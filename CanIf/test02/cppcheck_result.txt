@@ -1,0 +1,2792 @@
+Checking ..\..\..\communication\CanIf\CanIf.c ...
+Checking ..\..\..\communication\CanIf\CanIf.c: __CWCC__...
+..\..\..\communication\CanIf\CanIf.c:103:30: style: The scope of the variable 'hrhConfig' can be reduced. [variableScope]
+  const CanIf_HrhConfigType *hrhConfig;
+                             ^
+..\..\..\communication\CanIf\CanIf.c:950:50: style: The scope of the variable 'channel' can be reduced. [variableScope]
+ CanIf_Arc_ChannelIdType __attribute__((unused)) channel = 0xff;
+                                                 ^
+Checking ..\..\..\communication\CanIf\CanIf.c: __DCC__...
+Checking ..\..\..\communication\CanIf\CanIf.c: __GNUC__...
+Checking ..\..\..\communication\CanIf\CanIf.c: __ICCHCS12__...
+..\..\..\communication\CanIf\CanIf.c:776:3: style: The character sequences /* and // shall not be used within a comment [misra-c2012-3.1]
+  /*if (channel == -1)  // Invalid HRH
+  ^
+..\..\..\app\config\GEN\CanIf_Cfg.h:66:31: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
+extern const CanIf_ConfigType CanIf_Config;
+                              ^
+..\..\..\include\PduR.h:87:33: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
+extern const PduR_PBConfigType *PduRConfig;
+                                ^
+..\..\..\include\Dcm_Lcfg.h:641:29: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
+extern const Dcm_ConfigType DCM_Config;
+                            ^
+..\..\..\app\config\GEN\Com_PbCfg.h:23:29: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
+extern const Com_ConfigType ComConfiguration;
+                            ^
+..\..\..\communication\CanIf\CanIf.c:129:18: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
+CanIf_GlobalType CanIf_Global;
+                 ^
+..\..\..\app\config\GEN\Can_Cfg.h:199:29: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
+extern const Can_ConfigType Can_ConfigData;
+                            ^
+..\..\..\app\config\GEN\CanTp_Cfg.h:37:31: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
+extern const CanTp_ConfigType CanTpConfig;
+                              ^
+..\..\..\app\config\GEN\PduR_PbCfg.h:26:32: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
+extern const PduR_PBConfigType PduR_Config;
+                               ^
+..\..\..\include\Mcu.h:166:29: style: When an array with external linkage is declared, its size should be explicitly specified [misra-c2012-8.11]
+extern const Mcu_ConfigType McuConfigData[];
+                            ^
+..\..\..\app\config\GEN\CanTp_Cfg.h:39:29: style: When an array with external linkage is declared, its size should be explicitly specified [misra-c2012-8.11]
+extern const CanTp_RxIdType CanTp_RxIdList[];
+                            ^
+..\..\..\app\config\GEN\CanTp_Cfg.h:38:29: style: When an array with external linkage is declared, its size should be explicitly specified [misra-c2012-8.11]
+extern const CanTp_NSduType CanTpNSduConfigList[];
+                            ^
+..\..\..\communication\CanIf\CanIf.c:137:23: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
+  for (uint8 i = 0; i < CANIF_CHANNEL_CNT; i++)
+                      ^
+..\..\..\communication\CanIf\CanIf.c:800:54: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
+    if (entry->CanIfCanRxPduHrhRef->CanIfHrhIdSymRef == Hrh)
+                                                     ^
+..\..\..\communication\CanIf\CanIf.c:928:20: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
+  for(int i = 0; i < CANIF_CHANNEL_CNT; i++)
+                   ^
+..\..\..\communication\CanIf\CanIf.c:930:54: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
+   if(CanIf_ConfigPtr->Arc_ChannelToControllerMap[i] == Controller)
+                                                     ^
+..\..\..\communication\CanIf\CanIf.c:954:19: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
+ for(int i = 0; i < CANIF_CHANNEL_CNT; i++)
+                  ^
+..\..\..\communication\CanIf\CanIf.c:956:54: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
+   if(CanIf_ConfigPtr->Arc_ChannelToControllerMap[i] == Controller)
+                                                     ^
+..\..\..\communication\CanIf\CanIf.c:974:20: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
+  for(int i = 0; i < CANIF_CHANNEL_CNT; i++)
+                   ^
+..\..\..\communication\CanIf\CanIf.c:976:54: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
+   if(CanIf_ConfigPtr->Arc_ChannelToControllerMap[i] == Controller)
+                                                     ^
+..\..\..\communication\CanIf\CanIf.c:840:13: style: A cast shall not remove any const or volatile qualification from the type pointed to by a pointer [misra-c2012-11.8]
+          ( (CanIf_FuncTypeCanSpecial)(entry->CanIfUserRxIndication) )(
+            ^
+..\..\..\communication\CanIf\CanIf.c:442:15: style: The macro NULL shall be the only permitted form of integer null pointer constant [misra-c2012-11.9]
+  if (txEntry == 0)
+              ^
+..\..\..\communication\CanIf\CanIf.c:755:42: style: The macro NULL shall be the only permitted form of integer null pointer constant [misra-c2012-11.9]
+      if (entry->CanIfUserTxConfirmation != NULL)
+                                         ^
+..\..\..\communication\CanIf\CanIf.c:942:64: style: The macro NULL shall be the only permitted form of integer null pointer constant [misra-c2012-11.9]
+  if (CanIf_ConfigPtr->DispatchConfig->CanIfBusOffNotification != NULL)
+                                                               ^
+..\..\..\communication\CanIf\CanIf.c:984:62: style: The macro NULL shall be the only permitted form of integer null pointer constant [misra-c2012-11.9]
+  if (CanIf_ConfigPtr->DispatchConfig->CanIfErrorNotificaton != NULL)
+                                                             ^
+..\..\..\communication\CanIf\CanIf.c:990:64: style: The macro NULL shall be the only permitted form of integer null pointer constant [misra-c2012-11.9]
+  if (CanIf_ConfigPtr->DispatchConfig->CanIfBusOffNotification != NULL)
+                                                               ^
+..\..\..\communication\CanIf\CanIf.c:805:12: style: The controlling expression of an if statement and the controlling expression of an iteration-statement shall have essentially Boolean type [misra-c2012-14.4]
+        if (entry->CanIfCanRxPduHrhRef->CanIfSoftwareFilterHrh)
+           ^
+..\..\..\communication\CanIf\CanIf.c:118:9: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+        return hrhConfig->CanIfCanControllerHrhIdRef;
+        ^
+..\..\..\communication\CanIf\CanIf.c:242:7: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+      return E_NOT_OK;
+      ^
+..\..\..\communication\CanIf\CanIf.c:248:5: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+    return E_NOT_OK;
+    ^
+..\..\..\communication\CanIf\CanIf.c:259:11: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+          return E_NOT_OK;
+          ^
+..\..\..\communication\CanIf\CanIf.c:270:7: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+      return E_NOT_OK;
+      ^
+..\..\..\communication\CanIf\CanIf.c:281:11: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+          return E_NOT_OK;
+          ^
+..\..\..\communication\CanIf\CanIf.c:291:7: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+      return E_NOT_OK;
+      ^
+..\..\..\communication\CanIf\CanIf.c:302:11: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+          return E_NOT_OK;
+          ^
+..\..\..\communication\CanIf\CanIf.c:312:7: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+      return E_NOT_OK;
+      ^
+..\..\..\communication\CanIf\CanIf.c:355:3: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+  return NULL;
+  ^
+..\..\..\communication\CanIf\CanIf.c:357:3: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+  return &CanIf_ConfigPtr->InitConfig->CanIfTxPduConfigPtr[id];
+  ^
+..\..\..\communication\CanIf\CanIf.c:445:5: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+    return E_NOT_OK;
+    ^
+..\..\..\communication\CanIf\CanIf.c:452:5: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+    return E_NOT_OK;
+    ^
+..\..\..\communication\CanIf\CanIf.c:456:5: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+    return E_NOT_OK;
+    ^
+..\..\..\communication\CanIf\CanIf.c:461:5: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+    return E_NOT_OK;
+    ^
+..\..\..\communication\CanIf\CanIf.c:465:5: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+    return E_NOT_OK;
+    ^
+..\..\..\communication\CanIf\CanIf.c:477:5: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+    return E_NOT_OK;
+    ^
+..\..\..\communication\CanIf\CanIf.c:483:5: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+    return E_NOT_OK;
+    ^
+..\..\..\communication\CanIf\CanIf.c:787:7: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+      return;
+      ^
+..\..\..\communication\CanIf\CanIf.c:792:5: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+    return;  // No mode so just return
+    ^
+..\..\..\communication\CanIf\CanIf.c:832:9: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+        return;
+        ^
+..\..\..\communication\CanIf\CanIf.c:847:13: style: A function should have a single point of exit at the end [misra-c2012-15.5]
+            return;
+            ^
+..\..\..\communication\CanIf\CanIf.c:387:7: style: The body of an iteration-statement or a selection-statement shall be a compound-statement [misra-c2012-15.6]
+      if (hrhConfig->CanIfCanControllerHrhIdRef == Channel)
+      ^
+..\..\..\communication\CanIf\CanIf.c:414:7: style: The body of an iteration-statement or a selection-statement shall be a compound-statement [misra-c2012-15.6]
+      if (hthConfig->CanIfCanControllerIdRef == Channel)
+      ^
+..\..\..\communication\CanIf\CanIf.c:175:5: style: All if ƒ?Ý else if constructs shall be terminated with an else statement [misra-c2012-15.7]
+    }
+    ^
+..\..\..\communication\CanIf\CanIf.c:572:5: style: All if ƒ?Ý else if constructs shall be terminated with an else statement [misra-c2012-15.7]
+    }
+    ^
+..\..\..\communication\CanIf\CanIf.c:583:5: style: All if ƒ?Ý else if constructs shall be terminated with an else statement [misra-c2012-15.7]
+    }
+    ^
+..\..\..\communication\CanIf\CanIf.c:596:5: style: All if ƒ?Ý else if constructs shall be terminated with an else statement [misra-c2012-15.7]
+    }
+    ^
+..\..\..\communication\CanIf\CanIf.c:609:5: style: All if ƒ?Ý else if constructs shall be terminated with an else statement [misra-c2012-15.7]
+    }
+    ^
+..\..\..\communication\CanIf\CanIf.c:626:5: style: All if ƒ?Ý else if constructs shall be terminated with an else statement [misra-c2012-15.7]
+    }
+    ^
+..\..\..\communication\CanIf\CanIf.c:296:3: style: An unconditional break statement shall terminate every switch-clause [misra-c2012-16.3]
+  case CANIF_CS_STOPPED:
+  ^
+..\..\..\communication\CanIf\CanIf.c:251:3: style: Every switch statement shall have a default label [misra-c2012-16.4]
+  switch (ControllerMode)
+  ^
+..\..\..\communication\CanIf\CanIf.c:560:3: style: Every switch statement shall have a default label [misra-c2012-16.4]
+  switch(PduModeRequest)
+  ^
+..\..\..\communication\CanIf\CanIf.c:836:7: style: Every switch statement shall have a default label [misra-c2012-16.4]
+      switch (entry->CanIfRxUserType)
+      ^
+..\..\..\communication\CanIf\CanIf.c:170:30: style: The value returned by a function having non-void return type shall be used [misra-c2012-17.7]
+      CanIf_SetControllerMode(channel, CANIF_CS_STOPPED); // CANIF092
+                             ^
+..\..\..\communication\CanIf\CanIf.c:203:26: style: The value returned by a function having non-void return type shall be used [misra-c2012-17.7]
+  CanIf_SetControllerMode(channel, CANIF_CS_STOPPED);
+                         ^
+..\..\..\communication\CanIf\CanIf.c:268:21: style: The value returned by a function having non-void return type shall be used [misra-c2012-17.7]
+    CanIf_SetPduMode(channel, CANIF_SET_ONLINE);
+                    ^
+..\..\..\communication\CanIf\CanIf.c:310:21: style: The value returned by a function having non-void return type shall be used [misra-c2012-17.7]
+    CanIf_SetPduMode(channel, CANIF_SET_OFFLINE);
+                    ^
+..\..\..\communication\CanIf\CanIf.c:758:25: style: The value returned by a function having non-void return type shall be used [misra-c2012-17.7]
+        CanIf_GetPduMode(entry->CanIfCanTxPduHthRef->CanIfCanControllerIdRef, &mode);
+                        ^
+..\..\..\communication\CanIf\CanIf.c:940:26: style: The value returned by a function having non-void return type shall be used [misra-c2012-17.7]
+  CanIf_SetControllerMode(channel, CANIF_CS_STOPPED);
+                         ^
+..\..\..\include\PduR_Types.h:134:27: style: Flexible array members shall not be declared [misra-c2012-18.7]
+ uint8 DefaultValueElement[];
+                          ^
+..\..\..\include\Can.h:146:9: style: The union keyword should not be used [misra-c2012-19.2]
+typedef union {
+        ^
+..\..\..\app\config\GEN\Can_Cfg.h:66:29: style: The union keyword should not be used [misra-c2012-19.2]
+    void (*Arc_Error)(uint8,Can_Arc_ErrorType);
+                            ^
+..\..\..\include\CanIf_ConfigTypes.h:344:38: style: The union keyword should not be used [misra-c2012-19.2]
+ void (*CanIfErrorNotificaton)(uint8,Can_Arc_ErrorType);
+                                     ^
+..\..\..\include\CanIf_Cbk.h:37:41: style: The union keyword should not be used [misra-c2012-19.2]
+void CanIf_Arc_Error( uint8 Controller, Can_Arc_ErrorType Error );
+                                        ^
+..\..\..\include\CanTp_Types.h:155:2: style: The union keyword should not be used [misra-c2012-19.2]
+ union {
+ ^
+..\..\..\include\CanTp_Types.h:158:0: style: The union keyword should not be used [misra-c2012-19.2]
+ } configData;
+^
+..\..\..\communication\CanIf\CanIf.c:968:40: style: The union keyword should not be used [misra-c2012-19.2]
+void CanIf_Arc_Error(uint8 Controller, Can_Arc_ErrorType Error)
+                                       ^
+..\..\..\app\config\GEN\CanIf_Cfg.h:64:0: style: #include directives should only be preceded by preprocessor directives or comments [misra-c2012-20.1]
+#include "CanIf_ConfigTypes.h"
+^
+..\..\..\include\Can.h:188:0: style: #include directives should only be preceded by preprocessor directives or comments [misra-c2012-20.1]
+#include "Can_Cfg.h"
+^
+..\..\..\include\Can.h:304:0: style: #include directives should only be preceded by preprocessor directives or comments [misra-c2012-20.1]
+#include "Can_Cfg.h"
+^
+..\..\..\include\Compiler.h:62:0: style: A macro shall not be defined with the same name as a keyword [misra-c2012-20.4]
+#define restrict
+^
+..\..\..\arch\arm\arm_cr4\kernel\irq_types.h:24:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define IrqActivateChannel(_c) \
+^
+..\..\..\arch\arm\arm_cr4\kernel\irq_types.h:34:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define IrqDeactivateChannel(_c) \
+^
+..\..\..\include\Can.h:310:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define GET_CANCONTROLLER(a) (a / HTH_DIVIDER)
+^
+..\..\..\include\Com_Types.h:113:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define SignalTypeToSize(type,length) \
+^
+..\..\..\include\Com_Types.h:122:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define SignalTypeSignedness(type) \
+^
+..\..\..\include\Compiler.h:54:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define __balign(x)       Pragma(data_alignment=x)
+^
+..\..\..\include\Compiler.h:76:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define P2VAR(ptrtype, memclass, ptrclass) ptrtype *
+^
+..\..\..\include\Compiler.h:78:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define P2CONST(ptrtype, memclass, ptrclass) const ptrtype *
+^
+..\..\..\include\Compiler.h:80:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define CONSTP2VAR(ptrtype,memclass,ptrclass) ptrtype * const
+^
+..\..\..\include\Compiler.h:82:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define CONSTP2CONST(ptrtype, memclass, ptrclass) const ptrtype * const
+^
+..\..\..\include\Compiler.h:84:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define P2FUNC(rettype,ptrclass,fctname) rettype (*fctname)
+^
+..\..\..\include\Compiler.h:87:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define CONST(consttype,memclass) const consttype
+^
+..\..\..\include\PduR.h:94:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define PduR_IsUpModule(_mod) ((_mod > ARC_PDUR_UP_MODULES) && (_mod < ARC_PDUR_LOIF_MODULES))
+^
+..\..\..\include\PduR.h:95:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define PduR_IsIfModule(_mod) ((_mod > ARC_PDUR_LOIF_MODULES) && (_mod < ARC_PDUR_LOTP_MODULES))
+^
+..\..\..\include\PduR.h:96:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define PduR_IsTpModule(_mod) ((_mod > ARC_PDUR_LOTP_MODULES) && (_mod < ARC_PDUR_END_OF_MODULES))
+^
+..\..\..\include\PduR.h:162:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define setTxConfP(_B) (_B->TxConfP = 1)
+^
+..\..\..\include\PduR.h:163:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define clearTxConfP(_B) (_B->TxConfP = 0)
+^
+..\..\..\include\Std_Types.h:65:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define STD_GET_VERSION_INFO(_vi,_module) \
+^
+..\..\..\include\arm\Cpu.h:34:0: style: Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses [misra-c2012-20.7]
+#define Irq_Save(_flags)       _flags = _Irq_Save();
+^
+..\..\..\include\Compiler.h:53:0: style: The # and ## preprocessor operators should not be used [misra-c2012-20.10]
+#define Pragma(x) _Pragma(#x)
+^
+..\..\..\include\Std_Types.h:65:0: style: The # and ## preprocessor operators should not be used [misra-c2012-20.10]
+#define STD_GET_VERSION_INFO(_vi,_module) \
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:21:0: style: #define and #undef shall not be used on a reserved identifier or reserved macro name [misra-c2012-21.1]
+#define     __I     volatile const            /*!< defines 'read only' permissions      */
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:22:0: style: #define and #undef shall not be used on a reserved identifier or reserved macro name [misra-c2012-21.1]
+#define     __O     volatile                  /*!< defines 'write only' permissions     */
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:23:0: style: #define and #undef shall not be used on a reserved identifier or reserved macro name [misra-c2012-21.1]
+#define     __IO    volatile                  /*!< defines 'read / write' permissions   */
+^
+..\..\..\include\Compiler.h:47:0: style: #define and #undef shall not be used on a reserved identifier or reserved macro name [misra-c2012-21.1]
+#define __balign(x)       __attribute__ ((aligned (x)))
+^
+..\..\..\include\Compiler.h:49:0: style: #define and #undef shall not be used on a reserved identifier or reserved macro name [misra-c2012-21.1]
+#define __balign(x)       __attribute__ ((aligned (x)))
+^
+..\..\..\include\Compiler.h:51:0: style: #define and #undef shall not be used on a reserved identifier or reserved macro name [misra-c2012-21.1]
+#define __balign(x)       __attribute__ ((aligned (x)))
+^
+..\..\..\include\Compiler.h:54:0: style: #define and #undef shall not be used on a reserved identifier or reserved macro name [misra-c2012-21.1]
+#define __balign(x)       Pragma(data_alignment=x)
+^
+..\..\..\include\Compiler.h:64:0: style: #define and #undef shall not be used on a reserved identifier or reserved macro name [misra-c2012-21.1]
+#define __simple __simple
+^
+..\..\..\include\Compiler.h:67:0: style: #define and #undef shall not be used on a reserved identifier or reserved macro name [misra-c2012-21.1]
+#define __simple
+^
+..\..\..\include\Platform_Types.h:30:0: style: #define and #undef shall not be used on a reserved identifier or reserved macro name [misra-c2012-21.1]
+#define _Bool unsigned char
+^
+..\..\..\include\Std_Types.h:36:0: style: #define and #undef shall not be used on a reserved identifier or reserved macro name [misra-c2012-21.1]
+#define NULL 0
+^
+..\..\..\include\debug.h:51:0: style: The Standard Library input/output functions shall not be used [misra-c2012-21.6]
+#include <stdio.h>
+^
+1/3 files checked 96% done
+Checking main.c ...
+Checking main.c: __CWCC__...
+Checking main.c: __DCC__...
+Checking main.c: __GNUC__...
+Checking main.c: __ICCHCS12__...
+main.c:4:9: style: Function types shall be in prototype form with named parameters [misra-c2012-8.2]
+int main(){
+        ^
+main.c:5:11: style: The value returned by a function having non-void return type shall be used [misra-c2012-17.7]
+    printf("Compiled successfully!!\n");
+          ^
+main.c:1:0: style: The Standard Library input/output functions shall not be used [misra-c2012-21.6]
+#include <stdio.h>
+^
+2/3 files checked 96% done
+Checking stubs.c ...
+Checking stubs.c: __CWCC__...
+stubs.c:31:61: style: Parameter 'pduInfo' can be declared as pointer to const [constParameterPointer]
+Can_ReturnType Can_Write( Can_Arc_HTHType hth, Can_PduType *pduInfo ){
+                                                            ^
+stubs.c:54:72: style: Parameter 'stat' can be declared as pointer to const [constParameterPointer]
+void Can_Arc_GetStatistics( uint8 controller, Can_Arc_StatisticsType * stat){
+                                                                       ^
+Checking stubs.c: __DCC__...
+Checking stubs.c: __GNUC__...
+Checking stubs.c: __ICCHCS12__...
+stubs.c:11:38: style: There should be no unused parameters in functions [misra-c2012-2.7]
+void Can_Init( const Can_ConfigType *Config ){
+                                     ^
+stubs.c:18:32: style: There should be no unused parameters in functions [misra-c2012-2.7]
+void Can_InitController( uint8 controller, const Can_ControllerConfigType *config){
+                               ^
+stubs.c:21:45: style: There should be no unused parameters in functions [misra-c2012-2.7]
+Can_ReturnType Can_SetControllerMode( uint8 Controller, Can_StateTransitionType transition ){
+                                            ^
+stubs.c:24:45: style: There should be no unused parameters in functions [misra-c2012-2.7]
+void Can_DisableControllerInterrupts( uint8 controller ){
+                                            ^
+stubs.c:27:44: style: There should be no unused parameters in functions [misra-c2012-2.7]
+void Can_EnableControllerInterrupts( uint8 controller ){
+                                           ^
+stubs.c:31:43: style: There should be no unused parameters in functions [misra-c2012-2.7]
+Can_ReturnType Can_Write( Can_Arc_HTHType hth, Can_PduType *pduInfo ){
+                                          ^
+stubs.c:35:33: style: There should be no unused parameters in functions [misra-c2012-2.7]
+void Can_Cbk_CheckWakeup( uint8 controller ){
+                                ^
+stubs.c:54:35: style: There should be no unused parameters in functions [misra-c2012-2.7]
+void Can_Arc_GetStatistics( uint8 controller, Can_Arc_StatisticsType * stat){
+                                  ^
+stubs.c:9:24: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
+const CanIf_ConfigType CanIf_Config;
+                       ^
+..\..\..\include\CanIf_Cbk.h:29:2: style: All identifiers used in the controlling expression of #if or #elif preprocessing directives shall be #defineƒ?Td before evaluation [misra-c2012-20.9]
+#if ( CANIF_TRANSMIT_CANCELLATION == STD_ON )
+ ^
+3/3 files checked 100% done
+..\..\..\communication\CanIf\CanIf.c:131:0: style: The function 'CanIf_Init' is never used. [unusedFunction]
+void CanIf_Init(const CanIf_ConfigType *ConfigPtr)
+^
+..\..\..\communication\CanIf\CanIf.c:156:0: style: The function 'CanIf_InitController' is never used. [unusedFunction]
+void CanIf_InitController(uint8 Controller, uint8 ConfigurationIndex)
+^
+..\..\..\communication\CanIf\CanIf.c:428:0: style: The function 'CanIf_Transmit' is never used. [unusedFunction]
+Std_ReturnType CanIf_Transmit(PduIdType CanTxPduId,
+^
+..\..\..\communication\CanIf\CanIf.c:747:0: style: The function 'CanIf_TxConfirmation' is never used. [unusedFunction]
+void CanIf_TxConfirmation(PduIdType canTxPduId)
+^
+..\..\..\communication\CanIf\CanIf.c:768:0: style: The function 'CanIf_RxIndication' is never used. [unusedFunction]
+void CanIf_RxIndication(uint8 Hrh, Can_IdType CanId, uint8 CanDlc,
+^
+..\..\..\communication\CanIf\CanIf.c:922:0: style: The function 'CanIf_ControllerBusOff' is never used. [unusedFunction]
+void CanIf_ControllerBusOff(uint8 Controller)
+^
+..\..\..\communication\CanIf\CanIf.c:948:0: style: The function 'CanIf_SetWakeupEvent' is never used. [unusedFunction]
+void CanIf_SetWakeupEvent(uint8 Controller)
+^
+..\..\..\communication\CanIf\CanIf.c:968:0: style: The function 'CanIf_Arc_Error' is never used. [unusedFunction]
+void CanIf_Arc_Error(uint8 Controller, Can_Arc_ErrorType Error)
+^
+..\..\..\communication\CanIf\CanIf.c:996:0: style: The function 'CanIf_Arc_GetChannelDefaultConfIndex' is never used. [unusedFunction]
+uint8 CanIf_Arc_GetChannelDefaultConfIndex(CanIf_Arc_ChannelIdType Channel)
+^
+stubs.c:11:0: style: The function 'Can_Init' is never used. [unusedFunction]
+void Can_Init( const Can_ConfigType *Config ){
+^
+stubs.c:24:0: style: The function 'Can_DisableControllerInterrupts' is never used. [unusedFunction]
+void Can_DisableControllerInterrupts( uint8 controller ){
+^
+stubs.c:27:0: style: The function 'Can_EnableControllerInterrupts' is never used. [unusedFunction]
+void Can_EnableControllerInterrupts( uint8 controller ){
+^
+stubs.c:35:0: style: The function 'Can_Cbk_CheckWakeup' is never used. [unusedFunction]
+void Can_Cbk_CheckWakeup( uint8 controller ){
+^
+stubs.c:38:0: style: The function 'Can_MainFunction_Write' is never used. [unusedFunction]
+void Can_MainFunction_Write( void ){
+^
+stubs.c:41:0: style: The function 'Can_MainFunction_Read' is never used. [unusedFunction]
+void Can_MainFunction_Read( void ){
+^
+stubs.c:44:0: style: The function 'Can_MainFunction_BusOff' is never used. [unusedFunction]
+void Can_MainFunction_BusOff( void ){
+^
+stubs.c:47:0: style: The function 'Can_MainFunction_Error' is never used. [unusedFunction]
+void Can_MainFunction_Error( void ){
+^
+stubs.c:50:0: style: The function 'Can_MainFunction_Wakeup' is never used. [unusedFunction]
+void Can_MainFunction_Wakeup( void ){
+^
+stubs.c:54:0: style: The function 'Can_Arc_GetStatistics' is never used. [unusedFunction]
+void Can_Arc_GetStatistics( uint8 controller, Can_Arc_StatisticsType * stat){
+^
+..\..\..\include\ComStack_Types.h:95:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef uint8 BusTrcvErrorType;
+^
+..\..\..\app\config\GEN\CanIf_Cfg.h:49:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef enum {
+^
+..\..\..\include\CanIf_Types.h:134:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef enum {
+^
+..\..\..\include\CanIf_ConfigTypes.h:315:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef struct {
+^
+..\..\..\include\CanIf_Types.h:144:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef enum {
+^
+..\..\..\include\CanIf_Types.h:175:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef enum {
+^
+..\..\..\include\CanIf_Types.h:153:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef enum {
+^
+..\..\..\include\CanTp_Types.h:85:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef struct {
+^
+..\..\..\include\CanTp_Types.h:71:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef struct {
+^
+..\..\..\include\CanTp_Types.h:50:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef enum {
+^
+..\..\..\include\CanTp_Types.h:81:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef struct {
+^
+..\..\..\include\CanTp_Types.h:76:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef struct {
+^
+..\..\..\include\Com_Types.h:129:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef struct {
+^
+..\..\..\include\Dcm_Lcfg.h:89:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef Std_ReturnType (*Dcm_CallbackEcuResetType)(uint8 resetType, Dcm_NegativeResponseCodeType *errorCode);
+^
+..\..\..\include\Dcm_Lcfg.h:71:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef Std_ReturnType (*Dcm_CallbackGgetDTRValueFncType)(uint16 *testval, uint16 *minlimit, uint16 *maxlimit, uint8 *status);
+^
+..\..\..\include\Dcm_Lcfg.h:79:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef Std_ReturnType (*Dcm_CallbackRequestControlType)(uint8 *outBuffer, uint8 *inBuffer);
+^
+..\..\..\include\Dcm_Types.h:171:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef uint8 Dcm_DDDSourceStateType;
+^
+..\..\..\include\Dcm_Types.h:161:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef uint8 Dcm_DDDSubfunctionType;
+^
+..\..\..\include\Dcm_Lcfg.h:533:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef enum {
+^
+..\..\..\include\Dcm_Lcfg.h:525:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef enum {
+^
+..\..\..\include\Dcm_Types.h:175:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef uint8 Dcm_IOControlParameterType;
+^
+..\..\..\include\Dcm_Types.h:167:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef uint8 Dcm_PeriodicDidStartType;
+^
+..\..\..\include\Dcm_Types.h:152:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef uint8 Dcm_PeriodicTransmitModeType;
+^
+..\..\..\include\Dcm_Types.h:140:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef uint8 Dcm_StatusType;
+^
+..\..\..\arch\arm\arm_cr4\kernel\irq_types.h:127:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef enum {
+^
+..\..\..\include\ComStack_Types.h:106:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef uint8 NetworkHandleType;
+^
+..\..\..\include\Platform_Types.h:54:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef char    char_t;
+^
+..\..\..\include\Platform_Types.h:67:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef float               float32;
+^
+..\..\..\include\Platform_Types.h:68:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef double              float64;
+^
+..\..\..\include\arm\Cpu.h:28:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef uint32_t imask_t;
+^
+..\..\..\include\Platform_Types.h:55:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef int16_t          sint16;
+^
+..\..\..\include\Platform_Types.h:65:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef int_least16_t       sint16_least;
+^
+..\..\..\include\Platform_Types.h:57:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef int32_t          sint32;
+^
+..\..\..\include\Platform_Types.h:66:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef int_least32_t       sint32_least;
+^
+..\..\..\include\Platform_Types.h:59:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef int64_t     sint64;
+^
+..\..\..\include\Platform_Types.h:52:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef int8_t           sint8;
+^
+..\..\..\include\Platform_Types.h:64:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef int_least8_t        sint8_least;
+^
+..\..\..\include\Platform_Types.h:62:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef uint_least16_t      uint16_least;
+^
+..\..\..\include\Platform_Types.h:63:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef uint_least32_t      uint32_least;
+^
+..\..\..\include\Platform_Types.h:60:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef uint64_t     uint64;
+^
+..\..\..\include\Platform_Types.h:61:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef uint_least8_t       uint8_least;
+^
+..\..\..\include\Platform_Types.h:74:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef volatile int16_t vint16_t;
+^
+..\..\..\include\Platform_Types.h:77:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef volatile int32_t vint32_t;
+^
+..\..\..\include\Platform_Types.h:80:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef volatile int64_t vint64_t;
+^
+..\..\..\include\Platform_Types.h:71:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef volatile int8_t vint8_t;
+^
+..\..\..\include\Platform_Types.h:75:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef volatile uint16_t vuint16_t;
+^
+..\..\..\include\Platform_Types.h:78:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef volatile uint32_t vuint32_t;
+^
+..\..\..\include\Platform_Types.h:81:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef volatile uint64_t vuint64_t;
+^
+..\..\..\include\Platform_Types.h:72:1: style: A project should not contain unused type declarations [misra-c2012-2.3]
+typedef volatile uint8_t vuint8_t;
+^
+..\..\..\include\CanIf_Types.h:134:14: style: A project should not contain unused tag declarations [misra-c2012-2.4]
+typedef enum {
+             ^
+..\..\..\include\CanIf_Types.h:144:14: style: A project should not contain unused tag declarations [misra-c2012-2.4]
+typedef enum {
+             ^
+..\..\..\include\CanIf_Types.h:153:14: style: A project should not contain unused tag declarations [misra-c2012-2.4]
+typedef enum {
+             ^
+..\..\..\include\CanIf_Types.h:175:14: style: A project should not contain unused tag declarations [misra-c2012-2.4]
+typedef enum {
+             ^
+..\..\..\arch\arm\arm_cr4\kernel\irq_types.h:127:14: style: A project should not contain unused tag declarations [misra-c2012-2.4]
+typedef enum {
+             ^
+..\..\..\app\config\GEN\CanIf_Cfg.h:49:14: style: A project should not contain unused tag declarations [misra-c2012-2.4]
+typedef enum {
+             ^
+..\..\..\include\CanIf_ConfigTypes.h:315:16: style: A project should not contain unused tag declarations [misra-c2012-2.4]
+typedef struct {
+               ^
+..\..\..\include\Dcm_Lcfg.h:525:14: style: A project should not contain unused tag declarations [misra-c2012-2.4]
+typedef enum {
+             ^
+..\..\..\include\Dcm_Lcfg.h:533:14: style: A project should not contain unused tag declarations [misra-c2012-2.4]
+typedef enum {
+             ^
+..\..\..\include\Com_Types.h:129:16: style: A project should not contain unused tag declarations [misra-c2012-2.4]
+typedef struct {
+               ^
+..\..\..\include\CanTp_Types.h:50:14: style: A project should not contain unused tag declarations [misra-c2012-2.4]
+typedef enum {
+             ^
+..\..\..\include\CanTp_Types.h:71:16: style: A project should not contain unused tag declarations [misra-c2012-2.4]
+typedef struct {
+               ^
+..\..\..\include\CanTp_Types.h:76:16: style: A project should not contain unused tag declarations [misra-c2012-2.4]
+typedef struct {
+               ^
+..\..\..\include\CanTp_Types.h:81:16: style: A project should not contain unused tag declarations [misra-c2012-2.4]
+typedef struct {
+               ^
+..\..\..\include\CanTp_Types.h:85:16: style: A project should not contain unused tag declarations [misra-c2012-2.4]
+typedef struct {
+               ^
+..\..\..\app\config\CanNm_Cfg.h:9:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_CFG_H_H
+^
+..\..\..\app\config\CanNm_Cfg.h:12:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_DEV_ERROR_DETECT    STD_ON
+^
+..\..\..\app\config\CanNm_Cfg.h:16:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_VERSION_INFO_API    STD_ON
+^
+..\..\..\app\config\CanNm_Cfg.h:17:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_PASSIVE_MODE_ENABLED   STD_OFF
+^
+..\..\..\app\config\CanNm_Cfg.h:18:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_USER_DATA_ENABLED    STD_ON
+^
+..\..\..\app\config\CanNm_Cfg.h:19:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_REMOTE_SLEEP_IND_ENABLED  STD_OFF // Not supported
+^
+..\..\..\app\config\CanNm_Cfg.h:20:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_BUS_SYNCHRONIZATION_ENABLED STD_OFF // Not supported
+^
+..\..\..\app\config\CanNm_Cfg.h:21:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_BUS_LOAD_REDUCTION_ENABLED STD_OFF // Not supported
+^
+..\..\..\app\config\CanNm_Cfg.h:22:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_NODE_ID_ENABLED    STD_ON
+^
+..\..\..\app\config\CanNm_Cfg.h:23:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_NODE_DETECTION_ENABLED  STD_ON
+^
+..\..\..\app\config\CanNm_Cfg.h:24:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_IMMEDIATE_RESTART_ENABLED  STD_OFF // Not supported
+^
+..\..\..\app\config\CanNm_Cfg.h:25:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_PDU_RX_INDICATION_ENABLED  STD_ON
+^
+..\..\..\app\config\CanNm_Cfg.h:26:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_STATE_CHANGE_IND_ENABLED  STD_OFF // Not supported
+^
+..\..\..\app\config\CanNm_Cfg.h:27:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_COM_CONTROL_ENABLED   STD_OFF // Not supported
+^
+..\..\..\app\config\CanNm_Cfg.h:28:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_IMMEDIATE_TXCONF_ENABLED  STD_OFF // Not supported
+^
+..\..\..\app\config\CanNm_Cfg.h:29:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_REPEAT_MSG_IND_ENABLED  STD_OFF // Not supported
+^
+..\..\..\app\config\CanNm_Cfg.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_CHANNEL_COUNT 2
+^
+..\..\..\app\config\CanNm_Cfg.h:33:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_CHANNEL_LS 0
+^
+..\..\..\app\config\CanNm_Cfg.h:34:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_CHANNEL_HS 1
+^
+..\..\..\app\config\CanNm_Cfg.h:36:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_ID_LS_NM_TX 0
+^
+..\..\..\app\config\CanNm_Cfg.h:37:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_CHL_LS_RX 0
+^
+..\..\..\app\config\CanNm_Cfg.h:39:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_ID_HS_NM_TX 1
+^
+..\..\..\app\config\CanNm_Cfg.h:40:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_CHL_HS_RX 1
+^
+..\..\..\app\config\Det_Cfg.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_CFG_H
+^
+..\..\..\app\config\Det_Cfg.h:33:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_ENABLE_CALLBACKS STD_OFF  // Enable to use callback on errors
+^
+..\..\..\app\config\Det_Cfg.h:34:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_USE_RAMLOG       STD_OFF // Enable to log DET errors to ramlog
+^
+..\..\..\app\config\Det_Cfg.h:35:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_WRAP_RAMLOG      STD_ON  // The ramlog wraps around when reaching the end
+^
+..\..\..\app\config\Det_Cfg.h:36:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_USE_STDERR       STD_OFF // Enable to get DET errors on stderr
+^
+..\..\..\app\config\Det_Cfg.h:38:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_DEINIT_API       STD_ON // Enable/Disable the Det_DeInit function
+^
+..\..\..\app\config\Det_Cfg.h:40:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_RAMLOG_SIZE (32)        // Number of entries in ramlog
+^
+..\..\..\app\config\Det_Cfg.h:41:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_NUMBER_OF_CALLBACKS (5) // Number of callbacks
+^
+..\..\..\app\config\GEN\CanIf_Cfg.h:24:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_MULITPLE_DRIVER_SUPPORT       STD_OFF   // Not supported
+^
+..\..\..\app\config\GEN\CanIf_Cfg.h:28:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_SETDYNAMICTXID_API            STD_OFF   // Not supported
+^
+..\..\..\app\config\GEN\CanIf_Cfg.h:37:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_ID_RxDiagP2P                        0
+^
+..\..\..\app\config\GEN\CanIf_Cfg.h:38:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_ID_RxDiagP2A                        1
+^
+..\..\..\app\config\GEN\CanIf_Cfg.h:39:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_ID_RxMsgAbsInfo                     2
+^
+..\..\..\app\config\GEN\CanIf_Cfg.h:41:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_ID_TxDiagP2P                        0
+^
+..\..\..\app\config\GEN\CanIf_Cfg.h:42:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_ID_TxDiagP2A                        1
+^
+..\..\..\app\config\GEN\CanIf_Cfg.h:43:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_ID_LS_NM_TX                         2
+^
+..\..\..\app\config\GEN\CanIf_Cfg.h:44:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_ID_TxMsgTime                        3
+^
+..\..\..\app\config\GEN\CanIf_Cfg.h:45:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_ID_HS_NM_TX                         4
+^
+..\..\..\app\config\GEN\CanTp_Cfg.h:19:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_MAIN_FUNCTION_PERIOD_TIME_MS    10  /* ms TODO */
+^
+..\..\..\app\config\GEN\CanTp_Cfg.h:20:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_CONVERT_MS_TO_MAIN_CYCLES(x)     (x)/CANTP_MAIN_FUNCTION_PERIOD_TIME_MS
+^
+..\..\..\app\config\GEN\CanTp_Cfg.h:22:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_NSDU_CONFIG_LIST_SIZE 4
+^
+..\..\..\app\config\GEN\CanTp_Cfg.h:23:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_NSDU_RUNTIME_LIST_SIZE 4
+^
+..\..\..\app\config\GEN\CanTp_Cfg.h:24:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_RXID_LIST_SIZE 4
+^
+..\..\..\app\config\GEN\CanTp_Cfg.h:26:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define FRTP_CANCEL_TRANSMIT_REQUEST     STD_OFF
+^
+..\..\..\app\config\GEN\CanTp_Cfg.h:28:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_DEV_ERROR_DETECT STD_OFF
+^
+..\..\..\app\config\GEN\CanTp_Cfg.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_ID_RxDiagP2P                        0
+^
+..\..\..\app\config\GEN\CanTp_Cfg.h:32:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_ID_RxDiagP2A                        1
+^
+..\..\..\app\config\GEN\CanTp_Cfg.h:35:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_ID_TxDiagP2P                        2
+^
+..\..\..\app\config\GEN\CanTp_Cfg.h:36:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_ID_TxDiagP2A                        3
+^
+..\..\..\app\config\GEN\Can_Cfg.h:19:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_DEV_ERROR_DETECT STD_OFF
+^
+..\..\..\app\config\GEN\Can_Cfg.h:21:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_TIMEOUT_DURATION 10 /* ms */
+^
+..\..\..\app\config\GEN\Can_Cfg.h:24:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_ARC_CTRL_CONFIG_CNT 2
+^
+..\..\..\app\config\GEN\Can_Cfg.h:27:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define INDEX_OF_CAN_CTRL_0 0
+^
+..\..\..\app\config\GEN\Can_Cfg.h:28:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define INDEX_OF_CAN_CTRL_2 1
+^
+..\..\..\app\config\GEN\Com_Cfg.h:23:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_MODULE_ID 20
+^
+..\..\..\app\config\GEN\Com_Cfg.h:24:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_INSTANCE_ID 1
+^
+..\..\..\app\config\GEN\Com_Cfg.h:25:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_E_INVALID_FILTER_CONFIGURATION 101
+^
+..\..\..\app\config\GEN\Com_Cfg.h:26:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_E_INITIALIZATION_FAILED 102
+^
+..\..\..\app\config\GEN\Com_Cfg.h:27:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_E_INVALID_SIGNAL_CONFIGURATION 103
+^
+..\..\..\app\config\GEN\Com_Cfg.h:28:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_INVALID_PDU_ID 104
+^
+..\..\..\app\config\GEN\Com_Cfg.h:29:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_INVALID_SIGNAL_ID 109
+^
+..\..\..\app\config\GEN\Com_Cfg.h:30:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_ERROR_SIGNAL_IS_SIGNALGROUP 105
+^
+..\..\..\app\config\GEN\Com_Cfg.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_E_TOO_MANY_IPDU 106
+^
+..\..\..\app\config\GEN\Com_Cfg.h:32:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_E_TOO_MANY_SIGNAL 107
+^
+..\..\..\app\config\GEN\Com_Cfg.h:33:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_E_TOO_MANY_GROUPSIGNAL 108
+^
+..\..\..\app\config\GEN\Com_Cfg.h:35:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_DEV_ERROR_DETECT STD_OFF
+^
+..\..\..\app\config\GEN\Com_Cfg.h:37:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_N_IPDUS          2
+^
+..\..\..\app\config\GEN\Com_Cfg.h:38:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_N_SIGNALS        6
+^
+..\..\..\app\config\GEN\Com_Cfg.h:39:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_N_GROUP_SIGNALS  6
+^
+..\..\..\app\config\GEN\Com_Cfg.h:41:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define ComConfigurationTimeBase 0
+^
+..\..\..\app\config\GEN\Com_Cfg.h:42:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define ComVersionInfoApi
+^
+..\..\..\app\config\GEN\Com_PbCfg.h:26:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_DEFAULT_IPDU_GROUP  0
+^
+..\..\..\app\config\GEN\Com_PbCfg.h:28:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_IPDU_GROUP_PduGroup1                        0
+^
+..\..\..\app\config\GEN\Com_PbCfg.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_ID_TxMsgTime                        0
+^
+..\..\..\app\config\GEN\Com_PbCfg.h:32:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_ID_RxMsgAbsInfo                     1
+^
+..\..\..\app\config\GEN\Com_PbCfg.h:37:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_SID_SystemTime 0
+^
+..\..\..\app\config\GEN\Com_PbCfg.h:38:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_SID_VehicleSpeed                     1
+^
+..\..\..\app\config\GEN\Com_PbCfg.h:39:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_SID_TachoSpeed                       2
+^
+..\..\..\app\config\GEN\Com_PbCfg.h:40:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_SID_Led1Sts                          3
+^
+..\..\..\app\config\GEN\Com_PbCfg.h:41:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_SID_Led2Sts                          4
+^
+..\..\..\app\config\GEN\Com_PbCfg.h:42:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_SID_Led3Sts                          5
+^
+..\..\..\app\config\GEN\Com_PbCfg.h:46:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_GSID_year                             0
+^
+..\..\..\app\config\GEN\Com_PbCfg.h:47:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_GSID_month                            1
+^
+..\..\..\app\config\GEN\Com_PbCfg.h:48:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_GSID_day                              2
+^
+..\..\..\app\config\GEN\Com_PbCfg.h:49:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_GSID_hour                             3
+^
+..\..\..\app\config\GEN\Com_PbCfg.h:50:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_GSID_minute                           4
+^
+..\..\..\app\config\GEN\Com_PbCfg.h:51:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_GSID_second                           5
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:19:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_RESPOND_ALL_REQUEST           STD_ON  // Activate/Deactivate response on SID 0x40-0x7f and 0xc0-0xff.
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:20:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_REQUEST_INDICATION_ENABLED    STD_ON  // Activate/Deactivate indication request mechanism.
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:21:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PAGEDBUFFER_ENABLED           STD_OFF // Enable/disable page buffer mechanism (currently only disabled supported)
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:23:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_DSL_BUFFER_LIST_LENGTH        4
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:24:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_DSL_TX_PDU_ID_LIST_LENGTH        2
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:25:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_DSL_RX_PDU_ID_LIST_LENGTH        2
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:27:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_MAIN_FUNCTION_PERIOD_TIME_MS     10
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:29:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_LIMITNUMBER_PERIODDATA        8   // MaxNumberofSimultaneousPeriodictransmissions
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:30:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_MAX_DDDSOURCE_NUMBER          8   // TODO: MaxSourcesforOneDynamicIdentifier
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_MAX_DDD_NUMBER                8   // TODO
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:33:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PERIODICTRANSMIT_SLOW            200
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:34:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PERIODICTRANSMIT_MEDIUM          100
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:35:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PERIODICTRANSMIT_FAST            50
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:37:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_ID_RxDiagP2P 0
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:38:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_ID_RxDiagP2A 1
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:40:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_ID_TxDiagP2P 0
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:41:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_ID_TxDiagP2A 1
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:44:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_USE_SERVICE_DIAGNOSTICSESSIONCONTROL
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:45:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_USE_SERVICE_ECURESET
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:48:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_USE_SERVICE_READDATABYIDENTIFIER
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:49:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_USE_SERVICE_READMEMORYBYADDRESS
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:50:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_USE_SERVICE_WRITEMEMORYBYADDRESS
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:51:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_USE_SERVICE_READSCALINGDATABYIDENTIFIER
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:52:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_USE_SERVICE_SECURITYACCESS
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:53:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_USE_SERVICE_WRITEDATABYIDENTIFIER
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:54:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_USE_SERVICE_ROUTINECONTROL
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:55:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_USE_SERVICE_TESTERPRESENT
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:57:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_USE_SERVICE_READDATABYPERIODICIDENTIFIER
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:58:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_USE_SERVICE_DYNAMICALLYDEFINEDATAIDENTIFIER
+^
+..\..\..\app\config\GEN\Dcm_Cfg.h:59:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_USE_SERVICE_INPUTOUTPUTCONTROLBYIDENTIFIER
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:25:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_FRIF_SUPPORT STD_OFF  /* Not supported */
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:26:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_FRTP_SUPPORT STD_OFF  /* Not supported */
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:28:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_LINTP_SUPPORT STD_OFF  /* Not supported */
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_IPDUM_SUPPORT STD_OFF  /* Not supported */
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:36:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_VERSION_INFO_API         STD_OFF
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:40:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_SINGLE_IF CAN_IF
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:41:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_SINGLE_TP CAN_TP
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:45:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_GATEWAY_OPERATION                STD_OFF
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:46:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_MEMORY_SIZE                    10 /* Not used */
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:47:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_SB_TX_BUFFER_SUPPORT            STD_OFF
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:48:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_FIFO_TX_BUFFER_SUPPORT            STD_OFF
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:51:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_MAX_TX_BUFFER_NUMBER            10 /* Not used */
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:52:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_N_TP_ROUTES_WITH_BUFFER        0 //"not understand by parai"
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:53:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_N_TP_BUFFERS                    2
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:56:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_MULTICAST_TOIF_SUPPORT            STD_ON
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:57:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_MULTICAST_FROMIF_SUPPORT        STD_ON
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:58:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_MULTICAST_TOTP_SUPPORT            STD_ON
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:59:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_MULTICAST_FROMTP_SUPPORT        STD_ON
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:74:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_CanIfRxIndication Com_RxIndication
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:75:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_CanIfTxConfirmation Com_TxConfirmation
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:82:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_CanTpProvideRxBuffer Dcm_ProvideRxBuffer
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:83:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_CanTpRxIndication Dcm_RxIndication
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:84:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_CanTpProvideTxBuffer Dcm_ProvideTxBuffer
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:85:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_CanTpTxConfirmation Dcm_TxConfirmation
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:94:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_LinIfRxIndication Com_RxIndication
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:95:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_LinIfTxConfirmation Com_TxConfirmation
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:96:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_LinIfTriggerTransmit Com_TriggerTransmit
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:104:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_SoAdTpProvideRxBuffer Dcm_ProvideRxBuffer
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:105:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_SoAdTpRxIndication Dcm_RxIndication
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:106:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_SoAdTpProvideTxBuffer Dcm_ProvideTxBuffer
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:107:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_SoAdTpTxConfirmation Dcm_TxConfirmation
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:109:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_SoAdProvideRxBuffer()
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:110:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_SoAdRxIndication()
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:111:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_SoAdProvideTxBuffer()
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:112:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_SoAdTxConfirmation()
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:116:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_ComTransmit CanIf_Transmit
+^
+..\..\..\app\config\GEN\PduR_Cfg.h:122:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_DcmTransmit CanTp_Transmit
+^
+..\..\..\app\config\GEN\PduR_PbCfg.h:29:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_ID_TxDiagP2P                        0
+^
+..\..\..\app\config\GEN\PduR_PbCfg.h:30:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_ID2_TxDiagP2P                       0
+^
+..\..\..\app\config\GEN\PduR_PbCfg.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_ID_RxDiagP2P                        1
+^
+..\..\..\app\config\GEN\PduR_PbCfg.h:32:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_ID_TxDiagP2A                        2
+^
+..\..\..\app\config\GEN\PduR_PbCfg.h:33:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_ID2_TxDiagP2A                       2
+^
+..\..\..\app\config\GEN\PduR_PbCfg.h:34:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_ID_RxDiagP2A                        3
+^
+..\..\..\app\config\GEN\PduR_PbCfg.h:35:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_ID_TxMsgTime                        4
+^
+..\..\..\app\config\GEN\PduR_PbCfg.h:36:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_ID2_TxMsgTime                       4
+^
+..\..\..\app\config\GEN\PduR_PbCfg.h:37:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_ID_RxMsgAbsInfo                     5
+^
+..\..\..\app\config\GEN\PduR_PbCfg.h:43:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_ID2_RxDiagP2P                       CANTP_ID_RxDiagP2P
+^
+..\..\..\app\config\GEN\PduR_PbCfg.h:47:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_ID2_RxDiagP2A                       CANTP_ID_RxDiagP2A
+^
+..\..\..\app\config\GEN\PduR_PbCfg.h:51:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_ID2_RxMsgAbsInfo                    CANIF_ID_RxMsgAbsInfo
+^
+..\..\..\app\config\Mcu_Cfg.h:33:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_DEV_ERROR_DETECT STD_ON
+^
+..\..\..\app\config\Mcu_Cfg.h:54:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_NBR_OF_RAM_SECTIONS 0
+^
+..\..\..\app\config\Mcu_Cfg.h:57:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_DEFAULT_CONFIG McuConfigData[0]
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:17:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CORE_CR4_H_
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:21:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define     __I     volatile const            /*!< defines 'read only' permissions      */
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:22:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define     __O     volatile                  /*!< defines 'write only' permissions     */
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:23:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define     __IO    volatile                  /*!< defines 'read / write' permissions   */
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:68:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define vimREG ((vimBASE_t *)0xFFFFFE00U)
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:114:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define rtiREG1 ((rtiBASE_t *)0xFFFFFC00)
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:218:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define systemREG1 ((systemBASE1_t *)0xFFFFFF00U)
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:234:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PRE1 SYS_PLL
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:249:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PRE2 SYS_PLL
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:274:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define systemREG2 ((systemBASE2_t *)0xFFFFE100U)
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:329:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define pcrREG ((pcrBASE_t *)0xFFFFE000U)
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:432:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCAN1_Base ((Can_RegisterType *)0xFFF7DC00)
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:433:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCAN2_Base ((Can_RegisterType *)0xFFF7DE00)
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:434:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCAN3_Base ((Can_RegisterType *)0xFFF7E000)
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:474:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define GIO_PORTA_BASE ((GIO_RegisterType *)0xFFF7BC34)
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:475:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define GIO_PORTB_BASE ((GIO_RegisterType *)0xFFF7BC54)
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:483:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define gioREG   ((GIO_Base_RegisterType *)0xFFF7BC00U)
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:490:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define gioPORTA ((gioPORT_t *)0xFFF7BC34U)
+^
+..\..\..\arch\arm\arm_cr4\kernel\core_cr4.h:497:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define gioPORTB ((gioPORT_t *)0xFFF7BC54U)
+^
+..\..\..\arch\arm\arm_cr4\kernel\irq_types.h:20:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define IrqGetCurrentInterruptSource() \
+^
+..\..\..\arch\arm\arm_cr4\kernel\irq_types.h:24:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define IrqActivateChannel(_c) \
+^
+..\..\..\arch\arm\arm_cr4\kernel\irq_types.h:34:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define IrqDeactivateChannel(_c) \
+^
+..\..\..\arch\arm\arm_cr4\kernel\irq_types.h:43:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define Irq_SOI() \
+^
+..\..\..\arch\arm\arm_cr4\kernel\irq_types.h:47:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define Irq_EOI() \
+^
+..\..\..\arch\arm\arm_cr4\kernel\irq_types.h:120:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define NUMBER_OF_INTERRUPTS_AND_EXCEPTIONS 65
+^
+..\..\..\arch\arm\arm_cr4\kernel\irq_types.h:125:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define IRQ_INTERRUPT_OFFSET 0
+^
+..\..\..\include\Can.h:22:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_VENDOR_ID       VENDOR_ID_ARCCORE
+^
+..\..\..\include\Can.h:23:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_MODULE_ID       MODULE_ID_CAN
+^
+..\..\..\include\Can.h:24:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_AR_MAJOR_VERSION 3
+^
+..\..\..\include\Can.h:25:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_AR_MINOR_VERSION 1
+^
+..\..\..\include\Can.h:26:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_AR_PATCH_VERSION 5
+^
+..\..\..\include\Can.h:28:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_SW_MAJOR_VERSION 1
+^
+..\..\..\include\Can.h:29:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_SW_MINOR_VERSION  0
+^
+..\..\..\include\Can.h:30:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_SW_PATCH_VERSION 0
+^
+..\..\..\include\Can.h:32:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_E_PARAM_POINTER     0x01
+^
+..\..\..\include\Can.h:33:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_E_PARAM_HANDLE     0x02
+^
+..\..\..\include\Can.h:34:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_E_PARAM_DLC      0x03
+^
+..\..\..\include\Can.h:35:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_E_PARAM_CONTROLLER 0x04
+^
+..\..\..\include\Can.h:37:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_E_UNINIT           0x05
+^
+..\..\..\include\Can.h:39:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_E_TRANSITION       0x06
+^
+..\..\..\include\Can.h:41:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_E_DATALOST         0x07     /** @req 4.0.3/CAN395 */
+^
+..\..\..\include\Can.h:45:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_INIT_SERVICE_ID                         0x00
+^
+..\..\..\include\Can.h:46:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_MAINFUNCTION_WRITE_SERVICE_ID           0x01
+^
+..\..\..\include\Can.h:47:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_INITCONTROLLER_SERVICE_ID               0x02
+^
+..\..\..\include\Can.h:48:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_SETCONTROLLERMODE_SERVICE_ID            0x03
+^
+..\..\..\include\Can.h:49:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_DISABLECONTROLLERINTERRUPTS_SERVICE_ID  0x04
+^
+..\..\..\include\Can.h:50:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_ENABLECONTROLLERINTERRUPTS_SERVICE_ID   0x05
+^
+..\..\..\include\Can.h:51:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_WRITE_SERVICE_ID                        0x06
+^
+..\..\..\include\Can.h:52:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_GETVERSIONINFO_SERVICE_ID               0x07
+^
+..\..\..\include\Can.h:53:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_MAINFUNCTION_READ_SERVICE_ID            0x08
+^
+..\..\..\include\Can.h:54:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_MAINFUNCTION_BUSOFF_SERVICE_ID          0x09
+^
+..\..\..\include\Can.h:55:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_MAINFUNCTION_WAKEUP_SERVICE_ID          0x0a
+^
+..\..\..\include\Can.h:56:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_CBK_CHECKWAKEUP_SERVICE_ID              0x0b
+^
+..\..\..\include\Can.h:63:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_HOH_FIFO_MASK           (1UL<<0)
+^
+..\..\..\include\Can.h:67:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_CTRL_RX_PROCESSING_INTERRUPT        (1UL<<0)
+^
+..\..\..\include\Can.h:68:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_CTRL_RX_PROCESSING_POLLING          0
+^
+..\..\..\include\Can.h:69:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_CTRL_TX_PROCESSING_INTERRUPT        (1UL<<1)
+^
+..\..\..\include\Can.h:70:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_CTRL_TX_PROCESSING_POLLING          0
+^
+..\..\..\include\Can.h:71:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_CTRL_WAKEUP_PROCESSING_INTERRUPT    (1UL<<2)
+^
+..\..\..\include\Can.h:72:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_CTRL_WAKEUP_PROCESSING_POLLING      0
+^
+..\..\..\include\Can.h:73:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_CTRL_BUSOFF_PROCESSING_INTERRUPT    (1UL<<3)
+^
+..\..\..\include\Can.h:74:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_CTRL_BUSOFF_PROCESSING_POLLING      0
+^
+..\..\..\include\Can.h:75:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_CTRL_ACTIVATION                     (1UL<<4)
+^
+..\..\..\include\Can.h:77:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_CTRL_LOOPBACK                       (1UL<<5)
+^
+..\..\..\include\Can.h:78:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_CTRL_FIFO                           (1UL<<6)
+^
+..\..\..\include\Can.h:80:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_CTRL_ERROR_PROCESSING_INTERRUPT    (1UL<<7)
+^
+..\..\..\include\Can.h:81:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CAN_CTRL_ERROR_PROCESSING_POLLING      0
+^
+..\..\..\include\Can.h:310:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define GET_CANCONTROLLER(a) (a / HTH_DIVIDER)
+^
+..\..\..\include\Can.h:317:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define Can_GetVersionInfo(_vi) STD_GET_VERSION_INFO(_vi,CAN)
+^
+..\..\..\include\CanIf.h:29:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_VENDOR_ID          VENDOR_ID_ARCCORE
+^
+..\..\..\include\CanIf.h:30:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_MODULE_ID          MODULE_ID_CANIF
+^
+..\..\..\include\CanIf.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_AR_MAJOR_VERSION   3
+^
+..\..\..\include\CanIf.h:32:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_AR_MINOR_VERSION   1
+^
+..\..\..\include\CanIf.h:33:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_AR_PATCH_VERSION   5
+^
+..\..\..\include\CanIf.h:37:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_SW_PATCH_VERSION   0
+^
+..\..\..\include\CanIf.h:48:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_INIT_ID                0x01
+^
+..\..\..\include\CanIf.h:49:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_INIT_CONTROLLER_ID     0x02
+^
+..\..\..\include\CanIf.h:50:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_SET_CONTROLLER_MODE_ID 0x03
+^
+..\..\..\include\CanIf.h:51:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_GET_CONTROLLER_MODE_ID 0x04
+^
+..\..\..\include\CanIf.h:52:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_TRANSMIT_ID            0x05
+^
+..\..\..\include\CanIf.h:53:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_READTXPDUDATA_ID       0x06
+^
+..\..\..\include\CanIf.h:54:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_READTXNOTIFSTATUS_ID   0x07
+^
+..\..\..\include\CanIf.h:55:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_READRXNOTIFSTATUS_ID   0x08
+^
+..\..\..\include\CanIf.h:56:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_SETPDUMODE_ID          0x09
+^
+..\..\..\include\CanIf.h:57:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_GETPDUMODE_ID          0x0A
+^
+..\..\..\include\CanIf.h:58:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_SETDYNAMICTX_ID        0x0C
+^
+..\..\..\include\CanIf.h:59:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_SET_TRANSCEIVERMODE_ID     0x0D
+^
+..\..\..\include\CanIf.h:60:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_GET_TRANSCEIVERMODE_ID     0x0E
+^
+..\..\..\include\CanIf.h:61:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_GET_TRCVMODEREASON_ID      0x0F
+^
+..\..\..\include\CanIf.h:62:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_SET_TRANSCEIVERWAKEMODE_ID 0x10
+^
+..\..\..\include\CanIf.h:63:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_CHECKWAKEUP_ID          0x11
+^
+..\..\..\include\CanIf.h:64:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_CHECKVALIDATION_ID      0x12
+^
+..\..\..\include\CanIf.h:65:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_TXCONFIRMATION_ID       0x13
+^
+..\..\..\include\CanIf.h:66:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_RXINDICATION_ID         0x14
+^
+..\..\..\include\CanIf.h:67:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_CANCELTXCONFIRMATION_ID 0x15
+^
+..\..\..\include\CanIf.h:68:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_CONTROLLER_BUSOFF_ID    0x16
+^
+..\..\..\include\CanIf.h:70:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_SETWAKEUPEVENT_ID       0x40
+^
+..\..\..\include\CanIf.h:71:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_ARCERROR_ID           0x41
+^
+..\..\..\include\CanIf.h:124:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CanIf_GetVersionInfo(_vi) STD_GET_VERSION_INFO(_vi,CANIF)
+^
+..\..\..\include\CanIf_Types.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_E_PARAM_CANID        10
+^
+..\..\..\include\CanIf_Types.h:32:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_E_PARAM_DLC         11
+^
+..\..\..\include\CanIf_Types.h:33:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_E_PARAM_HRH         12
+^
+..\..\..\include\CanIf_Types.h:34:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_E_PARAM_CHANNEL      13
+^
+..\..\..\include\CanIf_Types.h:35:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_E_PARAM_CONTROLLER   14
+^
+..\..\..\include\CanIf_Types.h:36:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_E_PARAM_WAKEUPSOURCE 15
+^
+..\..\..\include\CanIf_Types.h:38:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_E_PARAM_HTH             17
+^
+..\..\..\include\CanIf_Types.h:39:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_E_PARAM_LPDU            18
+^
+..\..\..\include\CanIf_Types.h:40:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_E_PARAM_CONTROLLER_MODE 19
+^
+..\..\..\include\CanIf_Types.h:42:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_E_PARAM_POINTER      20
+^
+..\..\..\include\CanIf_Types.h:43:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_E_UNINIT             30
+^
+..\..\..\include\CanIf_Types.h:44:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_E_NOK_NOSUPPORT       40
+^
+..\..\..\include\CanIf_Types.h:45:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_TRCV_E_TRCV_NOT_STANDBY 60
+^
+..\..\..\include\CanIf_Types.h:46:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_TRCV_E_TRCV_NOT_NORMAL 70
+^
+..\..\..\include\CanIf_Types.h:47:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_E_INVALID_TXPDUID      80
+^
+..\..\..\include\CanIf_Types.h:48:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANIF_E_INVALID_RXPDUID     90
+^
+..\..\..\include\CanNm.h:18:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_H
+^
+..\..\..\include\CanNm.h:27:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_VENDOR_ID  VENDOR_ID_ARCCORE
+^
+..\..\..\include\CanNm.h:28:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_MODULE_ID  MODULE_ID_CANNM
+^
+..\..\..\include\CanNm.h:30:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_AR_MAJOR_VERSION 3
+^
+..\..\..\include\CanNm.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_AR_MINOR_VERSION 1
+^
+..\..\..\include\CanNm.h:32:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_AR_PATCH_VERSION 5
+^
+..\..\..\include\CanNm.h:34:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SW_MAJOR_VERSION 1
+^
+..\..\..\include\CanNm.h:35:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SW_MINOR_VERSION 0
+^
+..\..\..\include\CanNm.h:36:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SW_PATCH_VERSION 0
+^
+..\..\..\include\CanNm.h:42:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_E_NO_INIT      0x01u /**< API service used */
+^
+..\..\..\include\CanNm.h:43:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_E_INVALID_CHANNEL    0x02u /**< API service called with wrong channel handle */
+^
+..\..\..\include\CanNm.h:48:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_E_DEV_NETWORK_TIMEOUT   0x11u
+^
+..\..\..\include\CanNm.h:49:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define NM_E_NULL_POINTER     0x12u /**< Null pointer has been passed as an argument (Does not apply to function CanNm_Init) */
+^
+..\..\..\include\CanNm.h:52:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_INIT        0x00u
+^
+..\..\..\include\CanNm.h:53:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_PASSIVESTARTUP      0x01u
+^
+..\..\..\include\CanNm.h:54:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_NETWORKREQUEST      0x02u
+^
+..\..\..\include\CanNm.h:55:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_NETWORKRELEASE      0x03u
+^
+..\..\..\include\CanNm.h:56:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_DISABLECOMMUNICATION    0x0Cu
+^
+..\..\..\include\CanNm.h:57:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_ENABLECOMMUNICATION     0x0Du
+^
+..\..\..\include\CanNm.h:58:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_SETUSERDATA       0x04u
+^
+..\..\..\include\CanNm.h:59:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_GETUSERDATA       0x05u
+^
+..\..\..\include\CanNm.h:60:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_GETNODEIDENTIFIER     0x06u
+^
+..\..\..\include\CanNm.h:61:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_GETLOCALNODEIDENTIFIER    0x07u
+^
+..\..\..\include\CanNm.h:62:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_REPEATMESSAGEREQUEST    0x08u
+^
+..\..\..\include\CanNm.h:63:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_GETPDUDATA       0x0Au
+^
+..\..\..\include\CanNm.h:64:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_GETSTATE       0x0Bu
+^
+..\..\..\include\CanNm.h:65:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_GETVERSIONINFO      0xF1u
+^
+..\..\..\include\CanNm.h:66:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_REQUESTBUSSYNCHRONIZATION   0xC0u
+^
+..\..\..\include\CanNm.h:67:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_CHECKREMOTESLEEPINDICATION   0xD0u
+^
+..\..\..\include\CanNm.h:68:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_TXCONFIRMATION      0x0Fu
+^
+..\..\..\include\CanNm.h:69:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_RXINDICATION      0x10u
+^
+..\..\..\include\CanNm.h:70:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_SERVICEID_ARC_MAINFUNCTION     0x13u
+^
+..\..\..\include\CanNm.h:72:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_CBV_REPEAT_MESSAGE_REQUEST     0x01u  /**< @req CANNM045 */
+^
+..\..\..\include\CanNm.h:125:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CanNm_GetVersionInfo(_vi) STD_GET_VERSION_INFO(_vi,CANNM)
+^
+..\..\..\include\CanNm_Cbk.h:18:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_CBK_H_
+^
+..\..\..\include\CanNm_ConfigTypes.h:18:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANNM_CONFIGTYPES_H_
+^
+..\..\..\include\CanTp.h:30:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_MODULE_ID    MODULE_ID_CANTP /** @req CANTP115 */
+^
+..\..\..\include\CanTp.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_VENDOR_ID    VENDOR_ID_ARCCORE
+^
+..\..\..\include\CanTp.h:33:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_SW_MAJOR_VERSION     1
+^
+..\..\..\include\CanTp.h:34:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_SW_MINOR_VERSION   0
+^
+..\..\..\include\CanTp.h:35:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_SW_PATCH_VERSION     0
+^
+..\..\..\include\CanTp.h:36:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_AR_MAJOR_VERSION     3
+^
+..\..\..\include\CanTp.h:37:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_AR_MINOR_VERSION     1
+^
+..\..\..\include\CanTp.h:38:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_AR_PATCH_VERSION     5
+^
+..\..\..\include\CanTp.h:49:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_E_PARAM_CONFIG  0x01
+^
+..\..\..\include\CanTp.h:50:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_E_PARAM_ID   0x02
+^
+..\..\..\include\CanTp.h:51:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_E_PARAM_ADDRESS  0x04
+^
+..\..\..\include\CanTp.h:53:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_E_UNINIT    0x20
+^
+..\..\..\include\CanTp.h:54:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_E_INVALID_TX_ID  0x30
+^
+..\..\..\include\CanTp.h:55:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_E_INVALID_RX_ID  0x40
+^
+..\..\..\include\CanTp.h:56:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_E_INVALID_TX_BUFFER 0x50
+^
+..\..\..\include\CanTp.h:57:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_E_INVALID_RX_BUFFER 0x60
+^
+..\..\..\include\CanTp.h:58:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_E_INVALID_TX_LENGHT 0x70
+^
+..\..\..\include\CanTp.h:59:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_E_INVALID_RX_LENGTH 0x80
+^
+..\..\..\include\CanTp.h:60:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_E_INVALID_TATYPE  0x90
+^
+..\..\..\include\CanTp.h:66:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define SERVICE_ID_CANTP_INIT      0x01
+^
+..\..\..\include\CanTp.h:67:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define SERVICE_ID_CANTP_GET_VERSION_INFO   0x07
+^
+..\..\..\include\CanTp.h:68:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define SERVICE_ID_CANTP_SHUTDOWN     0x02
+^
+..\..\..\include\CanTp.h:69:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define SERVICE_ID_CANTP_TRANSMIT     0x03
+^
+..\..\..\include\CanTp.h:70:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define SERVICE_ID_CANTP_CANCEL_TRANSMIT_REQUEST 0x03
+^
+..\..\..\include\CanTp.h:71:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define SERVICE_ID_CANTP_MAIN_FUNCTION    0x06
+^
+..\..\..\include\CanTp.h:72:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define SERVICE_ID_CANTP_RX_INDICATION    0x04
+^
+..\..\..\include\CanTp.h:73:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define SERVICE_ID_CANTP_TX_CONFIRMATION   0x05
+^
+..\..\..\include\CanTp.h:95:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CanTp_GetVersionInfo(_vi) STD_GET_VERSION_INFO(_vi,CANTP) /** @req CANTP210 */ /* @req CANTP218 */
+^
+..\..\..\include\CanTp_Cbk.h:25:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CANTP_CBK_H_
+^
+..\..\..\include\Com.h:32:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_SW_PATCH_VERSION   0
+^
+..\..\..\include\Com.h:91:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_BUSY 0x81
+^
+..\..\..\include\Com.h:92:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_SERVICE_NOT_AVAILABLE 0x80
+^
+..\..\..\include\ComStack_Types.h:26:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define ECUC_SW_MAJOR_VERSION   1
+^
+..\..\..\include\ComStack_Types.h:27:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define ECUC_SW_MINOR_VERSION   0
+^
+..\..\..\include\ComStack_Types.h:28:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define ECUC_SW_PATCH_VERSION   0
+^
+..\..\..\include\ComStack_Types.h:86:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define NTFRSLT_OK      0x00
+^
+..\..\..\include\ComStack_Types.h:87:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define NTFRSLT_E_NOT_OK    0x01
+^
+..\..\..\include\ComStack_Types.h:88:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define NTFRSLT_E_CANCELATION_NOT_OK 0x0C
+^
+..\..\..\include\ComStack_Types.h:89:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define NTFRSLT_E_WRONG_SN     0x05
+^
+..\..\..\include\ComStack_Types.h:90:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define NTFRSLT_E_NO_BUFFER    0x09
+^
+..\..\..\include\ComStack_Types.h:98:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define BUSTRCV_NO_ERROR 0x00
+^
+..\..\..\include\ComStack_Types.h:99:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define BUSBUSTRCV_E_ERROR 0x01
+^
+..\..\..\include\ComStack_Types.h:102:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COMSTACKTYPE_AR_MINOR_VERSION  1
+^
+..\..\..\include\ComStack_Types.h:103:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COMSTACKTYPE_AR_MAJOR_VERSION  0
+^
+..\..\..\include\ComStack_Types.h:104:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COMSTACKTYPE_AR_PATCH_VERSION  0
+^
+..\..\..\include\Com_Types.h:59:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_SIGNALTYPE_UNSIGNED  FALSE
+^
+..\..\..\include\Com_Types.h:60:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define COM_SIGNALTYPE_SIGNED    TRUE
+^
+..\..\..\include\Com_Types.h:104:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define M_BOOLEAN boolean
+^
+..\..\..\include\Com_Types.h:105:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define M_UINT8 uint8
+^
+..\..\..\include\Com_Types.h:106:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define M_UINT16 uint16
+^
+..\..\..\include\Com_Types.h:107:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define M_UINT32 uint32
+^
+..\..\..\include\Com_Types.h:108:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define M_UINT8_N uint8
+^
+..\..\..\include\Com_Types.h:109:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define M_SINT8 sint8
+^
+..\..\..\include\Com_Types.h:110:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define M_SINT16 sint16
+^
+..\..\..\include\Com_Types.h:111:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define M_SINT32 sint32
+^
+..\..\..\include\Com_Types.h:113:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define SignalTypeToSize(type,length) \
+^
+..\..\..\include\Com_Types.h:122:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define SignalTypeSignedness(type) \
+^
+..\..\..\include\Compiler.h:29:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define AUTOMATIC
+^
+..\..\..\include\Compiler.h:30:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define STATIC  static
+^
+..\..\..\include\Compiler.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define NULL_PTR ((void *)0)
+^
+..\..\..\include\Compiler.h:34:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CC_EXTENSION  __extension__
+^
+..\..\..\include\Compiler.h:47:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define __balign(x)       __attribute__ ((aligned (x)))
+^
+..\..\..\include\Compiler.h:53:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define Pragma(x) _Pragma(#x)
+^
+..\..\..\include\Compiler.h:59:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define SECTION_BALIGN(x)  __balign(x)
+^
+..\..\..\include\Compiler.h:62:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define restrict
+^
+..\..\..\include\Compiler.h:63:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DECLARE_WEAK
+^
+..\..\..\include\Compiler.h:64:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define __simple __simple
+^
+..\..\..\include\Compiler.h:71:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define INLINE __inline__
+^
+..\..\..\include\Compiler.h:74:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define FUNC(rettype,memclass) rettype
+^
+..\..\..\include\Compiler.h:76:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define P2VAR(ptrtype, memclass, ptrclass) ptrtype *
+^
+..\..\..\include\Compiler.h:78:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define P2CONST(ptrtype, memclass, ptrclass) const ptrtype *
+^
+..\..\..\include\Compiler.h:80:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CONSTP2VAR(ptrtype,memclass,ptrclass) ptrtype * const
+^
+..\..\..\include\Compiler.h:82:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CONSTP2CONST(ptrtype, memclass, ptrclass) const ptrtype * const
+^
+..\..\..\include\Compiler.h:84:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define P2FUNC(rettype,ptrclass,fctname) rettype (*fctname)
+^
+..\..\..\include\Compiler.h:90:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define VAR(vartype,memclass) vartype
+^
+..\..\..\include\Dcm.h:28:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_MODULE_ID   MODULE_ID_DCM /** @req DCM052 */
+^
+..\..\..\include\Dcm.h:29:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_VENDOR_ID   VENDOR_ID_ARCCORE
+^
+..\..\..\include\Dcm.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_SW_MAJOR_VERSION    1
+^
+..\..\..\include\Dcm.h:32:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_SW_MINOR_VERSION    0
+^
+..\..\..\include\Dcm.h:33:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_SW_PATCH_VERSION    0
+^
+..\..\..\include\Dcm.h:34:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_AR_MAJOR_VERSION    3
+^
+..\..\..\include\Dcm.h:35:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_AR_MINOR_VERSION    1
+^
+..\..\..\include\Dcm.h:36:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_AR_PATCH_VERSION    5
+^
+..\..\..\include\Dcm.h:46:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_INTERFACE_TIMEOUT    0x01
+^
+..\..\..\include\Dcm.h:47:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_INTERFACE_VALUE_OUT_OF_RANGE 0x02
+^
+..\..\..\include\Dcm.h:48:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_INTERFACE_BUFFER_OVERFLOW  0x03
+^
+..\..\..\include\Dcm.h:49:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_INTERFACE_PROTOCOL_MISMATCH 0x04
+^
+..\..\..\include\Dcm.h:50:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_UNINIT      0x05
+^
+..\..\..\include\Dcm.h:51:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_PARAM       0x06
+^
+..\..\..\include\Dcm.h:54:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_CONFIG_INVALID    0x40
+^
+..\..\..\include\Dcm.h:55:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_NOT_SUPPORTED     0xfe
+^
+..\..\..\include\Dcm.h:56:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_NOT_IMPLEMENTED_YET   0xff
+^
+..\..\..\include\Dcm.h:59:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_INIT_ID       0x01
+^
+..\..\..\include\Dcm.h:60:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PROVIDE_RX_BUFFER_ID   0x02
+^
+..\..\..\include\Dcm.h:61:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_RX_INDICATION_ID    0x03
+^
+..\..\..\include\Dcm.h:62:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PROVIDE_TX_BUFFER_ID   0x04
+^
+..\..\..\include\Dcm.h:63:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_TX_CONFIRMATION_ID    0x05
+^
+..\..\..\include\Dcm.h:64:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_GET_SES_CTRL_TYPE_ID   0x06
+^
+..\..\..\include\Dcm.h:65:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_GET_SECURITY_LEVEL_ID   0x0d
+^
+..\..\..\include\Dcm.h:66:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_GET_ACTIVE_PROTOCOL_ID   0x0f
+^
+..\..\..\include\Dcm.h:67:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_COMM_NO_COM_MODE_ENTERED_ID  0x21
+^
+..\..\..\include\Dcm.h:68:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_COMM_SILENT_COM_MODE_ENTERED_ID 0x22
+^
+..\..\..\include\Dcm.h:69:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_COMM_FULL_COM_MODE_ENTERED_ID 0x23
+^
+..\..\..\include\Dcm.h:70:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_MAIN_ID       0x25
+^
+..\..\..\include\Dcm.h:73:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_HANDLE_RESPONSE_TRANSMISSION_ID 0x80
+^
+..\..\..\include\Dcm.h:74:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_UDS_READ_DTC_INFO_ID   0x81
+^
+..\..\..\include\Dcm.h:75:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_UDS_RESET_ID     0x82
+^
+..\..\..\include\Dcm.h:76:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_CHANGE_DIAGNOSTIC_SESSION_ID 0x88
+^
+..\..\..\include\Dcm.h:77:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_GLOBAL_ID      0xff
+^
+..\..\..\include\Dcm.h:85:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define Dcm_GetVersionInfo(_vi) STD_GET_VERSION_INFO(_vi,DCM) /** @req DCM065 */ /** @req DCM335 */ /** @req DCM336 */
+^
+..\..\..\include\Dcm_Lcfg.h:30:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PROTOCOL_TRANS_TYPE_1  1
+^
+..\..\..\include\Dcm_Lcfg.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PROTOCOL_TRANS_TYPE_2  2
+^
+..\..\..\include\Dcm_Lcfg.h:34:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PROTOCOL_FUNCTIONAL_ADDR_TYPE 1
+^
+..\..\..\include\Dcm_Lcfg.h:35:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PROTOCOL_PHYSICAL_ADDR_TYPE  2
+^
+..\..\..\include\Dcm_Lcfg.h:37:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PROTOCAL_TP_MAX_LENGTH 0x1000
+^
+..\..\..\include\Dcm_Types.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_SEC_LEV_LOCKED  ((Dcm_SecLevelType)0x00)
+^
+..\..\..\include\Dcm_Types.h:32:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_SEC_LEV_L1   ((Dcm_SecLevelType)0x01)
+^
+..\..\..\include\Dcm_Types.h:33:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_SEC_LEV_ALL   ((Dcm_SecLevelType)0xFF)
+^
+..\..\..\include\Dcm_Types.h:39:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_HARD_RESET       ((Dcm_EcuResetType)0x01)
+^
+..\..\..\include\Dcm_Types.h:40:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_KEY_OFF_ON_RESET     ((Dcm_EcuResetType)0x02)
+^
+..\..\..\include\Dcm_Types.h:41:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_SOFT_RESET       ((Dcm_EcuResetType)0x03)
+^
+..\..\..\include\Dcm_Types.h:47:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_DEFAULT_SESSION      ((Dcm_SesCtrlType)0x01)
+^
+..\..\..\include\Dcm_Types.h:48:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PROGRAMMING_SESSION     ((Dcm_SesCtrlType)0x02)
+^
+..\..\..\include\Dcm_Types.h:49:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_EXTENDED_DIAGNOSTIC_SESSION   ((Dcm_SesCtrlType)0x03)
+^
+..\..\..\include\Dcm_Types.h:50:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_SAFTEY_SYSTEM_DIAGNOSTIC_SESSION ((Dcm_SesCtrlType)0x04)
+^
+..\..\..\include\Dcm_Types.h:51:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_OBD_SESSION       ((Dcm_SesCtrlType)0x05)//only used for OBD diagnostic
+^
+..\..\..\include\Dcm_Types.h:52:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_ALL_SESSION_LEVEL     ((Dcm_SesCtrlType)0xFF)
+^
+..\..\..\include\Dcm_Types.h:55:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_RES_POS_OK       ((Dcm_ConfirmationStatusType)0x00)
+^
+..\..\..\include\Dcm_Types.h:56:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_RES_POS_NOT_OK      ((Dcm_ConfirmationStatusType)0x01)
+^
+..\..\..\include\Dcm_Types.h:57:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_RES_NEG_OK       ((Dcm_ConfirmationStatusType)0x02)
+^
+..\..\..\include\Dcm_Types.h:58:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DECM_RES_NEG_NOT_OK      ((Dcm_ConfirmationStatusType)0x03)
+^
+..\..\..\include\Dcm_Types.h:64:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_OBD_ON_CAN     ((Dcm_ProtocolType)0x00)
+^
+..\..\..\include\Dcm_Types.h:65:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_UDS_ON_CAN     ((Dcm_ProtocolType)0x01)
+^
+..\..\..\include\Dcm_Types.h:66:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_UDS_ON_FLEAXRAY    ((Dcm_ProtocolType)0x02)
+^
+..\..\..\include\Dcm_Types.h:67:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_ROE_ON_CAN     ((Dcm_ProtocolType)0x03)
+^
+..\..\..\include\Dcm_Types.h:68:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_ROE_ON_FLEXRAY    ((Dcm_ProtocolType)0x04)
+^
+..\..\..\include\Dcm_Types.h:69:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PERIODICTRANS_ON_CAN  ((Dcm_ProtocolType)0x05)
+^
+..\..\..\include\Dcm_Types.h:70:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PERIODICTRANS_ON_FLEXRAY ((Dcm_ProtocolType)0x06)
+^
+..\..\..\include\Dcm_Types.h:76:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_READ_OK      ((Dcm_ReturnReadMemoryType)0x00)
+^
+..\..\..\include\Dcm_Types.h:77:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_READ_PENDING    ((Dcm_ReturnReadMemoryType)0x01)
+^
+..\..\..\include\Dcm_Types.h:78:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_READ_FAILED     ((Dcm_ReturnReadMemoryType)0x02)
+^
+..\..\..\include\Dcm_Types.h:84:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_WRITE_OK     ((Dcm_ReturnWriteMemoryType)0x00)
+^
+..\..\..\include\Dcm_Types.h:85:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_WRITE_PENDING    ((Dcm_ReturnWriteMemoryType)0x01)
+^
+..\..\..\include\Dcm_Types.h:86:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_WRITE_FAILED    ((Dcm_ReturnWriteMemoryType)0x02)
+^
+..\..\..\include\Dcm_Types.h:92:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_INITIAL      ((Dcm_OpStatusType)0x00)
+^
+..\..\..\include\Dcm_Types.h:93:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PENDING      ((Dcm_OpStatusType)0X01)
+^
+..\..\..\include\Dcm_Types.h:94:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_CANCEL      ((Dcm_OpStatusType)0x02)
+^
+..\..\..\include\Dcm_Types.h:95:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_FORCE_RCRRP_OK    ((Dcm_OpStatusType)0X03)
+^
+..\..\..\include\Dcm_Types.h:102:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_GENERALREJECT        ((Dcm_NegativeResponseCodeType)0x10)
+^
+..\..\..\include\Dcm_Types.h:103:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_BUSYREPEATREQUEST       ((Dcm_NegativeResponseCodeType)0x21)
+^
+..\..\..\include\Dcm_Types.h:104:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_CONDITIONSNOTCORRECT      ((Dcm_NegativeResponseCodeType)0x22)
+^
+..\..\..\include\Dcm_Types.h:105:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_REQUESTSEQUENCEERROR      ((Dcm_NegativeResponseCodeType)0x24)
+^
+..\..\..\include\Dcm_Types.h:106:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_REQUESTOUTOFRANGE       ((Dcm_NegativeResponseCodeType)0x31)
+^
+..\..\..\include\Dcm_Types.h:107:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_SECUTITYACCESSDENIED      ((Dcm_NegativeResponseCodeType)0x33)
+^
+..\..\..\include\Dcm_Types.h:108:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_INVALIDKEY        ((Dcm_NegativeResponseCodeType)0x35)
+^
+..\..\..\include\Dcm_Types.h:109:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_GENERALPROGRAMMINGFAILURE     ((Dcm_NegativeResponseCodeType)0x72)
+^
+..\..\..\include\Dcm_Types.h:110:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_WrongBlockSequenceCounter                 ((Dcm_NegativeResponseCodeType)0x73)
+^
+..\..\..\include\Dcm_Types.h:111:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_SUBFUNCTIONNOTSUPPORTEDINACTIVESESSION ((Dcm_NegativeResponseCodeType)0x7E)
+^
+..\..\..\include\Dcm_Types.h:112:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_RPMTOOHIGH        ((Dcm_NegativeResponseCodeType)0x81)
+^
+..\..\..\include\Dcm_Types.h:113:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_RPMTOLOW         ((Dcm_NegativeResponseCodeType)0x82)
+^
+..\..\..\include\Dcm_Types.h:114:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_ENGINEISRUNNING       ((Dcm_NegativeResponseCodeType)0x83)
+^
+..\..\..\include\Dcm_Types.h:115:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_ENGINEISNOTRUNNING      ((Dcm_NegativeResponseCodeType)0x84)
+^
+..\..\..\include\Dcm_Types.h:116:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_ENGINERUNTIMETOOLOW      ((Dcm_NegativeResponseCodeType)0x85)
+^
+..\..\..\include\Dcm_Types.h:117:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_TEMPERATURETOOHIGH      ((Dcm_NegativeResponseCodeType)0x86)
+^
+..\..\..\include\Dcm_Types.h:118:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_TEMPERATURETOOLOW       ((Dcm_NegativeResponseCodeType)0x87)
+^
+..\..\..\include\Dcm_Types.h:119:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_VEHICLESPEEDTOOHIGH      ((Dcm_NegativeResponseCodeType)0x88)
+^
+..\..\..\include\Dcm_Types.h:120:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_VEHICLESPEEDTOOLOW      ((Dcm_NegativeResponseCodeType)0x89)
+^
+..\..\..\include\Dcm_Types.h:121:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_THROTTLE_PEDALTOOHIGH      ((Dcm_NegativeResponseCodeType)0x8A)
+^
+..\..\..\include\Dcm_Types.h:122:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_THROTTLE_PEDALTOOLOW      ((Dcm_NegativeResponseCodeType)0x8B)
+^
+..\..\..\include\Dcm_Types.h:123:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_TRANSMISSIONRANGENOTINNEUTRAL    ((Dcm_NegativeResponseCodeType)0x8C)
+^
+..\..\..\include\Dcm_Types.h:124:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_TRANSMISSIONRANGENOTINGEAR    ((Dcm_NegativeResponseCodeType)0x8D)
+^
+..\..\..\include\Dcm_Types.h:125:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_BRAKESWITCH_NOTCLOSED      ((Dcm_NegativeResponseCodeType)0x8F)
+^
+..\..\..\include\Dcm_Types.h:126:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_SHIFTERLEVERNOTINPARK      ((Dcm_NegativeResponseCodeType)0x90)
+^
+..\..\..\include\Dcm_Types.h:127:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_TORQUECONVERTERCLUTCHLOCKED    ((Dcm_NegativeResponseCodeType)0x91)
+^
+..\..\..\include\Dcm_Types.h:128:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_VOLTAGETOOHIGH       ((Dcm_NegativeResponseCodeType)0x92)
+^
+..\..\..\include\Dcm_Types.h:129:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_VOLTAGETOOLOW        ((Dcm_NegativeResponseCodeType)0x93)
+^
+..\..\..\include\Dcm_Types.h:131:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_POSITIVERESPONSE       ((Dcm_NegativeResponseCodeType)0x00)
+^
+..\..\..\include\Dcm_Types.h:132:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_SERVICENOTSUPPORTED      ((Dcm_NegativeResponseCodeType)0x11)
+^
+..\..\..\include\Dcm_Types.h:133:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_SUBFUNCTIONNOTSUPPORTED     ((Dcm_NegativeResponseCodeType)0x12)
+^
+..\..\..\include\Dcm_Types.h:134:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_INCORRECTMESSAGELENGTHORINVALIDFORMAT  ((Dcm_NegativeResponseCodeType)0x13)
+^
+..\..\..\include\Dcm_Types.h:135:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_RESPONSEPENDING       ((Dcm_NegativeResponseCodeType)0x78)
+^
+..\..\..\include\Dcm_Types.h:136:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_SERVICENOTSUPPORTEDINACTIVESESSION  ((Dcm_NegativeResponseCodeType)0x7F)
+^
+..\..\..\include\Dcm_Types.h:141:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_OK            (Dcm_StatusType)0x00u
+^
+..\..\..\include\Dcm_Types.h:142:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_COMPARE_KEY_FAILED       (Dcm_StatusType)0x01u
+^
+..\..\..\include\Dcm_Types.h:143:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_TI_PREPARE_LIMITS       (Dcm_StatusType)0x02u
+^
+..\..\..\include\Dcm_Types.h:144:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_TI_PREPARE_INCONSTENT      (Dcm_StatusType)0x03u
+^
+..\..\..\include\Dcm_Types.h:145:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_SESSION_NOT_ALLOWED       (Dcm_StatusType)0x04u
+^
+..\..\..\include\Dcm_Types.h:146:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_PROTOCOL_NOT_ALLOWED       (Dcm_StatusType)0x05u
+^
+..\..\..\include\Dcm_Types.h:147:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_ROE_NOT_ACCEPTED        (Dcm_StatusType)0x06u
+^
+..\..\..\include\Dcm_Types.h:148:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_PERIODICID_NOT_ACCEPTED      (Dcm_StatusType)0x07u
+^
+..\..\..\include\Dcm_Types.h:149:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_REQUEST_NOT_ACCEPTED       (Dcm_StatusType)0x08u
+^
+..\..\..\include\Dcm_Types.h:150:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_E_REQUEST_ENV_NOK        (Dcm_StatusType)0x09u
+^
+..\..\..\include\Dcm_Types.h:153:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PERIODICTRANSMIT_DEFAULT_MODE      (Dcm_PeriodicTransmitModeType)0x00u
+^
+..\..\..\include\Dcm_Types.h:154:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PERIODICTRANSMIT_SLOWRATE_MODE     (Dcm_PeriodicTransmitModeType)0x01u
+^
+..\..\..\include\Dcm_Types.h:155:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PERIODICTRANSMIT_MEDIUM_MODE      (Dcm_PeriodicTransmitModeType)0x02u
+^
+..\..\..\include\Dcm_Types.h:156:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PERIODICTRANSMIT_FAST_MODE      (Dcm_PeriodicTransmitModeType)0x03u
+^
+..\..\..\include\Dcm_Types.h:157:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PERIODICTRANSMIT_STOPSENDING_MODE    (Dcm_PeriodicTransmitModeType)0x04u
+^
+..\..\..\include\Dcm_Types.h:162:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_DDD_SUBFUNCTION_DEFINEBYDID     (Dcm_DDDSubfunctionType)0x01u
+^
+..\..\..\include\Dcm_Types.h:163:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_DDD_SUBFUNCTION_DEFINEBYADDRESS    (Dcm_DDDSubfunctionType)0x02u
+^
+..\..\..\include\Dcm_Types.h:164:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_DDD_SUBFUNCTION_CLEAR       (Dcm_DDDSubfunctionType)0x03u
+^
+..\..\..\include\Dcm_Types.h:168:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PERIODIC_TRANISMIT_STOP      (Dcm_PeriodicDidStartType)0
+^
+..\..\..\include\Dcm_Types.h:169:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_PERIODIC_TRANISMIT_START      (Dcm_PeriodicDidStartType)0x01u
+^
+..\..\..\include\Dcm_Types.h:172:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_DDDSOURCE_BY_DID        (Dcm_DDDSourceStateType)0x00u
+^
+..\..\..\include\Dcm_Types.h:173:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_DDDSOURCE_BY_ADDRESS       (Dcm_DDDSourceStateType)0x01u
+^
+..\..\..\include\Dcm_Types.h:176:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_RETURN_CONTROL_TO_ECU      (Dcm_IOControlParameterType)0x0
+^
+..\..\..\include\Dcm_Types.h:177:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_RESET_TO_DEFAULT        (Dcm_IOControlParameterType)0x01
+^
+..\..\..\include\Dcm_Types.h:178:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_FREEZE_CURRENT_STATE      (Dcm_IOControlParameterType)0x02
+^
+..\..\..\include\Dcm_Types.h:179:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DCM_SHORT_TERM_ADJUSTMENT      (Dcm_IOControlParameterType)0x03
+^
+..\..\..\include\Det.h:35:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_H
+^
+..\..\..\include\Det.h:40:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_MODULE_ID            MODULE_ID_DET
+^
+..\..\..\include\Det.h:41:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_VENDOR_ID            VENDOR_ID_ARCCORE
+^
+..\..\..\include\Det.h:44:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_SW_MAJOR_VERSION     1
+^
+..\..\..\include\Det.h:45:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_SW_MINOR_VERSION     0
+^
+..\..\..\include\Det.h:46:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_SW_PATCH_VERSION     0
+^
+..\..\..\include\Det.h:49:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_AR_MAJOR_VERSION     3
+^
+..\..\..\include\Det.h:50:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_AR_MINOR_VERSION     1
+^
+..\..\..\include\Det.h:51:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_AR_PATCH_VERSION     5
+^
+..\..\..\include\Det.h:57:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_E_CBK_REGISTRATION_FAILED 0x01
+^
+..\..\..\include\Det.h:58:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_E_INDEX_OUT_OF_RANGE      0x02
+^
+..\..\..\include\Det.h:60:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_CALLBACK_API              0xFF
+^
+..\..\..\include\Det.h:62:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DET_CBK_REGISTRATION_FAILED_INDEX 0xFF
+^
+..\..\..\include\Det.h:94:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define Det_GetVersionInfo(_vi) STD_GET_VERSION_INFO(_vi,DET) /** @req DET011 */ /** @req DET012 */
+^
+..\..\..\include\J1939Tp_Cbk.h:18:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define J1939TP_CBK_H_
+^
+..\..\..\include\Mcu.h:30:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_SW_PATCH_VERSION     0
+^
+..\..\..\include\Mcu.h:32:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_AR_MAJOR_VERSION      2
+^
+..\..\..\include\Mcu.h:33:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_AR_MINOR_VERSION      2
+^
+..\..\..\include\Mcu.h:34:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_AR_PATCH_VERSION      2
+^
+..\..\..\include\Mcu.h:44:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_INIT_SERVICE_ID                 0x00
+^
+..\..\..\include\Mcu.h:45:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_INITRAMSECTION_SERVICE_ID       0x01
+^
+..\..\..\include\Mcu.h:46:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_INITCLOCK_SERVICE_ID            0x02
+^
+..\..\..\include\Mcu.h:47:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_DISTRIBUTEPLLCLOCK_SERVICE_ID   0x03
+^
+..\..\..\include\Mcu.h:48:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_GETPLLSTATUS_SERVICE_ID         0x04
+^
+..\..\..\include\Mcu.h:49:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_GETRESETREASON_SERVICE_ID       0x05
+^
+..\..\..\include\Mcu.h:50:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_GETRESETRAWVALUE_SERVICE_ID     0x06
+^
+..\..\..\include\Mcu.h:51:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_PERFORMRESET_SERVICE_ID         0x07
+^
+..\..\..\include\Mcu.h:52:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_SETMODE_SERVICE_ID              0x08
+^
+..\..\..\include\Mcu.h:53:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_GETVERSIONINFO_SERVICE_ID       0x09
+^
+..\..\..\include\Mcu.h:54:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_INTCVECTORINSTALL_SERVICE_ID    0x0A // Not in spec but follows pattern
+^
+..\..\..\include\Mcu.h:59:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_E_PARAM_CONFIG                  0x0A
+^
+..\..\..\include\Mcu.h:60:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_E_PARAM_CLOCK                   0x0B
+^
+..\..\..\include\Mcu.h:61:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_E_PARAM_MODE                    0x0C
+^
+..\..\..\include\Mcu.h:62:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_E_PARAM_RAMSECTION              0x0D
+^
+..\..\..\include\Mcu.h:63:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_E_PLL_NOT_LOCKED                0x0E
+^
+..\..\..\include\Mcu.h:64:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_E_UNINIT                        0x0F
+^
+..\..\..\include\Mcu.h:68:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_GETRESETRAWVALUE_NORESETREG_RV  0x00 /**< MCU006 */
+^
+..\..\..\include\Mcu.h:69:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MCU_GETRESETRAWVALUE_UNINIT_RV      0xffffffff /**< MCU135 */
+^
+..\..\..\include\Mcu.h:184:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define Mcu_GetVersionInfo(_vi) STD_GET_VERSION_INFO(_vi,MCU)
+^
+..\..\..\include\Modules.h:32:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define VENDOR_ID_ARCCORE   (60)
+^
+..\..\..\include\Modules.h:34:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_OS       (1) // Os
+^
+..\..\..\include\Modules.h:36:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_ECUM    (10) // ECU state manager
+^
+..\..\..\include\Modules.h:37:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_FIM     (11) // Function Inhibition Manager
+^
+..\..\..\include\Modules.h:38:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_COMM    (12) // Communication manager
+^
+..\..\..\include\Modules.h:39:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_WDGM    (13) // Watchdog manager
+^
+..\..\..\include\Modules.h:41:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_DET     (15) // Development Error Tracer
+^
+..\..\..\include\Modules.h:43:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_NVM     (20) // NVRAM Manager
+^
+..\..\..\include\Modules.h:44:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_FEE     (21) // Flash EEPROM Emulation
+^
+..\..\..\include\Modules.h:45:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_MEMIF   (22) // Memory Abstraction Interface
+^
+..\..\..\include\Modules.h:46:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_NM      (29) // Generic networw management
+^
+..\..\..\include\Modules.h:48:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_CANNM   (31) // Can network management
+^
+..\..\..\include\Modules.h:49:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_FRNM    (32) // Flexray network management
+^
+..\..\..\include\Modules.h:50:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_CANTP   (35) // Can transport layer
+^
+..\..\..\include\Modules.h:51:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_FRTP    (36) // Flexray transport protocol
+^
+..\..\..\include\Modules.h:52:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_J1939TP (37) // J1939 Transport protocol (Autosar 4)
+^
+..\..\..\include\Modules.h:53:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_EA      (40) // EEPROM Abstraction
+^
+..\..\..\include\Modules.h:55:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_WDGIF   (43) // Watchdog interface
+^
+..\..\..\include\Modules.h:57:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_COM     (50) // Autosar COM
+^
+..\..\..\include\Modules.h:58:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_PDUR    (51) // PDU router
+^
+..\..\..\include\Modules.h:59:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_IPDUM   (52) // IPDU Multiplexer
+^
+..\..\..\include\Modules.h:60:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_DCM     (53) // Diagnostic Communication Manager
+^
+..\..\..\include\Modules.h:61:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_DEM     (54) // Diagnostic Event Manager
+^
+..\..\..\include\Modules.h:62:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_SOAD    (56) // Socket Adaptor
+^
+..\..\..\include\Modules.h:64:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_CANIF   (60) // CAN Interface
+^
+..\..\..\include\Modules.h:65:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_FRIF    (61) // Flexray interface
+^
+..\..\..\include\Modules.h:66:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_LINIF   (62) // LIN interface
+^
+..\..\..\include\Modules.h:67:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_LINNM   (63) // LIN network management
+^
+..\..\..\include\Modules.h:69:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_CANTRCV (70) // Can tranceiver driver
+^
+..\..\..\include\Modules.h:70:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_FRTRCV  (71) // Flexray tranceiver driver
+^
+..\..\..\include\Modules.h:72:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_CAN     (80) // Can Driver
+^
+..\..\..\include\Modules.h:73:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_FR      (81) // Flexray driver
+^
+..\..\..\include\Modules.h:74:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_LIN     (82) // LIN Driver
+^
+..\..\..\include\Modules.h:75:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_SPI     (83) // SPI Handler Driver
+^
+..\..\..\include\Modules.h:77:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_EEP     (90) // EEPROM Driver
+^
+..\..\..\include\Modules.h:78:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_FLS     (92) // Flash driver
+^
+..\..\..\include\Modules.h:79:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_RAMTST  (93) // RAM test
+^
+..\..\..\include\Modules.h:81:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_GPT    (100) // GPT driver
+^
+..\..\..\include\Modules.h:82:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_MCU    (101) // MCU driver
+^
+..\..\..\include\Modules.h:83:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_WDG    (102) // Watchdog driver
+^
+..\..\..\include\Modules.h:85:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_DIO    (120) // Dio driver
+^
+..\..\..\include\Modules.h:86:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_PWM    (121) // PWM driver
+^
+..\..\..\include\Modules.h:87:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_ICU    (122) // ICU Driver
+^
+..\..\..\include\Modules.h:88:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_ADC    (123) // ADC driver
+^
+..\..\..\include\Modules.h:89:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_PORT   (124) // Port driver
+^
+..\..\..\include\Modules.h:91:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_SCHM   (130) // BSW Scheduler Module
+^
+..\..\..\include\Modules.h:93:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_CANSM  (140) // Can state manager
+^
+..\..\..\include\Modules.h:94:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_LINSM  (141) // LIN state manager
+^
+..\..\..\include\Modules.h:95:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_FRSM   (142) // Flexray state manager
+^
+..\..\..\include\Modules.h:97:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_CRC    (201) // CRC Routines
+^
+..\..\..\include\Modules.h:99:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_C2CAN  (220) // CAN
+^
+..\..\..\include\Modules.h:100:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_C2COM  (221) // COM Services
+^
+..\..\..\include\Modules.h:101:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_C2DIAG (222) // Diagnostic
+^
+..\..\..\include\Modules.h:102:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_C2FW   (223) // ECU Firmware
+^
+..\..\..\include\Modules.h:103:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_C2FR   (224) // FlexRay
+^
+..\..\..\include\Modules.h:104:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_C2LIN  (225) // LIN
+^
+..\..\..\include\Modules.h:105:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_C2MMGT (226) // Mode Management
+^
+..\..\..\include\Modules.h:107:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_IO     (254) // IO Hardware Abstraction
+^
+..\..\..\include\Modules.h:108:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define MODULE_ID_CPLX   (255) // Complex drivers
+^
+..\..\..\include\NmStack_Types.h:18:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define NMSTACK_TYPES_H_
+^
+..\..\..\include\PduR.h:28:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_VENDOR_ID     VENDOR_ID_ARCCORE
+^
+..\..\..\include\PduR.h:29:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_AR_MAJOR_VERSION  3
+^
+..\..\..\include\PduR.h:30:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_AR_MINOR_VERSION  1
+^
+..\..\..\include\PduR.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_AR_PATCH_VERSION  5
+^
+..\..\..\include\PduR.h:34:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_SW_PATCH_VERSION  0
+^
+..\..\..\include\PduR.h:39:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_E_CONFIG_PTR_INVALID   0x06
+^
+..\..\..\include\PduR.h:40:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_E_INVALID_REQUEST    0x01
+^
+..\..\..\include\PduR.h:41:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_E_PDU_ID_INVALID   0x02
+^
+..\..\..\include\PduR.h:42:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_E_TP_TX_REQ_REJECTED  0x03
+^
+..\..\..\include\PduR.h:43:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_E_DATA_PTR_INVALID   0x05
+^
+..\..\..\include\PduR.h:44:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_E_BUFFER_ERROR    0x06
+^
+..\..\..\include\PduR.h:46:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_INSTANCE_ID 0
+^
+..\..\..\include\PduR.h:94:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_IsUpModule(_mod) ((_mod > ARC_PDUR_UP_MODULES) && (_mod < ARC_PDUR_LOIF_MODULES))
+^
+..\..\..\include\PduR.h:95:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_IsIfModule(_mod) ((_mod > ARC_PDUR_LOIF_MODULES) && (_mod < ARC_PDUR_LOTP_MODULES))
+^
+..\..\..\include\PduR.h:96:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_IsTpModule(_mod) ((_mod > ARC_PDUR_LOTP_MODULES) && (_mod < ARC_PDUR_END_OF_MODULES))
+^
+..\..\..\include\PduR.h:97:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_IsLoModule(_mod) (PduR_IsIfModule(_mod) || PduR_IsTpModule(_mod))
+^
+..\..\..\include\PduR.h:102:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_DET_REPORTERROR(_x,_y,_z,_o) Det_ReportError(_x,_y,_z,_o)
+^
+..\..\..\include\PduR.h:104:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_VALIDATE_INITIALIZED(_api,...) \
+^
+..\..\..\include\PduR.h:110:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_VALIDATE_PDUPTR(_api, _pduPtr, ...) \
+^
+..\..\..\include\PduR.h:116:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_VALIDATE_PDUID(_api, _pduId, ...) \
+^
+..\..\..\include\PduR.h:140:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_Init(...)
+^
+..\..\..\include\PduR.h:141:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_GetVersionInfo(...)
+^
+..\..\..\include\PduR.h:142:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PduR_GetConfigurationId(...) 0
+^
+..\..\..\include\PduR.h:162:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define setTxConfP(_B) (_B->TxConfP = 1)
+^
+..\..\..\include\PduR.h:163:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define clearTxConfP(_B) (_B->TxConfP = 0)
+^
+..\..\..\include\PduR_J1939Tp.h:19:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_J1939TP_H_
+^
+..\..\..\include\PduR_LinIf.h:24:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_LINIF_H_
+^
+..\..\..\include\PduR_SoAd.h:24:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define PDUR_SOAD_H_
+^
+..\..\..\include\Platform_Types.h:33:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CPU_TYPE            CPU_TYPE_32
+^
+..\..\..\include\Platform_Types.h:34:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CPU_BIT_ORDER       MSB_FIRST
+^
+..\..\..\include\Platform_Types.h:35:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CPU_BYTE_ORDER      HIGH_BYTE_FIRST
+^
+..\..\..\include\Std_Types.h:60:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define STD_GET_VERSION (_major,_minor,_patch) (_major * 10000 + _minor * 100 + _patch)
+^
+..\..\..\include\Std_Types.h:65:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define STD_GET_VERSION_INFO(_vi,_module) \
+^
+..\..\..\include\Std_Types.h:91:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define E_NO_DTC_AVAILABLE  (Std_ReturnType)2
+^
+..\..\..\include\Std_Types.h:92:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define E_SESSION_NOT_ALLOWED (Std_ReturnType)4
+^
+..\..\..\include\Std_Types.h:93:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define E_PROTOCOL_NOT_ALLOWED (Std_ReturnType)5
+^
+..\..\..\include\Std_Types.h:94:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define E_REQUEST_NOT_ACCEPTED (Std_ReturnType)8
+^
+..\..\..\include\Std_Types.h:95:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define E_REQUEST_ENV_NOK  (Std_ReturnType)9
+^
+..\..\..\include\Std_Types.h:99:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define E_COMPARE_KEY_FAILED (Std_ReturnType)11
+^
+..\..\..\include\Std_Types.h:100:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define E_FORCE_RCRRP   (Std_ReturnType)12
+^
+..\..\..\include\Std_Types.h:102:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define STD_HIGH  0x01
+^
+..\..\..\include\Std_Types.h:103:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define STD_LOW   0x00
+^
+..\..\..\include\Std_Types.h:105:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define STD_ACTIVE  0x01
+^
+..\..\..\include\Std_Types.h:106:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define STD_IDLE  0x00
+^
+..\..\..\include\arm\Cpu.h:31:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define Irq_Disable()  __disable_irq()
+^
+..\..\..\include\arm\Cpu.h:32:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define Irq_Enable()  __enable_irq()
+^
+..\..\..\include\arm\Cpu.h:34:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define Irq_Save(_flags)       _flags = _Irq_Save();
+^
+..\..\..\include\arm\Cpu.h:35:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define Irq_Restore(_flags)   _Irq_Restore(_flags);
+^
+..\..\..\include\arm\Cpu.h:37:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define Irq_SuspendAll()  Irq_Disable()
+^
+..\..\..\include\arm\Cpu.h:38:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define Irq_ResumeAll()  Irq_Enable()
+^
+..\..\..\include\arm\Cpu.h:40:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define Irq_SuspendOs()  Irq_Disable()
+^
+..\..\..\include\arm\Cpu.h:41:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define Irq_ResumeOs()   Irq_Enable()
+^
+..\..\..\include\arm\Cpu.h:44:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CallService(index,param)
+^
+..\..\..\include\arm\Cpu.h:46:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define ilog2(x) (__builtin_ffs(x)-1)
+^
+..\..\..\include\debug.h:53:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DEBUG_LOW  1
+^
+..\..\..\include\debug.h:54:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DEBUG_MEDIUM 2
+^
+..\..\..\include\debug.h:55:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DEBUG_HIGH  3
+^
+..\..\..\include\debug.h:56:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DEBUG_NONE  4
+^
+..\..\..\include\debug.h:62:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CH_ISR  0
+^
+..\..\..\include\debug.h:63:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define CH_PROC  1
+^
+..\..\..\include\debug.h:68:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define DEBUG(_level,...) \
+^
+..\..\..\include\debug.h:80:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define LDEBUG_PRINTF(format,...)  Arch_Trace(format,## __VA_ARGS__ )
+^
+..\..\..\include\debug.h:81:0: style: A project should not contain unused macro declarations [misra-c2012-2.5]
+#define LDEBUG_FPUTS(_str)    fputs((_str),stdout)
+^
+..\..\..\communication\CanIf\CanIf.c:131:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+void CanIf_Init(const CanIf_ConfigType *ConfigPtr)
+     ^
+..\..\..\communication\CanIf\CanIf.c:156:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+void CanIf_InitController(uint8 Controller, uint8 ConfigurationIndex)
+     ^
+..\..\..\communication\CanIf\CanIf.c:428:16: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+Std_ReturnType CanIf_Transmit(PduIdType CanTxPduId,
+               ^
+..\..\..\communication\CanIf\CanIf.c:747:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+void CanIf_TxConfirmation(PduIdType canTxPduId)
+     ^
+..\..\..\communication\CanIf\CanIf.c:768:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+void CanIf_RxIndication(uint8 Hrh, Can_IdType CanId, uint8 CanDlc,
+     ^
+..\..\..\communication\CanIf\CanIf.c:922:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+void CanIf_ControllerBusOff(uint8 Controller)
+     ^
+..\..\..\communication\CanIf\CanIf.c:948:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+void CanIf_SetWakeupEvent(uint8 Controller)
+     ^
+..\..\..\communication\CanIf\CanIf.c:968:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+void CanIf_Arc_Error(uint8 Controller, Can_Arc_ErrorType Error)
+     ^
+..\..\..\communication\CanIf\CanIf.c:996:7: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+uint8 CanIf_Arc_GetChannelDefaultConfIndex(CanIf_Arc_ChannelIdType Channel)
+      ^
+stubs.c:11:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+void Can_Init( const Can_ConfigType *Config ){
+     ^
+stubs.c:24:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+void Can_DisableControllerInterrupts( uint8 controller ){
+     ^
+stubs.c:27:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+void Can_EnableControllerInterrupts( uint8 controller ){
+     ^
+stubs.c:35:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+void Can_Cbk_CheckWakeup( uint8 controller ){
+     ^
+stubs.c:38:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+void Can_MainFunction_Write( void ){
+     ^
+stubs.c:41:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+void Can_MainFunction_Read( void ){
+     ^
+stubs.c:44:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+void Can_MainFunction_BusOff( void ){
+     ^
+stubs.c:47:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+void Can_MainFunction_Error( void ){
+     ^
+stubs.c:50:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+void Can_MainFunction_Wakeup( void ){
+     ^
+stubs.c:54:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+void Can_Arc_GetStatistics( uint8 controller, Can_Arc_StatisticsType * stat){
+     ^
+nofile:0:0: information: Active checkers: 135/712 (use --checkers-report=<filename> to see details) [checkersReport]
+
