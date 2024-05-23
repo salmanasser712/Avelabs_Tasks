@@ -2,11 +2,12 @@
 setlocal enabledelayedexpansion
 
 REM Initialize an empty string for the include directories
-set "INCLUDE_FLAGS=-I..\..\..\include -I..\..\..\boot\config -I..\..\..\include\generic -I..\..\..\arch\generic\mingw\kernel"
+set "Base_Dir=..\..\..\OpenSAR"
+set "INCLUDE_FLAGS=-I%Base_Dir%\include -I%Base_Dir%\boot\config -I%Base_Dir%\include\generic -I%Base_Dir%\arch\generic\mingw\kernel"
 
 
 :: Source Files to compile
-set "CanIf_Source=..\..\..\communication\CanIf\CanIf.c"
+set "CanIf_Source=%Base_Dir%\communication\CanIf\CanIf.c"
 set "Main_Source=main.c"
 set "Stubs_Source=stubs.c"
 
