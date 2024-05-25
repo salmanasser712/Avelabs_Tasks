@@ -1,0 +1,135 @@
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 4: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 7: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 10: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 14: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 18: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 22: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 26: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 30: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 34: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 38: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 42: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 46: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 50: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 54: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 58: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 62: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 66: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 70: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 73: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 76: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 79: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 82: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 85: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 88: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 91: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 94: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 97: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 100: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 103: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 106: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 109: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 112: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 115: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 118: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 121: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 124: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 127: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 130: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 133: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 136: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 139: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 142: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 145: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 148: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 151: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 154: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 157: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 160: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 163: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 166: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 169: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 172: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 175: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 178: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 183: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 186: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 191: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 197: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 201: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 201: warning: (MISRA-C:2004 20.1/R) Reserved identifiers, macros and functions in the standard library, shall not be defined, redefined or undefined ("size_t")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 205: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 208: warning: (MISRA-C:2004 19.11/R) All macro identifiers in preprocessor directives shall be defined before use, except in #ifdef and #ifndef preprocessor directives and the defined() operator ("HAVE_EXIT_SUCCESS_AND_FAILURE")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 209: warning: (MISRA-C:2004 20.1/R) Reserved identifiers, macros and functions in the standard library, shall not be defined, redefined or undefined ("EXIT_SUCCESS")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 210: warning: (MISRA-C:2004 20.1/R) Reserved identifiers, macros and functions in the standard library, shall not be defined, redefined or undefined ("EXIT_FAILURE")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 214: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 215: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 216: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 217: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 218: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 219: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 220: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 221: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 222: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 223: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 224: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 225: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 226: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 227: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 228: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 229: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 230: warning: (MISRA-C:2004 19.6/R) #undef shall not be used
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 246: warning: (MISRA-C:2004 19.11/R) All macro identifiers in preprocessor directives shall be defined before use, except in #ifdef and #ifndef preprocessor directives and the defined() operator ("HAVE_EXTENDED_PRECISION_REGISTERS")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 249: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 254: warning: (MISRA-C:2004 19.11/R) All macro identifiers in preprocessor directives shall be defined before use, except in #ifdef and #ifndef preprocessor directives and the defined() operator ("HAVE_DECL_HYPOT")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 255: warning: (MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 258: warning: (MISRA-C:2004 19.11/R) All macro identifiers in preprocessor directives shall be defined before use, except in #ifdef and #ifndef preprocessor directives and the defined() operator ("HAVE_DECL_LOG1P")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 259: warning: (MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 262: warning: (MISRA-C:2004 19.11/R) All macro identifiers in preprocessor directives shall be defined before use, except in #ifdef and #ifndef preprocessor directives and the defined() operator ("HAVE_DECL_EXPM1")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 263: warning: (MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 266: warning: (MISRA-C:2004 19.11/R) All macro identifiers in preprocessor directives shall be defined before use, except in #ifdef and #ifndef preprocessor directives and the defined() operator ("HAVE_DECL_ACOSH")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 267: warning: (MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 270: warning: (MISRA-C:2004 19.11/R) All macro identifiers in preprocessor directives shall be defined before use, except in #ifdef and #ifndef preprocessor directives and the defined() operator ("HAVE_DECL_ASINH")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 271: warning: (MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 274: warning: (MISRA-C:2004 19.11/R) All macro identifiers in preprocessor directives shall be defined before use, except in #ifdef and #ifndef preprocessor directives and the defined() operator ("HAVE_DECL_ATANH")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 275: warning: (MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 278: warning: (MISRA-C:2004 19.11/R) All macro identifiers in preprocessor directives shall be defined before use, except in #ifdef and #ifndef preprocessor directives and the defined() operator ("HAVE_DECL_LDEXP")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 279: warning: (MISRA-C:2004 20.1/R) Reserved identifiers, macros and functions in the standard library, shall not be defined, redefined or undefined ("ldexp")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 279: warning: (MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 282: warning: (MISRA-C:2004 19.11/R) All macro identifiers in preprocessor directives shall be defined before use, except in #ifdef and #ifndef preprocessor directives and the defined() operator ("HAVE_DECL_FREXP")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 283: warning: (MISRA-C:2004 20.1/R) Reserved identifiers, macros and functions in the standard library, shall not be defined, redefined or undefined ("frexp")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 283: warning: (MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 286: warning: (MISRA-C:2004 19.11/R) All macro identifiers in preprocessor directives shall be defined before use, except in #ifdef and #ifndef preprocessor directives and the defined() operator ("HAVE_DECL_ISINF")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 287: warning: (MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 290: warning: (MISRA-C:2004 19.11/R) All macro identifiers in preprocessor directives shall be defined before use, except in #ifdef and #ifndef preprocessor directives and the defined() operator ("HAVE_DECL_ISFINITE")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 291: warning: (MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 294: warning: (MISRA-C:2004 19.11/R) All macro identifiers in preprocessor directives shall be defined before use, except in #ifdef and #ifndef preprocessor directives and the defined() operator ("HAVE_DECL_FINITE")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 295: warning: (MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 298: warning: (MISRA-C:2004 19.11/R) All macro identifiers in preprocessor directives shall be defined before use, except in #ifdef and #ifndef preprocessor directives and the defined() operator ("HAVE_DECL_ISNAN")
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 299: warning: (MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 305: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 312: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 312: warning: (MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct
+"..\..\..\gsl-2.7.1_Misra\config.h.in", line 312: warning: (MISRA-C:2004 19.15/R) Precautions shall be taken in order to prevent the contents of a header file being included twice
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 23: warning: (MISRA-C:2004 20.9/R) The input/output library <stdio.h> shall not be used in production code
+"C:\Program Files\ti-cgt-arm_20.2.7.LTS\include\machine/_types.h", line 74: warning: (MISRA-C:2004 1.1/R) Ensure strict ANSI C mode (-ps) is enabled
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 116: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 116: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "reason" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 116: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "gsl_errno" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 116: warning: (MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 132: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 133: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 133: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "b" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 133: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "c" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 134: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 134: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "b" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 134: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "c" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 134: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "d" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 135: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 135: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "b" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 135: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "c" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 135: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "d" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 135: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "e" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 137: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
+"..\..\..\gsl-2.7.1_Misra\gsl_inline.h", line 65: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
+"..\..\..\gsl-2.7.1_Misra\block\gsl_check_range.h", line 36: warning: (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types

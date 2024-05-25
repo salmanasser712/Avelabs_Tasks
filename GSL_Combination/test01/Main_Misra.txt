@@ -1,0 +1,40 @@
+"main.c", line 1: warning: (MISRA-C:2004 20.9/R) The input/output library <stdio.h> shall not be used in production code
+"C:\Program Files\ti-cgt-arm_20.2.7.LTS\include\machine/_types.h", line 74: warning: (MISRA-C:2004 1.1/R) Ensure strict ANSI C mode (-ps) is enabled
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 23: warning: (MISRA-C:2004 20.9/R) The input/output library <stdio.h> shall not be used in production code
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 116: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 116: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "reason" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 116: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "gsl_errno" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 116: warning: (MISRA-C:2004 19.4/R) C macros shall only expand to a braced initialiser, a constant, a string literal, a parenthesised expression, a type qualifier, a storage class specifier, or a do-while-zero construct
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 132: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 133: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 133: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "b" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 133: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "c" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 134: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 134: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "b" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 134: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "c" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 134: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "d" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 135: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 135: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "b" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 135: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "c" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 135: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "d" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 135: warning: (MISRA-C:2004 19.10/R) In the definition of a function-like macro each instance of a parameter shall be enclosed in parentheses unless it is used as the operand of # or ##. The compiler cannot determine if the parameter "e" is used as an operand of # or ##.
+"..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 137: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
+"..\..\..\gsl-2.7.1_Misra\gsl_inline.h", line 65: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
+"..\..\..\gsl-2.7.1_Misra\block\gsl_check_range.h", line 36: warning: (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types
+"main.c", line 4: warning: (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types
+"main.c", line 4: warning: (MISRA-C:2004 16.5/R) Functions with no parameters shall be declared and defined with the parameter list void
+"main.c", line 4: warning: (MISRA-C:2004 8.1/R) Functions shall have prototype declarations and the prototype shall be visible at both the function definition and call
+"main.c", line 5: warning: (MISRA-C:2004 5.6/A) No identifier in one name space should have the same spelling as an identifier in another name space, with the exception of structure member and union member names ("n")
+"main.c", line 5: warning: const variable "n" requires an initializer
+"main.c", line 5: warning: (MISRA-C:2004 5.6/A) No identifier in one name space should have the same spelling as an identifier in another name space, with the exception of structure member and union member names ("k")
+"main.c", line 5: warning: const variable "k" requires an initializer
+"main.c", line 6: warning: (MISRA-C:2004 20.9/R) The input/output library <stdio.h> shall not be used in production code ("printf")
+"main.c", line 7: warning: (MISRA-C:2004 20.9/R) The input/output library <stdio.h> shall not be used in production code ("scanf")
+"main.c", line 7: warning: argument is incompatible with corresponding format string conversion
+"main.c", line 7: warning: argument is incompatible with corresponding format string conversion
+"main.c", line 7: warning: (MISRA-C:2004 9.1/R) All automatic variables shall have been assigned a value before being used (variable "n")
+"main.c", line 7: warning: (MISRA-C:2004 9.1/R) All automatic variables shall have been assigned a value before being used (variable "k")
+"main.c", line 9: warning: (MISRA-C:2004 5.7/A) No identifier name should be reused ("c")
+"main.c", line 16: warning: (MISRA-C:2004 20.9/R) The input/output library <stdio.h> shall not be used in production code ("printf")
+"main.c", line 16: warning: argument is incompatible with corresponding format string conversion
+"main.c", line 19: warning: last line of file ends without a newline
