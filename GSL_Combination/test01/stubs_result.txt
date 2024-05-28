@@ -21,43 +21,8 @@
 "..\..\..\gsl-2.7.1_Misra\err\gsl_errno.h", line 137: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
 "..\..\..\gsl-2.7.1_Misra\gsl_inline.h", line 65: warning: (MISRA-C:2004 19.7/A) A function should be used in preference to a function-like macro
 "..\..\..\gsl-2.7.1_Misra\block\gsl_check_range.h", line 36: warning: (MISRA-C:2004 6.3/A) typedefs that indicate size and signedness should be used in place of the basic numerical types
-"stubs.c", line 11: warning: (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is not constant and is a function argument
-"stubs.c", line 14: warning: (MISRA-C:2004 16.7/A) A pointer parameter in a function prototype should be declared as pointer to const if the pointer is not used to modify the addressed object ("reason: const char *")
-"stubs.c", line 12: warning: (MISRA-C:2004 14.7/R) A function shall have a single point of exit at the end of the function
-"stubs.c", line 19: warning: (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is not constant and is a function argument
-"stubs.c", line 22: warning: (MISRA-C:2004 16.7/A) A pointer parameter in a function prototype should be declared as pointer to const if the pointer is not used to modify the addressed object ("reason: const char *")
-"stubs.c", line 20: warning: (MISRA-C:2004 14.7/R) A function shall have a single point of exit at the end of the function
-"stubs.c", line 27: warning: (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is not constant and is a function argument
-"stubs.c", line 30: warning: (MISRA-C:2004 16.7/A) A pointer parameter in a function prototype should be declared as pointer to const if the pointer is not used to modify the addressed object ("reason: const char *")
-"stubs.c", line 28: warning: (MISRA-C:2004 14.7/R) A function shall have a single point of exit at the end of the function
-"stubs.c", line 37: warning: (MISRA-C:2004 20.9/R) The input/output library <stdio.h> shall not be used in production code ("printf")
-"stubs.c", line 52: warning: (MISRA-C:2004 20.9/R) The input/output library <stdio.h> shall not be used in production code ("printf")
-"stubs.c", line 54: warning: (MISRA-C:2004 20.11/R) The library functions abort, exit, getenv and system from library <stdlib.h> shall not be used
-"stubs.c", line 47: warning: (MISRA-C:2004 14.7/R) A function shall have a single point of exit at the end of the function
-"stubs.c", line 58: warning: (MISRA-C:2004 5.6/A) No identifier in one name space should have the same spelling as an identifier in another name space, with the exception of structure member and union member names ("n")
-"stubs.c", line 58: warning: (MISRA-C:2004 5.6/A) No identifier in one name space should have the same spelling as an identifier in another name space, with the exception of structure member and union member names ("k")
-"stubs.c", line 58: warning: (MISRA-C:2004 16.4/R) The identifiers used in the declaration and definition of a function shall be identical
-"stubs.c", line 58: warning: (MISRA-C:2004 5.6/A) No identifier in one name space should have the same spelling as an identifier in another name space, with the exception of structure member and union member names ("n")
-"stubs.c", line 58: warning: (MISRA-C:2004 5.6/A) No identifier in one name space should have the same spelling as an identifier in another name space, with the exception of structure member and union member names ("k")
-"stubs.c", line 60: warning: (MISRA-C:2004 5.7/A) No identifier name should be reused ("c")
-"stubs.c", line 62: warning: (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness
-"stubs.c", line 72: warning: (MISRA-C:2004 20.4/R) Dynamic heap memory allocation shall not be used ("malloc")
-"stubs.c", line 80: warning: (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness
-"stubs.c", line 82: warning: (MISRA-C:2004 20.4/R) Dynamic heap memory allocation shall not be used ("malloc")
-"stubs.c", line 86: warning: (MISRA-C:2004 20.4/R) Dynamic heap memory allocation shall not be used ("free")
-"stubs.c", line 94: warning: (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness
-"stubs.c", line 97: warning: (MISRA-C:2004 12.6/A) Expressions that are effectively Boolean should not be used in operations with expressions that are not effectively Boolean
-"stubs.c", line 98: warning: (MISRA-C:2004 12.6/A) Expressions that are effectively Boolean should not be used in operations with expressions that are not effectively Boolean
-"stubs.c", line 104: warning: (MISRA-C:2004 5.6/A) No identifier in one name space should have the same spelling as an identifier in another name space, with the exception of structure member and union member names ("n")
-"stubs.c", line 104: warning: (MISRA-C:2004 5.6/A) No identifier in one name space should have the same spelling as an identifier in another name space, with the exception of structure member and union member names ("k")
-"stubs.c", line 104: warning: (MISRA-C:2004 16.4/R) The identifiers used in the declaration and definition of a function shall be identical
-"stubs.c", line 104: warning: (MISRA-C:2004 5.6/A) No identifier in one name space should have the same spelling as an identifier in another name space, with the exception of structure member and union member names ("n")
-"stubs.c", line 104: warning: (MISRA-C:2004 5.6/A) No identifier in one name space should have the same spelling as an identifier in another name space, with the exception of structure member and union member names ("k")
-"stubs.c", line 106: warning: (MISRA-C:2004 5.7/A) No identifier name should be reused ("i")
-"stubs.c", line 108: warning: (MISRA-C:2004 5.7/A) No identifier name should be reused ("c")
-"stubs.c", line 111: warning: (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if the expression is not constant and is a return expression
-"stubs.c", line 115: warning: (MISRA-C:2004 10.1/R) The value of an expression of integer type shall not be implicitly converted to a different underlying type if it is not a conversion to a wider integer type of the same signedness
-"stubs.c", line 117: warning: (MISRA-C:2004 17.4/R) Array indexing shall be the only allowed form of pointer arithmetic
-"stubs.c", line 117: warning: (MISRA-C:2004 12.6/A) Expressions that are effectively Boolean should not be used in operations with expressions that are not effectively Boolean
-"stubs.c", line 121: warning: last line of file ends without a newline
-"stubs.c", line 111: warning: (MISRA-C:2004 14.7/R) A function shall have a single point of exit at the end of the function
+"stubs.c", line 43: warning: (MISRA-C:2004 20.9/R) The input/output library <stdio.h> shall not be used in production code ("printf")
+"stubs.c", line 43: warning: argument is incompatible with corresponding format string conversion
+"stubs.c", line 59: warning: (MISRA-C:2004 20.9/R) The input/output library <stdio.h> shall not be used in production code ("printf")
+"stubs.c", line 61: warning: (MISRA-C:2004 20.11/R) The library functions abort, exit, getenv and system from library <stdlib.h> shall not be used
+"stubs.c", line 107: warning: (MISRA-C:2004 12.6/A) Expressions that are effectively Boolean should not be used in operations with expressions that are not effectively Boolean

@@ -1,19 +1,22 @@
 #include <stdio.h>
 #include "gsl_combination.h"
 
-int main(){
-    const size_t  n, k;
-    printf("Please Enter n and k of the combination you want to calculate:\n");
-    scanf("%llu%llu", &n, &k);
+int_type main(void);
 
-    gsl_combination * c = gsl_combination_calloc (n, k);
+int_type main(void)
+{
+    const int_type n1 = 18, k1 = 2;
+
+    printf("for 18C2, ");
+
+    gsl_combination * c1 = gsl_combination_calloc (n1, k1);
 
     size_t ans = 1;
-    while(gsl_combination_next(c) == GSL_SUCCESS){
+    while(gsl_combination_next(c1) == GSL_SUCCESS){
         ans++;
     }
 
     printf("The Result: %llu\n", ans);
     
-    return 0;
+    return (int_type)0;
 }

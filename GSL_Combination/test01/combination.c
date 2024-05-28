@@ -22,7 +22,6 @@
 #include "gsl_errno.h"
 #include "gsl_combination.h"
 
-
 size_t
 gsl_combination_n (const gsl_combination * c)
 {
@@ -36,7 +35,7 @@ gsl_combination_k (const gsl_combination * c)
 }
 
 size_t *
-gsl_combination_data (const gsl_combination * c)
+gsl_combination_data (gsl_combination * c)
 {
   return c->data ;
 }
@@ -55,9 +54,7 @@ gsl_combination_valid (gsl_combination * c)
     }
   for (pointer_i = (size_t)0; pointer_i < k1; pointer_i++) 
     {
-      size_t *temp = c->data;
-      temp += pointer_i;
-      const size_t ci = *temp;
+      size_t ci = c->data[pointer_i];
 
       if (ci >= n1)
         {
@@ -66,14 +63,12 @@ gsl_combination_valid (gsl_combination * c)
 
       for (pointer_j = (size_t)0; pointer_j < pointer_i; pointer_j++)
         {
-          temp = c->data;
-          temp += pointer_j;
-          size_t value_j = *temp;
-          if (value_j == ci)
+          size_t cj = c->data[pointer_j];
+          if (cj == ci)
             {
               GSL_ERROR("duplicate combination index", GSL_FAILURE) ;
             }
-          if (value_j > ci)
+          if (cj > ci)
             {
               GSL_ERROR("combination indices not in increasing order",
                         GSL_FAILURE) ;
@@ -81,7 +76,7 @@ gsl_combination_valid (gsl_combination * c)
         }
     }
   
-  return (int_type)GSL_SUCCESS;
+  return GSL_SUCCESS;
 }
 
 
@@ -93,56 +88,36 @@ gsl_combination_next (gsl_combination * c)
    */
   const size_t n2 = c->n;
   const size_t k2 = c->k;
-  size_t *data2 = c->data;
-  size_t pointer, value_temp;
+  size_t (*data2)[N];
+  data2 = &(c->data);
+  size_t pointer1;
+
   bool valid = true;
 
   if(k2 == (size_t)0)
-  {
+    {
       valid = false;
-  }
-  else
-  {
-      pointer = k2 - (size_t)1;
+    }
+  if(valid){
+      pointer1 = k2 - (size_t)1;
 
-      data2 += pointer;
-      value_temp = *data2;
-      data2 = c->data;
-
-      size_t w = (n2 - k2) + pointer;
-      while(pointer > (size_t)0)
-      {
-          if(value_temp != w) break;
-          pointer--;
-      }
-
-      data2 += pointer;
-      value_temp = *data2;
-      data2 = c->data;
-
-      size_t w2 = n2 - k2;
-      if((pointer == (size_t)0) && (value_temp == w2))
-      {
+      while((pointer1 > (size_t)0) && ((*data2)[pointer1] == ((n2 - k2) + pointer1)))
+        {
+          pointer1--;
+        }
+      if((pointer1 == (size_t)0) && ((*data2)[pointer1] == (n2 - k2)))
+        {
           valid = false;
-      }
-      else
-      {
-
-          data2 += pointer;
-          *data2 += (size_t)1;
-          data2 = c->data;
-
-          for(; pointer < (k2 - (size_t)1); pointer++)
-          {
-              size_t * temp_data = c->data;
-              temp_data += pointer;
-              data2 += (pointer + (size_t)1);
-              *data2 = *temp_data + (size_t)1;
-              data2 = c->data;
-          }
+        }
+      if(valid){
+          (*data2)[pointer1]++;
+          for(; pointer1 < (k2 - (size_t)1); pointer1++)
+            {
+              (*data2)[pointer1 + (size_t)1] = (*data2)[pointer1] + (size_t)1;
+            }
       }
   }
-  return (valid? (int_type)GSL_SUCCESS : (int_type)GSL_FAILURE);
+  return (valid? (int_type)GSL_SUCCESS: (int_type)GSL_FAILURE);
 }
 
 int_type
@@ -154,52 +129,37 @@ gsl_combination_prev (gsl_combination * c)
    */
   const size_t n3 = c->n;
   const size_t k3 = c->k;
-  size_t *data3 = c->data;
-  size_t pointer2, value1, value2;
-  bool valid2 = true;
+  size_t (*data3)[N];
+  data3 = &(c->data);
+  size_t pointer2;
+
+  bool valid1 = true;
 
   if(k3 == (size_t)0)
-  {
-      valid2 = false;
-  }
-  else
-  {
+    {
+      valid1 = false;
+    }
+  if(valid1){
       pointer2 = k3 - (size_t)1;
 
-      data3 += pointer2;
-      value1 = *data3;
-      data3 -= (size_t)1;
-      value2 = *data3;
-      data3 = c->data;
-
-      while((pointer2 > (size_t)0) && (value1 == (value2 + (size_t)1)))
-      {
+      while((pointer2 > (size_t)0) && ((*data3)[pointer2] == ((*data3)[pointer2 - (size_t)1] + (size_t)1)))
+        {
           pointer2--;
-      }
-  
-      data3 += pointer2;
-      value1 = *data3;
-
-      if((pointer2 == (size_t)0) && (value1 == (size_t)0))
-      {
-          valid2 = false;
-      }
-      else
-      {
-          data3 += pointer2;
+        }
+      if((pointer2 == (size_t)0) && ((*data3)[pointer2] == (size_t)0))
+        {
+          valid1  = false;
+        }
+      if(valid1 == true){
+          (*data3)[pointer2]--;
           pointer2++;
-          *data3 -= (size_t)1;
-          data3 = c->data;
-  
           for(; pointer2 < k3; pointer2++)
-          {
-              data3 += pointer2;
-              *data3 = (n3 - k3) + pointer2;
-              data3 = c->data;
-          }
+            {
+              (*data3)[pointer2] = (n3 - k3) + pointer2;
+            }
       }
   }
-  return (valid2? (int_type)GSL_SUCCESS : (int_type)GSL_FAILURE);
+  return (valid1? (int_type)GSL_SUCCESS: (int_type)GSL_FAILURE);
 }
 
 int_type
@@ -220,10 +180,7 @@ gsl_combination_memcpy (gsl_combination * dest, const gsl_combination * src)
      
      for (j = (size_t)0; j < src_k; j++)
        {
-         size_t *dest_data = dest->data, *src_data = src->data;
-         dest_data += j;
-         src_data += j;
-         *dest_data = *src_data;
+         dest->data[j] = src->data[j];
        }
    }
    

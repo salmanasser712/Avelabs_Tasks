@@ -1,0 +1,15 @@
+Base_Dir :=../../../OpenSAR
+INCLUDE_FLAGS :=-I$(Base_Dir)/include -I$(Base_Dir)/include/arm -I$(Base_Dir)/arch/arm/arm_cr4/kernel/ -I$(Base_Dir)/app/config/ -I$(Base_Dir)/app/config/GEN
+
+vpath %.c $(Base_Dir)/communication/CanIf/
+
+build: main.o stubs.o CanIf.o 
+	tiarmclang -mcpu=cortex-m4 $(INCLUDE_FLAGS) $^ -o output.hex -Wl,Linkscript_ti.cmd
+	tiarmnm output.hex
+
+
+%.o: %.c
+	tiarmclang -c -flto -mcpu=cortex-m4 $(INCLUDE_FLAGS) $^
+
+clean:
+	@rm *.o

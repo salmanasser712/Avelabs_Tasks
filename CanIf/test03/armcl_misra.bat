@@ -13,9 +13,9 @@ set "CanIf_Source=%Base_Dir%\communication\CanIf\CanIf.c"
 set "Main_Source=main.c"
 set "Stubs_Source=stubs.c"
 
-armcl --c99 --check_misra %COMPILAR_INC% %INCLUDE_FLAGS%  %CanIf_Source% 
-armcl --c99 --check_misra %COMPILAR_INC% %INCLUDE_FLAGS%  %Main_Source% 
-armcl --c99 --check_misra %COMPILAR_INC% %INCLUDE_FLAGS%  %Stubs_Source% 
+armcl --c99 --check_misra %COMPILAR_INC% %INCLUDE_FLAGS%  %CanIf_Source%  1>comb_Misra.txt 2>&1
+armcl --c99 --check_misra %COMPILAR_INC% %INCLUDE_FLAGS%  %Main_Source%   1>Main_Misra.txt 2>&1
+armcl --c99 --check_misra %COMPILAR_INC% %INCLUDE_FLAGS%  %Stubs_Source%  1>stubs_result.txt 2>&1
 
 armcl --run_linker %COMPILAR_LIB% %INCLUDE_FLAGS% %COMPILAR_INC% main.obj stubs.obj CanIf.obj --output_file=output.out Linkscript_ti.cmd
 

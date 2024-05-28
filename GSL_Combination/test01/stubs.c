@@ -5,28 +5,34 @@
 
 gsl_error_handler_t * gsl_error_handler = NULL;
 
-Error_status GSL_ERROR(char * reason, Error_status gsl_errno)
+Error_status GSL_ERROR(const char * reason, Error_status gsl_errno)
 {
+    bool state = true;
     do { 
-       gsl_error (reason, __FILE__, __LINE__, gsl_errno) ; 
-       return gsl_errno; 
-       } while (0);
+       gsl_error (reason, __FILE__, __LINE__, (int_type)gsl_errno) ; 
+       state = false; 
+       } while (state);
+    return gsl_errno;
 }
 
-int_type GSL_ERROR_VAL(char * reason, Error_status gsl_errno, int_type value)
+int_type GSL_ERROR_VAL(const char * reason, Error_status gsl_errno, int_type value)
 {
+       bool state1 = true;
        do { 
-       gsl_error (reason, __FILE__, __LINE__, gsl_errno) ; 
-       return value ; 
-       } while (0);
+       gsl_error (reason, __FILE__, __LINE__, (int_type)gsl_errno) ; 
+       state1 = false;  
+       } while (state1);
+      return value;
 }
 
-void GSL_ERROR_VOID(char * reason, Error_status gsl_errno)
+void GSL_ERROR_VOID(const char * reason, Error_status gsl_errno)
 {
+       bool state2 = true;
        do { 
-       gsl_error (reason, __FILE__, __LINE__, gsl_errno) ; 
-       return ; 
-       } while (0);
+       gsl_error (reason, __FILE__, __LINE__, (int_type)gsl_errno) ; 
+       state2 = false;
+       } while (state2);
+      return;
 }
 
 void
@@ -41,81 +47,65 @@ gsl_stream_printf (const char *label, const char *file, int_type line,
 void
 gsl_error (const char * reason, const char * file, int_type line, int_type gsl_errno)
 {
+  bool valid = false;
   if (gsl_error_handler) 
     {
       (*gsl_error_handler) (reason, file, line, gsl_errno);
-      return ;
+      valid = true;
     }
+  if(!valid){
+      gsl_stream_printf ("ERROR", file, line, reason);
 
-  gsl_stream_printf ("ERROR", file, line, reason);
+      printf ("Default GSL error handler invoked.\n");
 
-  printf ("Default GSL error handler invoked.\n");
-
-  abort ();
+      abort ();
+  }
+  return;
 }
 
 gsl_combination *
-gsl_combination_alloc (const size_t n, const size_t k)
+gsl_combination_alloc (const int_type p_n, const int_type p_k)
 {
-  gsl_combination * c;
+  gsl_combination temp = {0};
+  gsl_combination * c1 = &temp;
 
-  if (n == 0)
+  if (p_n == (int_type)0)
     {
       GSL_ERROR_VAL ("combination parameter n must be positive integer",
                         GSL_EDOM, 0);
     }
-  if (k > n)
+  if(p_k > p_n)
     {
       GSL_ERROR_VAL ("combination length k must be an integer less than or equal to n",
                         GSL_EDOM, 0);
     }
-  c = (gsl_combination *) malloc (sizeof (gsl_combination));
 
-  if (c == 0)
+  if (p_k < (int_type)0)
     {
-      GSL_ERROR_VAL ("failed to allocate space for combination struct",
-                        GSL_ENOMEM, 0);
+      GSL_ERROR_VAL ("combination length k must be an integer greater than or equal to 1",
+                        GSL_EDOM, 0);
+     
     }
 
-  if (k > 0)
-    {
-      c->data = (size_t *) malloc (k * sizeof (size_t));
+  c1->n = (size_t)p_n;
+  c1->k = (size_t)p_k;
 
-      if (c->data == 0)
-        {
-          free (c);             /* exception in constructor, avoid memory leak */
-
-          GSL_ERROR_VAL ("failed to allocate space for combination data",
-                         GSL_ENOMEM, 0);
-        }
-    }
-  else
-    {
-      c->data = 0;
-    }
-
-  c->n = n;
-  c->k = k;
-
-  return c;
+  return c1;
 }
 
 gsl_combination *
-gsl_combination_calloc (const size_t n, const size_t k)
+gsl_combination_calloc (const int_type p_n1, const int_type p_k1)
 {
-  size_t i;
+  size_t pointer_i;
 
-  gsl_combination * c =  gsl_combination_alloc (n, k);
-
-  if (c == 0)
-    return 0;
+  gsl_combination * c2 =  gsl_combination_alloc (p_n1, p_k1);
 
   /* initialize combination to identity */
 
-  for (i = 0; i < k; i++)
+  for (pointer_i = (size_t)0; pointer_i < (size_t)p_k1; pointer_i++)
     {
-      c->data[i] = i;
+      c2->data[pointer_i] = pointer_i;
     }
 
-  return c;
+  return c2;
 }

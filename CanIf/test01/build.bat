@@ -17,7 +17,7 @@ tiarmclang -c -flto -mcpu=cortex-m4 %INCLUDE_FLAGS% %Stubs_Source%
 tiarmclang -c -flto -mcpu=cortex-m4 %INCLUDE_FLAGS% %CanIf_Source%  
 tiarmclang -c -flto -mcpu=cortex-m4 %INCLUDE_FLAGS% %Main_Source%   
 
-tiarmclang -mcpu=cortex-m4 %INCLUDE_DIRS% CanIf.o stubs.o main.o -o output.hex -Wl,Linkscript_ti.cmd
+tiarmclang -mcpu=cortex-m4 %INCLUDE_FLAGS% CanIf.o stubs.o main.o -o output.hex -Wl,Linkscript_ti.cmd
 
 tiarmnm output.hex
 

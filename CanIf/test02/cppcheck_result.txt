@@ -3,9 +3,6 @@ Checking ..\..\..\OpenSAR\communication\CanIf\CanIf.c: __CWCC__...
 ..\..\..\OpenSAR\communication\CanIf\CanIf.c:103:30: style: The scope of the variable 'hrhConfig' can be reduced. [variableScope]
   const CanIf_HrhConfigType *hrhConfig;
                              ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:950:50: style: The scope of the variable 'channel' can be reduced. [variableScope]
- CanIf_Arc_ChannelIdType __attribute__((unused)) channel = 0xff;
-                                                 ^
 Checking ..\..\..\OpenSAR\communication\CanIf\CanIf.c: __DCC__...
 Checking ..\..\..\OpenSAR\communication\CanIf\CanIf.c: __GNUC__...
 Checking ..\..\..\OpenSAR\communication\CanIf\CanIf.c: __ICCHCS12__...
@@ -13,32 +10,29 @@ Checking ..\..\..\OpenSAR\communication\CanIf\CanIf.c: __TI_COMPILER_VERSION__..
 ..\..\..\OpenSAR\communication\CanIf\CanIf.c:776:3: style: The character sequences /* and // shall not be used within a comment [misra-c2012-3.1]
   /*if (channel == -1)  // Invalid HRH
   ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:129:18: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
-CanIf_GlobalType CanIf_Global;
-                 ^
-..\..\..\OpenSAR\include\Dcm_Lcfg.h:641:29: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
-extern const Dcm_ConfigType DCM_Config;
+..\..\..\OpenSAR\app\config\GEN\Can_Cfg.h:199:29: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
+extern const Can_ConfigType Can_ConfigData;
                             ^
 ..\..\..\OpenSAR\app\config\GEN\CanTp_Cfg.h:37:31: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
 extern const CanTp_ConfigType CanTpConfig;
                               ^
-..\..\..\OpenSAR\app\config\GEN\PduR_PbCfg.h:26:32: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
-extern const PduR_PBConfigType PduR_Config;
-                               ^
-..\..\..\OpenSAR\app\config\GEN\Can_Cfg.h:199:29: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
-extern const Can_ConfigType Can_ConfigData;
-                            ^
 ..\..\..\OpenSAR\app\config\GEN\CanIf_Cfg.h:66:31: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
 extern const CanIf_ConfigType CanIf_Config;
                               ^
-..\..\..\OpenSAR\app\config\GEN\Com_PbCfg.h:23:29: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
-extern const Com_ConfigType ComConfiguration;
+..\..\..\OpenSAR\include\Dcm_Lcfg.h:641:29: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
+extern const Dcm_ConfigType DCM_Config;
                             ^
 ..\..\..\OpenSAR\include\PduR.h:87:33: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
 extern const PduR_PBConfigType *PduRConfig;
                                 ^
-..\..\..\OpenSAR\app\config\GEN\CanTp_Cfg.h:39:29: style: When an array with external linkage is declared, its size should be explicitly specified [misra-c2012-8.11]
-extern const CanTp_RxIdType CanTp_RxIdList[];
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:129:18: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
+CanIf_GlobalType CanIf_Global;
+                 ^
+..\..\..\OpenSAR\app\config\GEN\PduR_PbCfg.h:26:32: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
+extern const PduR_PBConfigType PduR_Config;
+                               ^
+..\..\..\OpenSAR\app\config\GEN\Com_PbCfg.h:23:29: style: A compatible declaration shall be visible when an object or function with external linkage is defined [misra-c2012-8.4]
+extern const Com_ConfigType ComConfiguration;
                             ^
 ..\..\..\OpenSAR\include\Mcu.h:166:29: style: When an array with external linkage is declared, its size should be explicitly specified [misra-c2012-8.11]
 extern const Mcu_ConfigType McuConfigData[];
@@ -46,28 +40,31 @@ extern const Mcu_ConfigType McuConfigData[];
 ..\..\..\OpenSAR\app\config\GEN\CanTp_Cfg.h:38:29: style: When an array with external linkage is declared, its size should be explicitly specified [misra-c2012-8.11]
 extern const CanTp_NSduType CanTpNSduConfigList[];
                             ^
+..\..\..\OpenSAR\app\config\GEN\CanTp_Cfg.h:39:29: style: When an array with external linkage is declared, its size should be explicitly specified [misra-c2012-8.11]
+extern const CanTp_RxIdType CanTp_RxIdList[];
+                            ^
 ..\..\..\OpenSAR\communication\CanIf\CanIf.c:137:23: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
   for (uint8 i = 0; i < CANIF_CHANNEL_CNT; i++)
                       ^
 ..\..\..\OpenSAR\communication\CanIf\CanIf.c:800:54: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
     if (entry->CanIfCanRxPduHrhRef->CanIfHrhIdSymRef == Hrh)
                                                      ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:928:20: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:927:20: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
   for(int i = 0; i < CANIF_CHANNEL_CNT; i++)
                    ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:930:54: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:929:54: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
    if(CanIf_ConfigPtr->Arc_ChannelToControllerMap[i] == Controller)
                                                      ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:954:19: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:953:19: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
  for(int i = 0; i < CANIF_CHANNEL_CNT; i++)
                   ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:956:54: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:955:54: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
    if(CanIf_ConfigPtr->Arc_ChannelToControllerMap[i] == Controller)
                                                      ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:974:20: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:973:20: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
   for(int i = 0; i < CANIF_CHANNEL_CNT; i++)
                    ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:976:54: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:975:54: style: Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category [misra-c2012-10.4]
    if(CanIf_ConfigPtr->Arc_ChannelToControllerMap[i] == Controller)
                                                      ^
 ..\..\..\OpenSAR\communication\CanIf\CanIf.c:840:13: style: A cast shall not remove any const or volatile qualification from the type pointed to by a pointer [misra-c2012-11.8]
@@ -79,13 +76,13 @@ extern const CanTp_NSduType CanTpNSduConfigList[];
 ..\..\..\OpenSAR\communication\CanIf\CanIf.c:755:42: style: The macro NULL shall be the only permitted form of integer null pointer constant [misra-c2012-11.9]
       if (entry->CanIfUserTxConfirmation != NULL)
                                          ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:942:64: style: The macro NULL shall be the only permitted form of integer null pointer constant [misra-c2012-11.9]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:941:64: style: The macro NULL shall be the only permitted form of integer null pointer constant [misra-c2012-11.9]
   if (CanIf_ConfigPtr->DispatchConfig->CanIfBusOffNotification != NULL)
                                                                ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:984:62: style: The macro NULL shall be the only permitted form of integer null pointer constant [misra-c2012-11.9]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:983:62: style: The macro NULL shall be the only permitted form of integer null pointer constant [misra-c2012-11.9]
   if (CanIf_ConfigPtr->DispatchConfig->CanIfErrorNotificaton != NULL)
                                                              ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:990:64: style: The macro NULL shall be the only permitted form of integer null pointer constant [misra-c2012-11.9]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:989:64: style: The macro NULL shall be the only permitted form of integer null pointer constant [misra-c2012-11.9]
   if (CanIf_ConfigPtr->DispatchConfig->CanIfBusOffNotification != NULL)
                                                                ^
 ..\..\..\OpenSAR\communication\CanIf\CanIf.c:805:12: style: The controlling expression of an if statement and the controlling expression of an iteration-statement shall have essentially Boolean type [misra-c2012-14.4]
@@ -208,7 +205,7 @@ extern const CanTp_NSduType CanTpNSduConfigList[];
 ..\..\..\OpenSAR\communication\CanIf\CanIf.c:758:25: style: The value returned by a function having non-void return type shall be used [misra-c2012-17.7]
         CanIf_GetPduMode(entry->CanIfCanTxPduHthRef->CanIfCanControllerIdRef, &mode);
                         ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:940:26: style: The value returned by a function having non-void return type shall be used [misra-c2012-17.7]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:939:26: style: The value returned by a function having non-void return type shall be used [misra-c2012-17.7]
   CanIf_SetControllerMode(channel, CANIF_CS_STOPPED);
                          ^
 ..\..\..\OpenSAR\include\PduR_Types.h:134:27: style: Flexible array members shall not be declared [misra-c2012-18.7]
@@ -232,7 +229,7 @@ void CanIf_Arc_Error( uint8 Controller, Can_Arc_ErrorType Error );
 ..\..\..\OpenSAR\include\CanTp_Types.h:158:0: style: The union keyword should not be used [misra-c2012-19.2]
  } configData;
 ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:968:40: style: The union keyword should not be used [misra-c2012-19.2]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:967:40: style: The union keyword should not be used [misra-c2012-19.2]
 void CanIf_Arc_Error(uint8 Controller, Can_Arc_ErrorType Error)
                                        ^
 ..\..\..\OpenSAR\app\config\GEN\CanIf_Cfg.h:64:0: style: #include directives should only be preceded by preprocessor directives or comments [misra-c2012-20.1]
@@ -430,16 +427,16 @@ void CanIf_TxConfirmation(PduIdType canTxPduId)
 ..\..\..\OpenSAR\communication\CanIf\CanIf.c:768:0: style: The function 'CanIf_RxIndication' is never used. [unusedFunction]
 void CanIf_RxIndication(uint8 Hrh, Can_IdType CanId, uint8 CanDlc,
 ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:922:0: style: The function 'CanIf_ControllerBusOff' is never used. [unusedFunction]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:921:0: style: The function 'CanIf_ControllerBusOff' is never used. [unusedFunction]
 void CanIf_ControllerBusOff(uint8 Controller)
 ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:948:0: style: The function 'CanIf_SetWakeupEvent' is never used. [unusedFunction]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:947:0: style: The function 'CanIf_SetWakeupEvent' is never used. [unusedFunction]
 void CanIf_SetWakeupEvent(uint8 Controller)
 ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:968:0: style: The function 'CanIf_Arc_Error' is never used. [unusedFunction]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:967:0: style: The function 'CanIf_Arc_Error' is never used. [unusedFunction]
 void CanIf_Arc_Error(uint8 Controller, Can_Arc_ErrorType Error)
 ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:996:0: style: The function 'CanIf_Arc_GetChannelDefaultConfIndex' is never used. [unusedFunction]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:995:0: style: The function 'CanIf_Arc_GetChannelDefaultConfIndex' is never used. [unusedFunction]
 uint8 CanIf_Arc_GetChannelDefaultConfIndex(CanIf_Arc_ChannelIdType Channel)
 ^
 stubs.c:11:0: style: The function 'Can_Init' is never used. [unusedFunction]
@@ -2758,16 +2755,16 @@ void CanIf_TxConfirmation(PduIdType canTxPduId)
 ..\..\..\OpenSAR\communication\CanIf\CanIf.c:768:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
 void CanIf_RxIndication(uint8 Hrh, Can_IdType CanId, uint8 CanDlc,
      ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:922:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:921:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
 void CanIf_ControllerBusOff(uint8 Controller)
      ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:948:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:947:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
 void CanIf_SetWakeupEvent(uint8 Controller)
      ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:968:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:967:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
 void CanIf_Arc_Error(uint8 Controller, Can_Arc_ErrorType Error)
      ^
-..\..\..\OpenSAR\communication\CanIf\CanIf.c:996:7: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
+..\..\..\OpenSAR\communication\CanIf\CanIf.c:995:7: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
 uint8 CanIf_Arc_GetChannelDefaultConfIndex(CanIf_Arc_ChannelIdType Channel)
       ^
 stubs.c:11:6: style: Functions and objects should not be defined with external linkage if they are referenced in only one translation unit [misra-c2012-8.7]
