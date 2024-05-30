@@ -5,8 +5,8 @@ REM Initialize an empty string for the include directories
 set "Base_Dir=..\..\..\OpenSAR"
 set "INCLUDE_FLAGS=-I%Base_Dir%\include -I%Base_Dir%\include\arm -I%Base_Dir%\arch\arm\arm_cr4\kernel\ -I%Base_Dir%\app\config -I%Base_Dir%\app\config\GEN"
 
-set COMPILAR_INC="-IC:\Program Files\ti-cgt-arm_20.2.7.LTS\include"
-set COMPILAR_LIB="-IC:\Program Files\ti-cgt-arm_20.2.7.LTS\lib"
+set COMPILAR_INC="-ID:\Ti_Compilers\ti-cgt-arm_20.2.7.LTS\include"
+set COMPILAR_LIB="-ID:\Ti_Compilers\ti-cgt-arm_20.2.7.LTS\lib"
 
 :: Source Files to compile
 set "CanIf_Source=%Base_Dir%\communication\CanIf\CanIf.c"

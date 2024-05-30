@@ -1,15 +1,32 @@
 Base_Dir :=../../../OpenSAR
 INCLUDE_FLAGS :=-I$(Base_Dir)/include -I$(Base_Dir)/include/arm -I$(Base_Dir)/arch/arm/arm_cr4/kernel/ -I$(Base_Dir)/app/config/ -I$(Base_Dir)/app/config/GEN
 
+COMPILAR_INC=-ID:/Ti_Compilers/ti-cgt-arm_20.2.7.LTS/include
+COMPILAR_LIB=-ID:/Ti_Compilers/ti-cgt-arm_20.2.7.LTS/lib
+
 vpath %.c $(Base_Dir)/communication/CanIf/
 
-build: main.o stubs.o CanIf.o 
-	tiarmclang -mcpu=cortex-m4 $(INCLUDE_FLAGS) $^ -o output.hex -Wl,Linkscript_ti.cmd
-	tiarmnm output.hex
+SOURCES = main.c CanIf.c stubs.c
+
+OBJECTS = $(SOURCES:.c=.obj)
+
+STEM = $(basename $@)
+
+build: $(OBJECTS)
+	armcl --run_linker -mv7M4 $(COMPILAR_LIB) $(INCLUDE_FLAGS) $(COMPILAR_INC) $(OBJECTS) --output_file=output.out Linkscript_ti.cmd
 
 
-%.o: %.c
-	tiarmclang -c -flto -mcpu=cortex-m4 $(INCLUDE_FLAGS) $^
+%.obj: %.c
+	armcl --c99 --gcc -mv7M4 --preproc_with_compile $(COMPILAR_INC) $(INCLUDE_FLAGS) --preproc_dependency="$(STEM).d_raw" $< 
+	@sed  's|\\|/|g' < "$(STEM).d_raw" > "$(STEM).d"
+	@rm "$(STEM).d_raw"
+	
+
+-include $(OBJECTS:.obj=.d)
 
 clean:
-	@rm *.o
+	@find . -type f -name "*.obj" -exec 'rm' '{}' \; 
+	@find . -type f -name "*.d_raw" -exec 'rm' '{}' \;
+	@find . -type f -name "*.out" -exec 'rm' '{}' \;
+	@find . -type f -name "*.d" -exec 'rm' '{}' \;
+	@find . -type f -name "*.map" -exec 'rm' '{}' \;
