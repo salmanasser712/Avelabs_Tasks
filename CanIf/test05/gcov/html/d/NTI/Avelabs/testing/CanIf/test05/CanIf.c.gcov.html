@@ -1,0 +1,1075 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - lcov.info - /d/NTI/Avelabs/testing/CanIf/test05/CanIf.c</title>
+  <link rel="stylesheet" type="text/css" href="../../../../../../gcov.css">
+</head>
+
+<body>
+
+      <table width="100%" border=0 cellspacing=0 cellpadding=0>
+        <tr><td class="title">LCOV - code coverage report</td></tr>
+        <tr><td class="ruler"><img src="../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+        <tr>
+          <td width="100%">
+            <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../../../index.html">top level</a> - <a href="index.html">d/NTI/Avelabs/testing/CanIf/test05</a> - CanIf.c<span style="font-size: 80%;"> (source / <a href="CanIf.c.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">lcov.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">45</td>
+            <td class="headerCovTableEntry">230</td>
+            <td class="headerCovTableEntryLo">19.6 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-06-04 23:19:51</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">16</td>
+            <td class="headerCovTableEntryLo">31.2 %</td>
+          </tr>
+              <tr><td><img src="../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr><td class="ruler"><img src="../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+      </table>
+
+      <table cellpadding=0 cellspacing=0 border=0>
+        <tr>
+          <td><br></td>
+        </tr>
+        <tr>
+          <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : /* -------------------------------- Arctic Core ------------------------------</a>
+<span class="lineNum">       2 </span>            :  * Arctic Core - the open source AUTOSAR platform http://arccore.com
+<span class="lineNum">       3 </span>            :  *
+<span class="lineNum">       4 </span>            :  * Copyright (C) 2009  ArcCore AB &lt;contact@arccore.com&gt;
+<span class="lineNum">       5 </span>            :  *
+<span class="lineNum">       6 </span>            :  * This source code is free software; you can redistribute it and/or modify it
+<span class="lineNum">       7 </span>            :  * under the terms of the GNU General Public License version 2 as published by the
+<span class="lineNum">       8 </span>            :  * Free Software Foundation; See &lt;http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt&gt;.
+<span class="lineNum">       9 </span>            :  *
+<span class="lineNum">      10 </span>            :  * This program is distributed in the hope that it will be useful, but
+<span class="lineNum">      11 </span>            :  * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+<span class="lineNum">      12 </span>            :  * or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+<span class="lineNum">      13 </span>            :  * for more details.
+<span class="lineNum">      14 </span>            :  * -------------------------------- Arctic Core ------------------------------*/
+<span class="lineNum">      15 </span>            : 
+<span class="lineNum">      16 </span>            : 
+<span class="lineNum">      17 </span>            : 
+<span class="lineNum">      18 </span>            : 
+<span class="lineNum">      19 </span>            : 
+<span class="lineNum">      20 </span>            : 
+<span class="lineNum">      21 </span>            : 
+<span class="lineNum">      22 </span>            : #if defined(USE_DET)
+<span class="lineNum">      23 </span>            : #include &quot;Det.h&quot;
+<span class="lineNum">      24 </span>            : #endif
+<span class="lineNum">      25 </span>            : #include &quot;CanIf.h&quot;
+<span class="lineNum">      26 </span>            : 
+<span class="lineNum">      27 </span>            : #include &quot;Can.h&quot;
+<span class="lineNum">      28 </span>            : #include &quot;CanIf_Cbk.h&quot;
+<span class="lineNum">      29 </span>            : #include &lt;string.h&gt;
+<span class="lineNum">      30 </span>            : 
+<span class="lineNum">      31 </span>            : #include &quot;debug.h&quot;
+<span class="lineNum">      32 </span>            : #include &quot;PduR.h&quot;
+<span class="lineNum">      33 </span>            : 
+<span class="lineNum">      34 </span>            : #if defined(USE_CANTP)
+<span class="lineNum">      35 </span>            : #include &quot;CanTp_Cbk.h&quot;
+<span class="lineNum">      36 </span>            : #endif
+<span class="lineNum">      37 </span>            : 
+<span class="lineNum">      38 </span>            : #if defined(USE_J1939TP)
+<span class="lineNum">      39 </span>            : #include &quot;J1939Tp_Cbk.h&quot;
+<span class="lineNum">      40 </span>            : #endif
+<span class="lineNum">      41 </span>            : 
+<span class="lineNum">      42 </span>            : #if defined(USE_CANNM)
+<span class="lineNum">      43 </span>            : #include &quot;CanNm.h&quot;
+<span class="lineNum">      44 </span>            : #endif
+<span class="lineNum">      45 </span>            : 
+<span class="lineNum">      46 </span>            : #if 0
+<span class="lineNum">      47 </span>            : // TODO: Include upper layer functions, See CANIF208 and CANIF233
+<span class="lineNum">      48 </span>            : #include &quot;PduR_CanIf.h&quot;
+<span class="lineNum">      49 </span>            : #include &quot;CanNm.h&quot;
+<span class="lineNum">      50 </span>            : #include &quot;CanTp.h&quot;
+<span class="lineNum">      51 </span>            : 
+<span class="lineNum">      52 </span>            : #include &quot;PduR_Cbk.h&quot;
+<span class="lineNum">      53 </span>            : #include &quot;CanNm_Cbk.h&quot;
+<span class="lineNum">      54 </span>            : #include &quot;CanTp_Cbk.h&quot;
+<span class="lineNum">      55 </span>            : #endif
+<span class="lineNum">      56 </span>            : 
+<span class="lineNum">      57 </span>            : #if  ( CANIF_DEV_ERROR_DETECT == STD_ON )
+<span class="lineNum">      58 </span>            : #define VALIDATE(_exp,_api,_err ) \
+<span class="lineNum">      59 </span>            :         if( !(_exp) ) { \
+<span class="lineNum">      60 </span>            :           Det_ReportError(MODULE_ID_CANIF, 0, _api, _err); \
+<span class="lineNum">      61 </span>            :           return E_NOT_OK; \
+<span class="lineNum">      62 </span>            :         }
+<span class="lineNum">      63 </span>            : 
+<span class="lineNum">      64 </span>            : #define VALIDATE_NO_RV(_exp,_api,_err ) \
+<span class="lineNum">      65 </span>            :   if( !(_exp) ) { \
+<span class="lineNum">      66 </span>            :           Det_ReportError(MODULE_ID_CANIF, 0, _api, _err); \
+<span class="lineNum">      67 </span>            :           return; \
+<span class="lineNum">      68 </span>            :         }
+<span class="lineNum">      69 </span>            : #define DET_REPORTERROR(_x,_y,_z,_q) Det_ReportError(_x, _y, _z, _q)
+<span class="lineNum">      70 </span>            : 
+<span class="lineNum">      71 </span>            : #else
+<span class="lineNum">      72 </span>            : #define VALIDATE(_exp,_api,_err )
+<span class="lineNum">      73 </span>            : #define VALIDATE_NO_RV(_exp,_api,_err )
+<span class="lineNum">      74 </span>            : #define DET_REPORTERROR(_x,_y,_z,_q)
+<span class="lineNum">      75 </span>            : #endif
+<span class="lineNum">      76 </span>            : 
+<span class="lineNum">      77 </span>            : 
+<span class="lineNum">      78 </span>            : // Helper to get the Can Controller refered to by a CanIf Channel
+<span class="lineNum">      79 </span>            : #define ARC_GET_CHANNEL_CONTROLLER(_channel) \
+<span class="lineNum">      80 </span>            :         CanIf_ConfigPtr-&gt;Arc_ChannelToControllerMap[_channel]
+<span class="lineNum">      81 </span>            : 
+<span class="lineNum">      82 </span>            : /* Global configure */
+<span class="lineNum">      83 </span>            : static const CanIf_ConfigType *CanIf_ConfigPtr;
+<span class="lineNum">      84 </span>            : 
+<span class="lineNum">      85 </span>            : // Struct of controller private data.
+<span class="lineNum">      86 </span>            : typedef struct
+<span class="lineNum">      87 </span>            : {
+<span class="lineNum">      88 </span>            :   CanIf_ControllerModeType  ControllerMode;
+<span class="lineNum">      89 </span>            :   CanIf_ChannelGetModeType  PduMode;
+<span class="lineNum">      90 </span>            : } CanIf_ChannelPrivateType;
+<span class="lineNum">      91 </span>            : 
+<span class="lineNum">      92 </span>            : typedef struct
+<span class="lineNum">      93 </span>            : {
+<span class="lineNum">      94 </span>            :   boolean initRun;
+<span class="lineNum">      95 </span>            :   CanIf_ChannelPrivateType channelData[CANIF_CHANNEL_CNT];
+<span class="lineNum">      96 </span>            : } CanIf_GlobalType;
+<span class="lineNum">      97 </span>            : 
+<a name="98"><span class="lineNum">      98 </span>            : void CanIf_PreInit_InitController(uint8 Controller, uint8 ConfigurationIndex);</a>
+<span class="lineNum">      99 </span>            : 
+<span class="lineNum">     100 </span><span class="lineNoCov">          0 : static CanIf_Arc_ChannelIdType CanIf_Arc_FindHrhChannel( Can_Arc_HRHType hrh )</span>
+<span class="lineNum">     101 </span>            : {
+<span class="lineNum">     102 </span>            :   const CanIf_InitHohConfigType *hohConfig;
+<span class="lineNum">     103 </span>            :   const CanIf_HrhConfigType *hrhConfig;
+<span class="lineNum">     104 </span>            : 
+<span class="lineNum">     105 </span>            :   // foreach(hoh){ foreach(hrh in hoh) {} }
+<span class="lineNum">     106 </span><span class="lineNoCov">          0 :   hohConfig = CanIf_ConfigPtr-&gt;InitConfig-&gt;CanIfHohConfigPtr;</span>
+<span class="lineNum">     107 </span><span class="lineNoCov">          0 :   hohConfig--;</span>
+<span class="lineNum">     108 </span>            :   do
+<span class="lineNum">     109 </span>            :   {
+<span class="lineNum">     110 </span><span class="lineNoCov">          0 :     hohConfig++;</span>
+<span class="lineNum">     111 </span>            : 
+<span class="lineNum">     112 </span><span class="lineNoCov">          0 :     hrhConfig = hohConfig-&gt;CanIfHrhConfig;</span>
+<span class="lineNum">     113 </span><span class="lineNoCov">          0 :     hrhConfig--;</span>
+<span class="lineNum">     114 </span>            :     do
+<span class="lineNum">     115 </span>            :     {
+<span class="lineNum">     116 </span><span class="lineNoCov">          0 :       hrhConfig++;</span>
+<span class="lineNum">     117 </span><span class="lineNoCov">          0 :       if (hrhConfig-&gt;CanIfHrhIdSymRef == hrh){</span>
+<span class="lineNum">     118 </span><span class="lineNoCov">          0 :         return hrhConfig-&gt;CanIfCanControllerHrhIdRef;</span>
+<span class="lineNum">     119 </span>            :       }
+<span class="lineNum">     120 </span><span class="lineNoCov">          0 :     } while(!hrhConfig-&gt;CanIf_Arc_EOL);</span>
+<span class="lineNum">     121 </span><span class="lineNoCov">          0 :   } while(!hohConfig-&gt;CanIf_Arc_EOL);</span>
+<span class="lineNum">     122 </span>            : 
+<span class="lineNum">     123 </span>            :   DET_REPORTERROR(MODULE_ID_CANIF, 0, CANIF_RXINDICATION_ID, CANIF_E_PARAM_HRH);
+<span class="lineNum">     124 </span>            : 
+<span class="lineNum">     125 </span><span class="lineNoCov">          0 :   return (CanIf_Arc_ChannelIdType) -1;</span>
+<span class="lineNum">     126 </span>            : }
+<span class="lineNum">     127 </span>            : 
+<span class="lineNum">     128 </span>            : // Global config
+<a name="129"><span class="lineNum">     129 </span>            : CanIf_GlobalType CanIf_Global;</a>
+<span class="lineNum">     130 </span>            : 
+<span class="lineNum">     131 </span><span class="lineCov">          1 : void CanIf_Init(const CanIf_ConfigType *ConfigPtr)</span>
+<span class="lineNum">     132 </span>            : {
+<span class="lineNum">     133 </span>            :   VALIDATE_NO_RV(ConfigPtr != 0, CANIF_INIT_ID, CANIF_E_PARAM_POINTER); // Only PostBuild case supported
+<span class="lineNum">     134 </span>            : 
+<span class="lineNum">     135 </span><span class="lineCov">          1 :   CanIf_ConfigPtr = ConfigPtr;</span>
+<span class="lineNum">     136 </span>            : 
+<span class="lineNum">     137 </span><span class="lineCov">          2 :   for (uint8 i = 0; i &lt; CANIF_CHANNEL_CNT; i++)</span>
+<span class="lineNum">     138 </span>            :   {
+<span class="lineNum">     139 </span><span class="lineCov">          1 :     CanIf_Global.channelData[i].ControllerMode = CANIF_CS_STOPPED;</span>
+<span class="lineNum">     140 </span><span class="lineCov">          1 :     CanIf_Global.channelData[i].PduMode = CANIF_GET_OFFLINE;</span>
+<span class="lineNum">     141 </span><span class="lineCov">          1 :     CanIf_PreInit_InitController(i, CanIf_ConfigPtr-&gt;Arc_ChannelDefaultConfIndex[i]);</span>
+<span class="lineNum">     142 </span>            :   }
+<span class="lineNum">     143 </span>            : 
+<span class="lineNum">     144 </span>            : 
+<span class="lineNum">     145 </span><span class="lineCov">          1 :   CanIf_Global.initRun = TRUE;</span>
+<span class="lineNum">     146 </span><span class="lineCov">          1 : }</span>
+<span class="lineNum">     147 </span>            : 
+<span class="lineNum">     148 </span>            : 
+<span class="lineNum">     149 </span>            : 
+<span class="lineNum">     150 </span>            : 
+<span class="lineNum">     151 </span>            : //-------------------------------------------------------------------
+<span class="lineNum">     152 </span>            : /*
+<span class="lineNum">     153 </span>            :  * Controller :: CanIf_Arc_ChannelIdType (CanIf-specific id to abstract from Can driver/controllers)
+<a name="154"><span class="lineNum">     154 </span>            :  * ConfigurationIndex :: CanIf_Arc_ConfigurationIndexType</a>
+<span class="lineNum">     155 </span>            :  */
+<span class="lineNum">     156 </span><span class="lineNoCov">          0 : void CanIf_InitController(uint8 Controller, uint8 ConfigurationIndex)</span>
+<span class="lineNum">     157 </span>            : {
+<span class="lineNum">     158 </span>            :   // We call this a CanIf channel. Hopefully makes it easier to follow.
+<span class="lineNum">     159 </span><span class="lineNoCov">          0 :   CanIf_Arc_ChannelIdType channel = (CanIf_Arc_ChannelIdType) Controller;</span>
+<span class="lineNum">     160 </span><span class="lineNoCov">          0 :   CanIf_ControllerModeType mode = CANIF_CS_UNINIT;</span>
+<span class="lineNum">     161 </span>            : 
+<span class="lineNum">     162 </span>            :   VALIDATE_NO_RV(CanIf_Global.initRun, CANIF_INIT_CONTROLLER_ID, CANIF_E_UNINIT );
+<span class="lineNum">     163 </span>            :   VALIDATE_NO_RV(channel &lt; CANIF_CHANNEL_CNT, CANIF_INIT_CONTROLLER_ID, CANIF_E_PARAM_CONTROLLER);
+<span class="lineNum">     164 </span>            :   VALIDATE_NO_RV(ConfigurationIndex &lt; CANIF_CHANNEL_CONFIGURATION_CNT, CANIF_INIT_CONTROLLER_ID, CANIF_E_PARAM_POINTER);
+<span class="lineNum">     165 </span>            : 
+<span class="lineNum">     166 </span><span class="lineNoCov">          0 :   if (CanIf_GetControllerMode(channel, &amp;mode) == E_OK)</span>
+<span class="lineNum">     167 </span>            :   {
+<span class="lineNum">     168 </span><span class="lineNoCov">          0 :     if (mode == CANIF_CS_STARTED)</span>
+<span class="lineNum">     169 </span>            :     {
+<span class="lineNum">     170 </span><span class="lineNoCov">          0 :       CanIf_SetControllerMode(channel, CANIF_CS_STOPPED); // CANIF092</span>
+<span class="lineNum">     171 </span>            :     }
+<span class="lineNum">     172 </span><span class="lineNoCov">          0 :     else if (mode != CANIF_CS_STOPPED)</span>
+<span class="lineNum">     173 </span>            :     {
+<span class="lineNum">     174 </span>            :       VALIDATE_NO_RV(FALSE, CANIF_INIT_CONTROLLER_ID, CANIF_E_PARAM_CONTROLLER_MODE); // CANIF092
+<span class="lineNum">     175 </span>            :     }
+<span class="lineNum">     176 </span>            :   }
+<span class="lineNum">     177 </span>            :   else
+<span class="lineNum">     178 </span>            :   {
+<span class="lineNum">     179 </span>            :     VALIDATE_NO_RV(FALSE, CANIF_INIT_CONTROLLER_ID, CANIF_E_PARAM_CONTROLLER_MODE);
+<span class="lineNum">     180 </span>            :   }
+<span class="lineNum">     181 </span>            : 
+<span class="lineNum">     182 </span>            :   // CANIF293: ..Subsequently the CAN Interface calls the corresponding
+<span class="lineNum">     183 </span>            :   //             CAN Driver initialization services.
+<span class="lineNum">     184 </span>            : 
+<span class="lineNum">     185 </span>            :   // CANIF066: The CAN Interface has access to the CAN Driver configuration data. All
+<span class="lineNum">     186 </span>            :   // public CAN Driver configuration data are described in [8] Specification of CAN Driver.
+<span class="lineNum">     187 </span>            : 
+<span class="lineNum">     188 </span>            :   // Grab the configuration from the Can Controller
+<span class="lineNum">     189 </span>            :   const Can_ControllerConfigType *canConfig;
+<span class="lineNum">     190 </span><span class="lineNoCov">          0 :   const CanControllerIdType canControllerId = ARC_GET_CHANNEL_CONTROLLER(channel);</span>
+<span class="lineNum">     191 </span>            : 
+<span class="lineNum">     192 </span>            :   // Validate that the configuration at the index match the right channel
+<span class="lineNum">     193 </span>            :   VALIDATE_NO_RV(CanIf_ConfigPtr-&gt;ControllerConfig[ConfigurationIndex].CanIfControllerIdRef == channel, CANIF_INIT_CONTROLLER_ID, CANIF_E_PARAM_CONTROLLER);
+<span class="lineNum">     194 </span>            : 
+<span class="lineNum">     195 </span><span class="lineNoCov">          0 :   canConfig = CanIf_ConfigPtr-&gt;ControllerConfig[ConfigurationIndex].CanIfInitControllerRef;</span>
+<span class="lineNum">     196 </span>            : 
+<span class="lineNum">     197 </span>            :   // Validate that the CanIfControllerConfig points to configuration for the right Can Controller
+<span class="lineNum">     198 </span>            :   VALIDATE_NO_RV(canConfig-&gt;CanControllerId == canControllerId, CANIF_INIT_CONTROLLER_ID, CANIF_E_PARAM_CONTROLLER);
+<span class="lineNum">     199 </span>            : 
+<span class="lineNum">     200 </span><span class="lineNoCov">          0 :   Can_InitController(canControllerId, canConfig);</span>
+<span class="lineNum">     201 </span>            : 
+<span class="lineNum">     202 </span>            :   // Set mode to stopped
+<span class="lineNum">     203 </span><span class="lineNoCov">          0 :   CanIf_SetControllerMode(channel, CANIF_CS_STOPPED);</span>
+<a name="204"><span class="lineNum">     204 </span><span class="lineNoCov">          0 : }</span></a>
+<span class="lineNum">     205 </span>            : 
+<span class="lineNum">     206 </span><span class="lineCov">          1 : void CanIf_PreInit_InitController(uint8 Controller, uint8 ConfigurationIndex){</span>
+<span class="lineNum">     207 </span>            :         // We call this a CanIf channel. Hopefully makes it easier to follow.
+<span class="lineNum">     208 </span><span class="lineCov">          1 :         CanIf_Arc_ChannelIdType channel = (CanIf_Arc_ChannelIdType) Controller;</span>
+<span class="lineNum">     209 </span>            : 
+<span class="lineNum">     210 </span>            :         VALIDATE_NO_RV(channel &lt; CANIF_CHANNEL_CNT, CANIF_INIT_ID, CANIF_E_PARAM_CONTROLLER);
+<span class="lineNum">     211 </span>            :         VALIDATE_NO_RV(ConfigurationIndex &lt; CANIF_CHANNEL_CONFIGURATION_CNT, CANIF_INIT_ID, CANIF_E_PARAM_POINTER);
+<span class="lineNum">     212 </span>            : 
+<span class="lineNum">     213 </span>            : 
+<span class="lineNum">     214 </span><span class="lineCov">          1 :         const CanControllerIdType canControllerId = ARC_GET_CHANNEL_CONTROLLER(channel);</span>
+<span class="lineNum">     215 </span>            :         // Validate that the configuration at the index match the right channel
+<span class="lineNum">     216 </span>            :         VALIDATE_NO_RV(CanIf_ConfigPtr-&gt;ControllerConfig[ConfigurationIndex].CanIfControllerIdRef == channel, CANIF_INIT_CONTROLLER_ID, CANIF_E_PARAM_CONTROLLER);
+<span class="lineNum">     217 </span><span class="lineCov">          1 :         const Can_ControllerConfigType *canConfig = CanIf_ConfigPtr-&gt;ControllerConfig[ConfigurationIndex].CanIfInitControllerRef;</span>
+<span class="lineNum">     218 </span>            :         // Validate that the CanIfControllerConfig points to configuration for the right Can Controller
+<span class="lineNum">     219 </span>            :         VALIDATE_NO_RV(canConfig-&gt;CanControllerId == canControllerId, CANIF_INIT_CONTROLLER_ID, CANIF_E_PARAM_CONTROLLER);
+<span class="lineNum">     220 </span>            : 
+<span class="lineNum">     221 </span><span class="lineCov">          1 :         Can_InitController(canControllerId, canConfig);</span>
+<span class="lineNum">     222 </span><span class="lineCov">          1 : }</span>
+<span class="lineNum">     223 </span>            : 
+<a name="224"><span class="lineNum">     224 </span>            : //-------------------------------------------------------------------</a>
+<span class="lineNum">     225 </span>            : 
+<span class="lineNum">     226 </span><span class="lineCov">          1 : Std_ReturnType CanIf_SetControllerMode(uint8 Controller,</span>
+<span class="lineNum">     227 </span>            :     CanIf_ControllerModeType ControllerMode)
+<span class="lineNum">     228 </span>            : {
+<span class="lineNum">     229 </span>            :   // We call this a CanIf channel. Hopefully makes it easier to follow.
+<span class="lineNum">     230 </span><span class="lineCov">          1 :   CanIf_Arc_ChannelIdType channel = (CanIf_Arc_ChannelIdType) Controller;</span>
+<span class="lineNum">     231 </span>            : 
+<span class="lineNum">     232 </span>            : 
+<span class="lineNum">     233 </span><span class="lineCov">          1 :   CanIf_ControllerModeType oldMode = CANIF_CS_UNINIT;</span>
+<span class="lineNum">     234 </span>            : 
+<span class="lineNum">     235 </span>            :   VALIDATE( CanIf_Global.initRun, CANIF_SET_CONTROLLER_MODE_ID, CANIF_E_UNINIT );
+<span class="lineNum">     236 </span>            :   VALIDATE( channel &lt; CANIF_CHANNEL_CNT, CANIF_SET_CONTROLLER_MODE_ID, CANIF_E_PARAM_CONTROLLER );
+<span class="lineNum">     237 </span>            : 
+<span class="lineNum">     238 </span><span class="lineCov">          1 :   if (channel &lt; CANIF_CHANNEL_CNT) {</span>
+<span class="lineNum">     239 </span><span class="lineCov">          1 :       oldMode = CanIf_Global.channelData[channel].ControllerMode;</span>
+<span class="lineNum">     240 </span>            :   }
+<span class="lineNum">     241 </span>            :   else{
+<span class="lineNum">     242 </span><span class="lineNoCov">          0 :       return E_NOT_OK;</span>
+<span class="lineNum">     243 </span>            :   }
+<span class="lineNum">     244 </span>            : 
+<span class="lineNum">     245 </span><span class="lineCov">          1 :   if (oldMode == CANIF_CS_UNINIT)</span>
+<span class="lineNum">     246 </span>            :   {
+<span class="lineNum">     247 </span>            :     VALIDATE(FALSE, CANIF_SET_CONTROLLER_MODE_ID, CANIF_E_UNINIT); // See figure 32, 33
+<span class="lineNum">     248 </span><span class="lineNoCov">          0 :     return E_NOT_OK;</span>
+<span class="lineNum">     249 </span>            :   }
+<span class="lineNum">     250 </span><span class="lineCov">          1 :   CanControllerIdType canControllerId = ARC_GET_CHANNEL_CONTROLLER(Controller);</span>
+<span class="lineNum">     251 </span><span class="lineCov">          1 :   switch (ControllerMode)</span>
+<span class="lineNum">     252 </span>            :   {
+<span class="lineNum">     253 </span>            :   case CANIF_CS_STARTED:   // Figure 32
+<span class="lineNum">     254 </span>            :   {
+<span class="lineNum">     255 </span><span class="lineNoCov">          0 :     switch (oldMode)</span>
+<span class="lineNum">     256 </span>            :     {
+<span class="lineNum">     257 </span>            :       case CANIF_CS_SLEEP:
+<span class="lineNum">     258 </span><span class="lineNoCov">          0 :         if (Can_SetControllerMode(canControllerId, CAN_T_STOP) == CAN_NOT_OK){</span>
+<span class="lineNum">     259 </span><span class="lineNoCov">          0 :           return E_NOT_OK;</span>
+<span class="lineNum">     260 </span>            :         }
+<span class="lineNum">     261 </span><span class="lineNoCov">          0 :         CanIf_Global.channelData[channel].ControllerMode = CANIF_CS_STOPPED;</span>
+<span class="lineNum">     262 </span><span class="lineNoCov">          0 :         break;</span>
+<span class="lineNum">     263 </span>            :       default:
+<span class="lineNum">     264 </span>            :         // Just fall through
+<span class="lineNum">     265 </span><span class="lineNoCov">          0 :         break;</span>
+<span class="lineNum">     266 </span>            :     }
+<span class="lineNum">     267 </span>            : 
+<span class="lineNum">     268 </span><span class="lineNoCov">          0 :     CanIf_SetPduMode(channel, CANIF_SET_ONLINE);</span>
+<span class="lineNum">     269 </span><span class="lineNoCov">          0 :     if (Can_SetControllerMode(canControllerId, CAN_T_START) == CAN_NOT_OK){</span>
+<span class="lineNum">     270 </span><span class="lineNoCov">          0 :       return E_NOT_OK;</span>
+<span class="lineNum">     271 </span>            :     }
+<span class="lineNum">     272 </span><span class="lineNoCov">          0 :     CanIf_Global.channelData[channel].ControllerMode = CANIF_CS_STARTED;</span>
+<span class="lineNum">     273 </span>            :   }
+<span class="lineNum">     274 </span><span class="lineNoCov">          0 :   break;</span>
+<span class="lineNum">     275 </span>            : 
+<span class="lineNum">     276 </span>            :   case CANIF_CS_SLEEP: // Figure 33
+<span class="lineNum">     277 </span>            :   {
+<span class="lineNum">     278 </span><span class="lineNoCov">          0 :     switch (oldMode) {</span>
+<span class="lineNum">     279 </span>            :       case CANIF_CS_STARTED:
+<span class="lineNum">     280 </span><span class="lineNoCov">          0 :         if (Can_SetControllerMode(canControllerId, CAN_T_STOP) == CAN_NOT_OK){</span>
+<span class="lineNum">     281 </span><span class="lineNoCov">          0 :           return E_NOT_OK;</span>
+<span class="lineNum">     282 </span>            :         }
+<span class="lineNum">     283 </span><span class="lineNoCov">          0 :         CanIf_Global.channelData[channel].ControllerMode = CANIF_CS_STOPPED;</span>
+<span class="lineNum">     284 </span><span class="lineNoCov">          0 :         break;</span>
+<span class="lineNum">     285 </span>            :       default:
+<span class="lineNum">     286 </span>            :         // Just fall through for other cases
+<span class="lineNum">     287 </span><span class="lineNoCov">          0 :         break;</span>
+<span class="lineNum">     288 </span>            :     }
+<span class="lineNum">     289 </span>            : 
+<span class="lineNum">     290 </span><span class="lineNoCov">          0 :     if (Can_SetControllerMode(canControllerId, CAN_T_SLEEP) == CAN_NOT_OK){</span>
+<span class="lineNum">     291 </span><span class="lineNoCov">          0 :       return E_NOT_OK;</span>
+<span class="lineNum">     292 </span>            :     }
+<span class="lineNum">     293 </span><span class="lineNoCov">          0 :     CanIf_Global.channelData[channel].ControllerMode = CANIF_CS_SLEEP;</span>
+<span class="lineNum">     294 </span>            :   }
+<span class="lineNum">     295 </span>            : 
+<span class="lineNum">     296 </span>            :   case CANIF_CS_STOPPED:
+<span class="lineNum">     297 </span>            :   {
+<span class="lineNum">     298 </span><span class="lineCov">          1 :     switch (oldMode)</span>
+<span class="lineNum">     299 </span>            :     {
+<span class="lineNum">     300 </span>            :       case CANIF_CS_SLEEP:
+<span class="lineNum">     301 </span><span class="lineNoCov">          0 :         if (Can_SetControllerMode(canControllerId, CAN_T_WAKEUP) == CAN_NOT_OK){</span>
+<span class="lineNum">     302 </span><span class="lineNoCov">          0 :           return E_NOT_OK;</span>
+<span class="lineNum">     303 </span>            :         }
+<span class="lineNum">     304 </span><span class="lineNoCov">          0 :         break;</span>
+<span class="lineNum">     305 </span>            :       default:
+<span class="lineNum">     306 </span>            :         // Just fall through for other cases
+<span class="lineNum">     307 </span><span class="lineCov">          1 :         break;</span>
+<span class="lineNum">     308 </span>            :     }
+<span class="lineNum">     309 </span>            : 
+<span class="lineNum">     310 </span><span class="lineCov">          1 :     CanIf_SetPduMode(channel, CANIF_SET_OFFLINE);</span>
+<span class="lineNum">     311 </span><span class="lineCov">          1 :     if (Can_SetControllerMode(canControllerId, CAN_T_STOP) == CAN_NOT_OK){</span>
+<span class="lineNum">     312 </span><span class="lineNoCov">          0 :       return E_NOT_OK;</span>
+<span class="lineNum">     313 </span>            :     }
+<span class="lineNum">     314 </span><span class="lineCov">          1 :     CanIf_Global.channelData[channel].ControllerMode = CANIF_CS_STOPPED;</span>
+<span class="lineNum">     315 </span><span class="lineCov">          1 :     break;</span>
+<span class="lineNum">     316 </span>            :   }
+<span class="lineNum">     317 </span>            : 
+<span class="lineNum">     318 </span>            :   case CANIF_CS_UNINIT:
+<span class="lineNum">     319 </span>            :     // Just fall through
+<span class="lineNum">     320 </span><span class="lineNoCov">          0 :     break;</span>
+<span class="lineNum">     321 </span>            :   }
+<span class="lineNum">     322 </span><span class="lineCov">          1 :   return E_OK;</span>
+<span class="lineNum">     323 </span>            : }
+<span class="lineNum">     324 </span>            : 
+<a name="325"><span class="lineNum">     325 </span>            : //-------------------------------------------------------------------</a>
+<span class="lineNum">     326 </span>            : 
+<span class="lineNum">     327 </span><span class="lineNoCov">          0 : Std_ReturnType CanIf_GetControllerMode(uint8 Controller,</span>
+<span class="lineNum">     328 </span>            :     CanIf_ControllerModeType *ControllerModePtr)
+<span class="lineNum">     329 </span>            : {
+<span class="lineNum">     330 </span>            :   // We call this a CanIf channel. Hopefully makes it easier to follow.
+<span class="lineNum">     331 </span><span class="lineNoCov">          0 :   CanIf_Arc_ChannelIdType channel = (CanIf_Arc_ChannelIdType) Controller;</span>
+<span class="lineNum">     332 </span>            : 
+<span class="lineNum">     333 </span>            :   VALIDATE(CanIf_Global.initRun, CANIF_GET_CONTROLLER_MODE_ID, CANIF_E_UNINIT );
+<span class="lineNum">     334 </span>            :   VALIDATE(channel &lt; CANIF_CHANNEL_CNT, CANIF_GET_CONTROLLER_MODE_ID, CANIF_E_PARAM_CONTROLLER );
+<span class="lineNum">     335 </span>            :   VALIDATE(ControllerModePtr != NULL, CANIF_GET_CONTROLLER_MODE_ID, CANIF_E_PARAM_POINTER );
+<span class="lineNum">     336 </span>            : 
+<span class="lineNum">     337 </span><span class="lineNoCov">          0 :   *ControllerModePtr = CanIf_Global.channelData[channel].ControllerMode;</span>
+<span class="lineNum">     338 </span>            : 
+<span class="lineNum">     339 </span><span class="lineNoCov">          0 :   return E_OK;</span>
+<span class="lineNum">     340 </span>            : }
+<span class="lineNum">     341 </span>            : 
+<span class="lineNum">     342 </span>            : //-------------------------------------------------------------------
+<span class="lineNum">     343 </span>            : /**
+<span class="lineNum">     344 </span>            :  * Matches a Tx PDU id agaist the ones that are in the database.
+<span class="lineNum">     345 </span>            :  *
+<span class="lineNum">     346 </span>            :  * @returns Ptr a TxPdu
+<span class="lineNum">     347 </span>            :  */
+<span class="lineNum">     348 </span>            : #if ( CANIF_ARC_RUNTIME_PDU_CONFIGURATION == STD_ON )
+<a name="349"><span class="lineNum">     349 </span>            : CanIf_TxPduConfigType * CanIf_FindTxPduEntry(PduIdType id)</a>
+<span class="lineNum">     350 </span>            : #else
+<span class="lineNum">     351 </span><span class="lineNoCov">          0 : static const CanIf_TxPduConfigType * CanIf_FindTxPduEntry(PduIdType id)</span>
+<span class="lineNum">     352 </span>            : #endif
+<span class="lineNum">     353 </span>            : {
+<span class="lineNum">     354 </span><span class="lineNoCov">          0 :         if (id &gt;= CanIf_ConfigPtr-&gt;InitConfig-&gt;CanIfNumberOfCanTXPduIds) {</span>
+<span class="lineNum">     355 </span><span class="lineNoCov">          0 :                 return NULL;</span>
+<span class="lineNum">     356 </span>            :         } else {
+<span class="lineNum">     357 </span><span class="lineNoCov">          0 :                 return &amp;CanIf_ConfigPtr-&gt;InitConfig-&gt;CanIfTxPduConfigPtr[id];</span>
+<span class="lineNum">     358 </span>            :         }
+<span class="lineNum">     359 </span>            : }
+<span class="lineNum">     360 </span>            : 
+<span class="lineNum">     361 </span>            : 
+<span class="lineNum">     362 </span>            : #if ( CANIF_ARC_RUNTIME_PDU_CONFIGURATION == STD_ON )
+<span class="lineNum">     363 </span>            : CanIf_RxPduConfigType * CanIf_FindRxPduEntry(PduIdType id) {
+<span class="lineNum">     364 </span>            :         if (id &gt;= CanIf_ConfigPtr-&gt;InitConfig-&gt;CanIfNumberOfCanRxPduIds) {
+<span class="lineNum">     365 </span>            :                 return NULL;
+<span class="lineNum">     366 </span>            :         } else {
+<span class="lineNum">     367 </span>            :                 return &amp;CanIf_ConfigPtr-&gt;InitConfig-&gt;CanIfRxPduConfigPtr[id];
+<span class="lineNum">     368 </span>            :         }
+<span class="lineNum">     369 </span>            : }
+<span class="lineNum">     370 </span>            : 
+<span class="lineNum">     371 </span>            : const CanIf_HrhConfigType* CanIf_Arc_GetReceiveHandler(CanIf_Arc_ChannelIdType Channel) {
+<span class="lineNum">     372 </span>            :   const CanIf_InitHohConfigType *hohConfig;
+<span class="lineNum">     373 </span>            :   const CanIf_HrhConfigType *hrhConfig;
+<span class="lineNum">     374 </span>            : 
+<span class="lineNum">     375 </span>            :   // foreach(hoh){ foreach(hrh in hoh) {} }
+<span class="lineNum">     376 </span>            :   hohConfig = CanIf_ConfigPtr-&gt;InitConfig-&gt;CanIfHohConfigPtr;
+<span class="lineNum">     377 </span>            :   hohConfig--;
+<span class="lineNum">     378 </span>            :   do
+<span class="lineNum">     379 </span>            :   {
+<span class="lineNum">     380 </span>            :         hohConfig++;
+<span class="lineNum">     381 </span>            : 
+<span class="lineNum">     382 </span>            :         hrhConfig = hohConfig-&gt;CanIfHrhConfig;
+<span class="lineNum">     383 </span>            :     hrhConfig--;
+<span class="lineNum">     384 </span>            :     do
+<span class="lineNum">     385 </span>            :     {
+<span class="lineNum">     386 </span>            :       hrhConfig++;
+<span class="lineNum">     387 </span>            :       if (hrhConfig-&gt;CanIfCanControllerHrhIdRef == Channel)
+<span class="lineNum">     388 </span>            :         return hrhConfig;
+<span class="lineNum">     389 </span>            :         } while(!hrhConfig-&gt;CanIf_Arc_EOL);
+<span class="lineNum">     390 </span>            : 
+<span class="lineNum">     391 </span>            :   } while(!hohConfig-&gt;CanIf_Arc_EOL);
+<span class="lineNum">     392 </span>            : 
+<span class="lineNum">     393 </span>            :   DET_REPORTERROR(MODULE_ID_CANIF, 0, 0xFF, CANIF_E_PARAM_HRH);
+<span class="lineNum">     394 </span>            : 
+<span class="lineNum">     395 </span>            :   return NULL;
+<span class="lineNum">     396 </span>            : }
+<span class="lineNum">     397 </span>            : 
+<span class="lineNum">     398 </span>            : const CanIf_HthConfigType* CanIf_Arc_GetTransmitHandler(CanIf_Arc_ChannelIdType Channel) {
+<span class="lineNum">     399 </span>            :   const CanIf_InitHohConfigType *hohConfig;
+<span class="lineNum">     400 </span>            :   const CanIf_HthConfigType *hthConfig;
+<span class="lineNum">     401 </span>            : 
+<span class="lineNum">     402 </span>            :   // foreach(hoh){ foreach(hrh in hoh) {} }
+<span class="lineNum">     403 </span>            :   hohConfig = CanIf_ConfigPtr-&gt;InitConfig-&gt;CanIfHohConfigPtr;
+<span class="lineNum">     404 </span>            :   hohConfig--;
+<span class="lineNum">     405 </span>            :   do
+<span class="lineNum">     406 </span>            :   {
+<span class="lineNum">     407 </span>            :         hohConfig++;
+<span class="lineNum">     408 </span>            : 
+<span class="lineNum">     409 </span>            :         hthConfig = hohConfig-&gt;CanIfHthConfig;
+<span class="lineNum">     410 </span>            :         hthConfig--;
+<span class="lineNum">     411 </span>            :     do
+<span class="lineNum">     412 </span>            :     {
+<span class="lineNum">     413 </span>            :         hthConfig++;
+<span class="lineNum">     414 </span>            :       if (hthConfig-&gt;CanIfCanControllerIdRef == Channel)
+<span class="lineNum">     415 </span>            :         return hthConfig;
+<span class="lineNum">     416 </span>            :         } while(!hthConfig-&gt;CanIf_Arc_EOL);
+<span class="lineNum">     417 </span>            : 
+<span class="lineNum">     418 </span>            :   } while(!hohConfig-&gt;CanIf_Arc_EOL);
+<span class="lineNum">     419 </span>            : 
+<span class="lineNum">     420 </span>            :   DET_REPORTERROR(MODULE_ID_CANIF, 0, 0xFF, CANIF_E_PARAM_HTH);
+<span class="lineNum">     421 </span>            : 
+<span class="lineNum">     422 </span>            :   return NULL;
+<span class="lineNum">     423 </span>            : }
+<span class="lineNum">     424 </span>            : #endif
+<span class="lineNum">     425 </span>            : 
+<a name="426"><span class="lineNum">     426 </span>            : //-------------------------------------------------------------------</a>
+<span class="lineNum">     427 </span>            : 
+<span class="lineNum">     428 </span><span class="lineNoCov">          0 : Std_ReturnType CanIf_Transmit(PduIdType CanTxPduId,</span>
+<span class="lineNum">     429 </span>            :     const PduInfoType *PduInfoPtr)
+<span class="lineNum">     430 </span>            : {
+<span class="lineNum">     431 </span>            :   Can_PduType canPdu;
+<span class="lineNum">     432 </span>            :   const CanIf_TxPduConfigType *txEntry;
+<span class="lineNum">     433 </span>            :   CanIf_ControllerModeType csMode;
+<span class="lineNum">     434 </span>            :   CanIf_ChannelGetModeType pduMode;
+<span class="lineNum">     435 </span>            : 
+<span class="lineNum">     436 </span>            :   VALIDATE(CanIf_Global.initRun, CANIF_TRANSMIT_ID, CANIF_E_UNINIT );
+<span class="lineNum">     437 </span>            :   VALIDATE((PduInfoPtr != 0), CANIF_TRANSMIT_ID, CANIF_E_PARAM_POINTER );
+<span class="lineNum">     438 </span>            : 
+<span class="lineNum">     439 </span>            :   // Get the controller from L-PDU handle
+<span class="lineNum">     440 </span><span class="lineNoCov">          0 :   txEntry = CanIf_FindTxPduEntry(CanTxPduId);</span>
+<span class="lineNum">     441 </span>            : 
+<span class="lineNum">     442 </span><span class="lineNoCov">          0 :   if (txEntry == 0)</span>
+<span class="lineNum">     443 </span>            :   {
+<span class="lineNum">     444 </span>            :     VALIDATE(FALSE, CANIF_TRANSMIT_ID, CANIF_E_INVALID_TXPDUID);
+<span class="lineNum">     445 </span><span class="lineNoCov">          0 :     return E_NOT_OK;</span>
+<span class="lineNum">     446 </span>            :   }
+<span class="lineNum">     447 </span>            : 
+<span class="lineNum">     448 </span><span class="lineNoCov">          0 :   CanIf_Arc_ChannelIdType channel = txEntry-&gt;CanIfCanTxPduHthRef-&gt;CanIfCanControllerIdRef;</span>
+<span class="lineNum">     449 </span>            : 
+<span class="lineNum">     450 </span>            :   // Get and verify the controller mode
+<span class="lineNum">     451 </span><span class="lineNoCov">          0 :   if (CanIf_GetControllerMode(channel, &amp;csMode) == E_NOT_OK){</span>
+<span class="lineNum">     452 </span><span class="lineNoCov">          0 :     return E_NOT_OK;</span>
+<span class="lineNum">     453 </span>            :   }
+<span class="lineNum">     454 </span>            : 
+<span class="lineNum">     455 </span><span class="lineNoCov">          0 :   if (csMode != CANIF_CS_STARTED){  // CANIF_161</span>
+<span class="lineNum">     456 </span><span class="lineNoCov">          0 :     return E_NOT_OK;</span>
+<span class="lineNum">     457 </span>            :   }
+<span class="lineNum">     458 </span>            : 
+<span class="lineNum">     459 </span>            :   // Get and verify the PDU channel mode control
+<span class="lineNum">     460 </span><span class="lineNoCov">          0 :   if (CanIf_GetPduMode(channel, &amp;pduMode) == E_NOT_OK){</span>
+<span class="lineNum">     461 </span><span class="lineNoCov">          0 :     return E_NOT_OK;</span>
+<span class="lineNum">     462 </span>            :   }
+<span class="lineNum">     463 </span>            : 
+<span class="lineNum">     464 </span><span class="lineNoCov">          0 :   if ((pduMode != CANIF_GET_TX_ONLINE) &amp;&amp; (pduMode != CANIF_GET_ONLINE)){</span>
+<span class="lineNum">     465 </span><span class="lineNoCov">          0 :     return E_NOT_OK;</span>
+<span class="lineNum">     466 </span>            :   }
+<span class="lineNum">     467 </span>            : 
+<span class="lineNum">     468 </span><span class="lineNoCov">          0 :   canPdu.id = txEntry-&gt;CanIfCanTxPduIdCanId;</span>
+<span class="lineNum">     469 </span>            : 
+<span class="lineNum">     470 </span><span class="lineNoCov">          0 :   canPdu.length = PduInfoPtr-&gt;SduLength;</span>
+<span class="lineNum">     471 </span><span class="lineNoCov">          0 :   canPdu.sdu = PduInfoPtr-&gt;SduDataPtr;</span>
+<span class="lineNum">     472 </span><span class="lineNoCov">          0 :   canPdu.swPduHandle = CanTxPduId;</span>
+<span class="lineNum">     473 </span>            : 
+<span class="lineNum">     474 </span><span class="lineNoCov">          0 :   Can_ReturnType rVal = Can_Write(txEntry-&gt;CanIfCanTxPduHthRef-&gt;CanIfHthIdSymRef, &amp;canPdu);</span>
+<span class="lineNum">     475 </span>            : 
+<span class="lineNum">     476 </span><span class="lineNoCov">          0 :   if (rVal == CAN_NOT_OK){</span>
+<span class="lineNum">     477 </span><span class="lineNoCov">          0 :     return E_NOT_OK;</span>
+<span class="lineNum">     478 </span>            :   }
+<span class="lineNum">     479 </span>            : 
+<span class="lineNum">     480 </span><span class="lineNoCov">          0 :   if (rVal == CAN_BUSY)  // CANIF 082, CANIF 161</span>
+<span class="lineNum">     481 </span>            :   {
+<span class="lineNum">     482 </span>            :     // Tx buffering not supported so just return.
+<span class="lineNum">     483 </span><span class="lineNoCov">          0 :     return E_NOT_OK;</span>
+<span class="lineNum">     484 </span>            :   }
+<span class="lineNum">     485 </span>            : 
+<span class="lineNum">     486 </span><span class="lineNoCov">          0 :   return E_OK;</span>
+<span class="lineNum">     487 </span>            : }
+<span class="lineNum">     488 </span>            : 
+<span class="lineNum">     489 </span>            : //-------------------------------------------------------------------
+<span class="lineNum">     490 </span>            : 
+<span class="lineNum">     491 </span>            : #if ( CANIF_READRXPDU_DATA_API == STD_ON )
+<span class="lineNum">     492 </span>            : Std_ReturnType CanIf_ReadRxPduData(PduIdType CanRxPduId,
+<span class="lineNum">     493 </span>            :     PduInfoType *PduInfoPtr)
+<span class="lineNum">     494 </span>            : {
+<span class="lineNum">     495 </span>            :   VALIDATE(FALSE, CANIF_READTXPDUDATA_ID, CANIF_E_NOK_NOSUPPORT);
+<span class="lineNum">     496 </span>            :   VALIDATE(CanIf_Global.initRun == STD_ON, CANIF_READTXPDUDATA_ID, CANIF_E_UNINIT );
+<span class="lineNum">     497 </span>            :   VALIDATE(PduInfoPtr != 0, CANIF_READTXPDUDATA_ID, CANIF_E_PARAM_POINTER );
+<span class="lineNum">     498 </span>            : 
+<span class="lineNum">     499 </span>            :   // This function is not supported
+<span class="lineNum">     500 </span>            : 
+<span class="lineNum">     501 </span>            :   return E_NOT_OK;
+<span class="lineNum">     502 </span>            : }
+<span class="lineNum">     503 </span>            : #endif
+<span class="lineNum">     504 </span>            : 
+<span class="lineNum">     505 </span>            : //-------------------------------------------------------------------
+<span class="lineNum">     506 </span>            : 
+<span class="lineNum">     507 </span>            : #if ( CANIF_READTXPDU_NOTIFY_STATUS_API == STD_ON )
+<span class="lineNum">     508 </span>            : CanIf_NotifStatusType CanIf_ReadTxNotifStatus(PduIdType CanTxPduId)
+<span class="lineNum">     509 </span>            : {
+<span class="lineNum">     510 </span>            :   const CanIf_TxPduConfigType *txEntry;
+<span class="lineNum">     511 </span>            :   VALIDATE(FALSE, CANIF_READTXNOTIFSTATUS_ID, CANIF_E_NOK_NOSUPPORT);
+<span class="lineNum">     512 </span>            :   VALIDATE(CanIf_Global.initRun, CANIF_READTXNOTIFSTATUS_ID, CANIF_E_UNINIT );
+<span class="lineNum">     513 </span>            : 
+<span class="lineNum">     514 </span>            :   // Get the controller from L-PDU handle
+<span class="lineNum">     515 </span>            :   txEntry = CanIf_FindTxPduEntry(CanTxPduId);
+<span class="lineNum">     516 </span>            : 
+<span class="lineNum">     517 </span>            :   if (txEntry == 0)
+<span class="lineNum">     518 </span>            :   {
+<span class="lineNum">     519 </span>            :     VALIDATE(FALSE, CANIF_READTXNOTIFSTATUS_ID, CANIF_E_INVALID_TXPDUID);
+<span class="lineNum">     520 </span>            :     return CANIF_NO_NOTIFICATION;
+<span class="lineNum">     521 </span>            :   }
+<span class="lineNum">     522 </span>            : 
+<span class="lineNum">     523 </span>            :   if (txEntry-&gt;CanIfReadTxPduNotifyStatus == FALSE)
+<span class="lineNum">     524 </span>            :   {
+<span class="lineNum">     525 </span>            :     VALIDATE(FALSE, CANIF_READTXNOTIFSTATUS_ID, CANIF_E_INVALID_TXPDUID);
+<span class="lineNum">     526 </span>            :     return CANIF_NO_NOTIFICATION;
+<span class="lineNum">     527 </span>            :   }
+<span class="lineNum">     528 </span>            : 
+<span class="lineNum">     529 </span>            :   // This function is not supported
+<span class="lineNum">     530 </span>            : 
+<span class="lineNum">     531 </span>            :   return CANIF_NO_NOTIFICATION;
+<span class="lineNum">     532 </span>            : }
+<span class="lineNum">     533 </span>            : #endif
+<span class="lineNum">     534 </span>            : 
+<span class="lineNum">     535 </span>            : //-------------------------------------------------------------------
+<span class="lineNum">     536 </span>            : 
+<span class="lineNum">     537 </span>            : #if ( CANIF_READRXPDU_NOTIFY_STATUS_API == STD_ON )
+<span class="lineNum">     538 </span>            : CanIf_NotifStatusType CanIf_ReadRxNotifStatus(PduIdType CanRxPduId)
+<span class="lineNum">     539 </span>            : {
+<span class="lineNum">     540 </span>            :   VALIDATE(FALSE, CANIF_READRXNOTIFSTATUS_ID, CANIF_E_NOK_NOSUPPORT);
+<span class="lineNum">     541 </span>            :   VALIDATE(CanIf_Global.initRun, CANIF_READRXNOTIFSTATUS_ID, CANIF_E_UNINIT );
+<span class="lineNum">     542 </span>            : 
+<span class="lineNum">     543 </span>            :   return CANIF_NO_NOTIFICATION;
+<span class="lineNum">     544 </span>            : }
+<span class="lineNum">     545 </span>            : #endif
+<span class="lineNum">     546 </span>            : 
+<a name="547"><span class="lineNum">     547 </span>            : //-------------------------------------------------------------------</a>
+<span class="lineNum">     548 </span>            : 
+<span class="lineNum">     549 </span><span class="lineCov">          1 : Std_ReturnType CanIf_SetPduMode(uint8 Controller,</span>
+<span class="lineNum">     550 </span>            :     CanIf_ChannelSetModeType PduModeRequest)
+<span class="lineNum">     551 </span>            : {
+<span class="lineNum">     552 </span>            :   // We call this a CanIf channel. Hopefully makes it easier to follow.
+<span class="lineNum">     553 </span><span class="lineCov">          1 :   CanIf_Arc_ChannelIdType channel = (CanIf_Arc_ChannelIdType) Controller;</span>
+<span class="lineNum">     554 </span>            : 
+<span class="lineNum">     555 </span>            :   VALIDATE( CanIf_Global.initRun, CANIF_SETPDUMODE_ID, CANIF_E_UNINIT );
+<span class="lineNum">     556 </span>            :   VALIDATE( channel &lt; CANIF_CHANNEL_CNT, CANIF_SETPDUMODE_ID, CANIF_E_PARAM_CONTROLLER );
+<span class="lineNum">     557 </span>            : 
+<span class="lineNum">     558 </span><span class="lineCov">          1 :   CanIf_ChannelGetModeType oldMode = CanIf_Global.channelData[channel].PduMode;</span>
+<span class="lineNum">     559 </span>            : 
+<span class="lineNum">     560 </span><span class="lineCov">          1 :   switch(PduModeRequest)</span>
+<span class="lineNum">     561 </span>            :   {
+<span class="lineNum">     562 </span>            :   case CANIF_SET_OFFLINE:
+<span class="lineNum">     563 </span><span class="lineCov">          1 :     CanIf_Global.channelData[channel].PduMode = CANIF_GET_OFFLINE;</span>
+<span class="lineNum">     564 </span><span class="lineCov">          1 :     break;</span>
+<span class="lineNum">     565 </span>            :   case CANIF_SET_RX_OFFLINE:
+<span class="lineNum">     566 </span><span class="lineNoCov">          0 :     if (oldMode == CANIF_GET_RX_ONLINE){</span>
+<span class="lineNum">     567 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_OFFLINE;</span>
+<span class="lineNum">     568 </span><span class="lineNoCov">          0 :     } else if (oldMode == CANIF_GET_ONLINE){</span>
+<span class="lineNum">     569 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_TX_ONLINE;</span>
+<span class="lineNum">     570 </span><span class="lineNoCov">          0 :     } else if (oldMode == CANIF_GET_OFFLINE_ACTIVE_RX_ONLINE){</span>
+<span class="lineNum">     571 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_OFFLINE_ACTIVE;</span>
+<span class="lineNum">     572 </span>            :     }
+<span class="lineNum">     573 </span>            : 
+<span class="lineNum">     574 </span>            :     // Other oldmodes don't care
+<span class="lineNum">     575 </span><span class="lineNoCov">          0 :     break;</span>
+<span class="lineNum">     576 </span>            :   case CANIF_SET_RX_ONLINE:
+<span class="lineNum">     577 </span><span class="lineNoCov">          0 :     if (oldMode == CANIF_GET_OFFLINE){</span>
+<span class="lineNum">     578 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_RX_ONLINE;</span>
+<span class="lineNum">     579 </span><span class="lineNoCov">          0 :     } else if (oldMode == CANIF_GET_TX_ONLINE) {</span>
+<span class="lineNum">     580 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_ONLINE;</span>
+<span class="lineNum">     581 </span><span class="lineNoCov">          0 :     } else if (oldMode == CANIF_GET_OFFLINE_ACTIVE){</span>
+<span class="lineNum">     582 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_OFFLINE_ACTIVE_RX_ONLINE;</span>
+<span class="lineNum">     583 </span>            :     }
+<span class="lineNum">     584 </span>            : 
+<span class="lineNum">     585 </span>            :     // Other oldmodes don't care
+<span class="lineNum">     586 </span><span class="lineNoCov">          0 :     break;</span>
+<span class="lineNum">     587 </span>            :   case CANIF_SET_TX_OFFLINE:
+<span class="lineNum">     588 </span><span class="lineNoCov">          0 :     if (oldMode == CANIF_GET_TX_ONLINE){</span>
+<span class="lineNum">     589 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_OFFLINE;</span>
+<span class="lineNum">     590 </span><span class="lineNoCov">          0 :     } else if (oldMode == CANIF_GET_ONLINE) {</span>
+<span class="lineNum">     591 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_RX_ONLINE;</span>
+<span class="lineNum">     592 </span><span class="lineNoCov">          0 :     } else if (oldMode == CANIF_GET_OFFLINE_ACTIVE) {</span>
+<span class="lineNum">     593 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_OFFLINE;</span>
+<span class="lineNum">     594 </span><span class="lineNoCov">          0 :     } else if (oldMode == CANIF_GET_OFFLINE_ACTIVE_RX_ONLINE) {</span>
+<span class="lineNum">     595 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_RX_ONLINE;</span>
+<span class="lineNum">     596 </span>            :     }
+<span class="lineNum">     597 </span>            : 
+<span class="lineNum">     598 </span>            :     // Other oldmodes don't care
+<span class="lineNum">     599 </span><span class="lineNoCov">          0 :     break;</span>
+<span class="lineNum">     600 </span>            :   case CANIF_SET_TX_ONLINE:
+<span class="lineNum">     601 </span><span class="lineNoCov">          0 :     if (oldMode == CANIF_GET_OFFLINE){</span>
+<span class="lineNum">     602 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_TX_ONLINE;</span>
+<span class="lineNum">     603 </span><span class="lineNoCov">          0 :     } else if (oldMode == CANIF_GET_RX_ONLINE) {</span>
+<span class="lineNum">     604 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_ONLINE;</span>
+<span class="lineNum">     605 </span><span class="lineNoCov">          0 :     } else if (oldMode == CANIF_GET_OFFLINE_ACTIVE) {</span>
+<span class="lineNum">     606 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_TX_ONLINE;</span>
+<span class="lineNum">     607 </span><span class="lineNoCov">          0 :     } else if (oldMode == CANIF_GET_OFFLINE_ACTIVE_RX_ONLINE) {</span>
+<span class="lineNum">     608 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_ONLINE;</span>
+<span class="lineNum">     609 </span>            :     }
+<span class="lineNum">     610 </span>            : 
+<span class="lineNum">     611 </span>            :     // Other oldmodes don't care
+<span class="lineNum">     612 </span><span class="lineNoCov">          0 :     break;</span>
+<span class="lineNum">     613 </span>            :   case CANIF_SET_ONLINE:
+<span class="lineNum">     614 </span><span class="lineNoCov">          0 :     CanIf_Global.channelData[channel].PduMode = CANIF_GET_ONLINE;</span>
+<span class="lineNum">     615 </span><span class="lineNoCov">          0 :     break;</span>
+<span class="lineNum">     616 </span>            : 
+<span class="lineNum">     617 </span>            :   case CANIF_SET_TX_OFFLINE_ACTIVE:
+<span class="lineNum">     618 </span><span class="lineNoCov">          0 :     if (oldMode == CANIF_GET_OFFLINE) {</span>
+<span class="lineNum">     619 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_OFFLINE_ACTIVE;</span>
+<span class="lineNum">     620 </span><span class="lineNoCov">          0 :     } else if (oldMode == CANIF_GET_RX_ONLINE) {</span>
+<span class="lineNum">     621 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_OFFLINE_ACTIVE_RX_ONLINE;</span>
+<span class="lineNum">     622 </span><span class="lineNoCov">          0 :     } else if (oldMode == CANIF_GET_TX_ONLINE) {</span>
+<span class="lineNum">     623 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_OFFLINE_ACTIVE;</span>
+<span class="lineNum">     624 </span><span class="lineNoCov">          0 :     } else if (oldMode == CANIF_GET_ONLINE) {</span>
+<span class="lineNum">     625 </span><span class="lineNoCov">          0 :       CanIf_Global.channelData[channel].PduMode = CANIF_GET_OFFLINE_ACTIVE_RX_ONLINE;</span>
+<span class="lineNum">     626 </span>            :     }
+<span class="lineNum">     627 </span>            : 
+<span class="lineNum">     628 </span>            :     // Other oldmodes don't care
+<span class="lineNum">     629 </span><span class="lineNoCov">          0 :     break;</span>
+<span class="lineNum">     630 </span>            :   }
+<span class="lineNum">     631 </span>            : 
+<span class="lineNum">     632 </span><span class="lineCov">          1 :   return E_OK;</span>
+<span class="lineNum">     633 </span>            : }
+<span class="lineNum">     634 </span>            : 
+<a name="635"><span class="lineNum">     635 </span>            : //-------------------------------------------------------------------</a>
+<span class="lineNum">     636 </span>            : 
+<span class="lineNum">     637 </span><span class="lineNoCov">          0 : Std_ReturnType CanIf_GetPduMode(uint8 Controller,</span>
+<span class="lineNum">     638 </span>            :     CanIf_ChannelGetModeType *PduModePtr)
+<span class="lineNum">     639 </span>            : {
+<span class="lineNum">     640 </span>            :   // We call this a CanIf channel. Hopefully makes it easier to follow.
+<span class="lineNum">     641 </span><span class="lineNoCov">          0 :   CanIf_Arc_ChannelIdType channel = (CanIf_Arc_ChannelIdType) Controller;</span>
+<span class="lineNum">     642 </span>            : 
+<span class="lineNum">     643 </span>            :   VALIDATE( CanIf_Global.initRun, CANIF_GETPDUMODE_ID, CANIF_E_UNINIT );
+<span class="lineNum">     644 </span>            :   VALIDATE( channel &lt; CANIF_CHANNEL_CNT, CANIF_GETPDUMODE_ID, CANIF_E_PARAM_CONTROLLER );
+<span class="lineNum">     645 </span>            : 
+<span class="lineNum">     646 </span><span class="lineNoCov">          0 :   *PduModePtr = CanIf_Global.channelData[channel].PduMode;</span>
+<span class="lineNum">     647 </span>            : 
+<span class="lineNum">     648 </span><span class="lineNoCov">          0 :   return E_OK;</span>
+<span class="lineNum">     649 </span>            : }
+<span class="lineNum">     650 </span>            : 
+<span class="lineNum">     651 </span>            : #if ( CANIF_ARC_RUNTIME_PDU_CONFIGURATION == STD_ON )
+<span class="lineNum">     652 </span>            : void CanIf_SetDynamicTxId(PduIdType CanTxPduId, Can_IdType CanId)
+<span class="lineNum">     653 </span>            : {
+<span class="lineNum">     654 </span>            :   CanIf_TxPduConfigType *txEntry;
+<span class="lineNum">     655 </span>            :   VALIDATE_NO_RV(CanIf_Global.initRun, CANIF_SETDYNAMICTX_ID, CANIF_E_UNINIT );
+<span class="lineNum">     656 </span>            : 
+<span class="lineNum">     657 </span>            :   // Get the controller from L-PDU handle
+<span class="lineNum">     658 </span>            :   txEntry = CanIf_FindTxPduEntry(CanTxPduId);
+<span class="lineNum">     659 </span>            : 
+<span class="lineNum">     660 </span>            :   if (txEntry == 0)
+<span class="lineNum">     661 </span>            :   {
+<span class="lineNum">     662 </span>            :     VALIDATE_NO_RV(FALSE, CANIF_SETDYNAMICTX_ID, CANIF_E_INVALID_TXPDUID);
+<span class="lineNum">     663 </span>            :     return;
+<span class="lineNum">     664 </span>            :   }
+<span class="lineNum">     665 </span>            : 
+<span class="lineNum">     666 </span>            :   // Check that this is a dymanic PDU
+<span class="lineNum">     667 </span>            :   if (txEntry-&gt;CanIfCanTxPduType != CANIF_PDU_TYPE_DYNAMIC)
+<span class="lineNum">     668 </span>            :   {
+<span class="lineNum">     669 </span>            :     VALIDATE_NO_RV(FALSE, CANIF_SETDYNAMICTX_ID, CANIF_E_INVALID_TXPDUID);
+<span class="lineNum">     670 </span>            :     return;
+<span class="lineNum">     671 </span>            :   }
+<span class="lineNum">     672 </span>            : 
+<span class="lineNum">     673 </span>            :   // Check that this is an extended or standard id
+<span class="lineNum">     674 </span>            :   if (((CanId &amp; 0x80000000U) &amp;&amp; (txEntry-&gt;CanIfTxPduIdCanIdType == CANIF_CAN_ID_TYPE_29)) ||
+<span class="lineNum">     675 </span>            :       (((CanId &amp; 0x80000000U) == 0) &amp;&amp; (txEntry-&gt;CanIfTxPduIdCanIdType == CANIF_CAN_ID_TYPE_11)))
+<span class="lineNum">     676 </span>            :   {
+<span class="lineNum">     677 </span>            :     // Update the CanID
+<span class="lineNum">     678 </span>            :     txEntry-&gt;CanIfCanTxPduIdCanId = CanId &amp; 0x7FFFFFFFU;
+<span class="lineNum">     679 </span>            :   }
+<span class="lineNum">     680 </span>            :   else
+<span class="lineNum">     681 </span>            :   {
+<span class="lineNum">     682 </span>            :     // Inavlid Canid to configuration
+<span class="lineNum">     683 </span>            :     VALIDATE_NO_RV(FALSE, CANIF_SETDYNAMICTX_ID, CANIF_E_PARAM_CANID);
+<span class="lineNum">     684 </span>            :   }
+<span class="lineNum">     685 </span>            : }
+<span class="lineNum">     686 </span>            : #endif
+<span class="lineNum">     687 </span>            : 
+<span class="lineNum">     688 </span>            : #if ( CANIF_TRANSCEIVER_API == STD_ON )
+<span class="lineNum">     689 </span>            : Std_ReturnType CanIf_SetTransceiverMode(uint8 Transceiver,
+<span class="lineNum">     690 </span>            :     CanIf_TransceiverModeType TransceiverMode)
+<span class="lineNum">     691 </span>            : {
+<span class="lineNum">     692 </span>            :   VALIDATE(FALSE, CANIF_SET_TRANSCEIVERMODE_ID, CANIF_E_NOK_NOSUPPORT);
+<span class="lineNum">     693 </span>            : // Not supported
+<span class="lineNum">     694 </span>            : 
+<span class="lineNum">     695 </span>            :   return E_NOT_OK;
+<span class="lineNum">     696 </span>            : }
+<span class="lineNum">     697 </span>            : 
+<span class="lineNum">     698 </span>            : Std_ReturnType CanIf_GetTransceiverMode(uint8 Transceiver,
+<span class="lineNum">     699 </span>            :     CanIf_TransceiverModeType *TransceiverModePtr)
+<span class="lineNum">     700 </span>            : {
+<span class="lineNum">     701 </span>            :   VALIDATE(FALSE, CANIF_GET_TRANSCEIVERMODE_ID, CANIF_E_NOK_NOSUPPORT);
+<span class="lineNum">     702 </span>            :   // Not supported
+<span class="lineNum">     703 </span>            : 
+<span class="lineNum">     704 </span>            :   return E_NOT_OK;
+<span class="lineNum">     705 </span>            : }
+<span class="lineNum">     706 </span>            : 
+<span class="lineNum">     707 </span>            : Std_ReturnType CanIf_GetTrcvWakeupReason(uint8 Transceiver,
+<span class="lineNum">     708 </span>            :     CanIf_TrcvWakeupReasonType *TrcvWuReasonPtr)
+<span class="lineNum">     709 </span>            : {
+<span class="lineNum">     710 </span>            :   VALIDATE(FALSE, CANIF_GET_TRCVMODEREASON_ID, CANIF_E_NOK_NOSUPPORT);
+<span class="lineNum">     711 </span>            :   // Not supported
+<span class="lineNum">     712 </span>            : 
+<span class="lineNum">     713 </span>            :   return E_NOT_OK;
+<span class="lineNum">     714 </span>            : }
+<span class="lineNum">     715 </span>            : 
+<span class="lineNum">     716 </span>            : Std_ReturnType CanIf_SetTransceiverWakeupMode(uint8 Transceiver,
+<span class="lineNum">     717 </span>            :     CanIf_TrcvWakeupModeType *TrcvWakeupMode)
+<span class="lineNum">     718 </span>            : {
+<span class="lineNum">     719 </span>            :   VALIDATE(FALSE, CANIF_SET_TRANSCEIVERWAKEMODE_ID, CANIF_E_NOK_NOSUPPORT);
+<span class="lineNum">     720 </span>            :   // Not supported
+<span class="lineNum">     721 </span>            : 
+<span class="lineNum">     722 </span>            :   return E_NOT_OK;
+<span class="lineNum">     723 </span>            : }
+<span class="lineNum">     724 </span>            : #endif
+<span class="lineNum">     725 </span>            : 
+<span class="lineNum">     726 </span>            : #if ( CANIF_WAKEUP_EVENT_API == STD_ON )
+<span class="lineNum">     727 </span>            : Std_ReturnType CanIf_CheckWakeup(EcuM_WakeupSourceType WakeupSource)
+<span class="lineNum">     728 </span>            : {
+<span class="lineNum">     729 </span>            :   VALIDATE(FALSE, CANIF_CHECKWAKEUP_ID, CANIF_E_NOK_NOSUPPORT);
+<span class="lineNum">     730 </span>            :   // Not supported
+<span class="lineNum">     731 </span>            : 
+<span class="lineNum">     732 </span>            :   return E_NOT_OK;
+<span class="lineNum">     733 </span>            : }
+<span class="lineNum">     734 </span>            : 
+<span class="lineNum">     735 </span>            : Std_ReturnType CanIf_CheckValidation(EcuM_WakeupSourceType WakeupSource)
+<span class="lineNum">     736 </span>            : {
+<span class="lineNum">     737 </span>            :   VALIDATE(FALSE, CANIF_CHECKVALIDATION_ID, CANIF_E_NOK_NOSUPPORT);
+<span class="lineNum">     738 </span>            :   // Not supported
+<span class="lineNum">     739 </span>            : 
+<span class="lineNum">     740 </span>            :   return E_NOT_OK;
+<span class="lineNum">     741 </span>            : }
+<span class="lineNum">     742 </span>            : #endif
+<span class="lineNum">     743 </span>            : 
+<span class="lineNum">     744 </span>            : /*
+<a name="745"><span class="lineNum">     745 </span>            :  * Callback interface from driver</a>
+<span class="lineNum">     746 </span>            :  */
+<span class="lineNum">     747 </span><span class="lineNoCov">          0 : void CanIf_TxConfirmation(PduIdType canTxPduId)</span>
+<span class="lineNum">     748 </span>            : {
+<span class="lineNum">     749 </span>            :   VALIDATE_NO_RV(CanIf_Global.initRun, CANIF_TXCONFIRMATION_ID, CANIF_E_UNINIT)
+<span class="lineNum">     750 </span>            :   VALIDATE_NO_RV(canTxPduId &lt; CanIf_ConfigPtr-&gt;InitConfig-&gt;CanIfNumberOfCanTXPduIds, CANIF_TXCONFIRMATION_ID, CANIF_E_PARAM_LPDU);
+<span class="lineNum">     751 </span>            : 
+<span class="lineNum">     752 </span><span class="lineNoCov">          0 :   const CanIf_TxPduConfigType* entry =</span>
+<span class="lineNum">     753 </span><span class="lineNoCov">          0 :     &amp;CanIf_ConfigPtr-&gt;InitConfig-&gt;CanIfTxPduConfigPtr[canTxPduId];</span>
+<span class="lineNum">     754 </span>            : 
+<span class="lineNum">     755 </span><span class="lineNoCov">          0 :       if (entry-&gt;CanIfUserTxConfirmation != NULL)</span>
+<span class="lineNum">     756 </span>            :       {
+<span class="lineNum">     757 </span>            :         CanIf_ChannelGetModeType mode;
+<span class="lineNum">     758 </span><span class="lineNoCov">          0 :         CanIf_GetPduMode(entry-&gt;CanIfCanTxPduHthRef-&gt;CanIfCanControllerIdRef, &amp;mode);</span>
+<span class="lineNum">     759 </span><span class="lineNoCov">          0 :         if ((mode == CANIF_GET_TX_ONLINE) || (mode == CANIF_GET_ONLINE)</span>
+<span class="lineNum">     760 </span><span class="lineNoCov">          0 :             || (mode == CANIF_GET_OFFLINE_ACTIVE) || (mode == CANIF_GET_OFFLINE_ACTIVE_RX_ONLINE) )</span>
+<span class="lineNum">     761 </span>            :         {
+<span class="lineNum">     762 </span><span class="lineNoCov">          0 :           entry-&gt;CanIfUserTxConfirmation(entry-&gt;CanIfTxPduId);  /* CANIF053 */</span>
+<span class="lineNum">     763 </span>            :         }
+<span class="lineNum">     764 </span>            :       }
+<span class="lineNum">     765 </span><span class="lineNoCov">          0 :       return;</span>
+<a name="766"><span class="lineNum">     766 </span>            : }</a>
+<span class="lineNum">     767 </span>            : 
+<span class="lineNum">     768 </span><span class="lineNoCov">          0 : void CanIf_RxIndication(uint8 Hrh, Can_IdType CanId, uint8 CanDlc,</span>
+<span class="lineNum">     769 </span>            :               const uint8 *CanSduPtr)
+<span class="lineNum">     770 </span>            : {
+<span class="lineNum">     771 </span>            :   VALIDATE_NO_RV(CanIf_Global.initRun, CANIF_RXINDICATION_ID, CANIF_E_UNINIT);
+<span class="lineNum">     772 </span>            :   VALIDATE_NO_RV(CanSduPtr != NULL, CANIF_RXINDICATION_ID, CANIF_E_PARAM_POINTER);
+<span class="lineNum">     773 </span>            :   /* Check PDU mode before continue processing */
+<span class="lineNum">     774 </span><span class="lineNoCov">          0 :   CanIf_ChannelGetModeType mode = (CanIf_ChannelGetModeType)CANIF_CS_UNINIT;</span>
+<span class="lineNum">     775 </span><span class="lineNoCov">          0 :   CanIf_Arc_ChannelIdType channel = CanIf_Arc_FindHrhChannel( (Can_Arc_HRHType) Hrh);</span>
+<span class="lineNum">     776 </span>            :   /*if (channel == -1)  // Invalid HRH
+<span class="lineNum">     777 </span>            :   {
+<span class="lineNum">     778 </span>            :     return;
+<span class="lineNum">     779 </span>            :   }*/
+<span class="lineNum">     780 </span>            : 
+<span class="lineNum">     781 </span><span class="lineNoCov">          0 :   if (CanIf_GetPduMode(channel, &amp;mode) == E_OK)</span>
+<span class="lineNum">     782 </span>            :   {
+<span class="lineNum">     783 </span><span class="lineNoCov">          0 :     if ( (mode == CANIF_GET_OFFLINE) || (mode == CANIF_GET_TX_ONLINE) ||</span>
+<span class="lineNum">     784 </span><span class="lineNoCov">          0 :         (mode == CANIF_GET_OFFLINE_ACTIVE) )</span>
+<span class="lineNum">     785 </span>            :     {
+<span class="lineNum">     786 </span>            :       // Receiver path is disabled so just drop it
+<span class="lineNum">     787 </span><span class="lineNoCov">          0 :       return;</span>
+<span class="lineNum">     788 </span>            :     }
+<span class="lineNum">     789 </span>            :   }
+<span class="lineNum">     790 </span>            :   else
+<span class="lineNum">     791 </span>            :   {
+<span class="lineNum">     792 </span><span class="lineNoCov">          0 :     return;  // No mode so just return</span>
+<span class="lineNum">     793 </span>            :   }
+<span class="lineNum">     794 </span>            : 
+<span class="lineNum">     795 </span><span class="lineNoCov">          0 :   const CanIf_RxPduConfigType *entry = CanIf_ConfigPtr-&gt;InitConfig-&gt;CanIfRxPduConfigPtr;</span>
+<span class="lineNum">     796 </span>            : 
+<span class="lineNum">     797 </span>            :   /* Find the CAN id in the RxPduList */
+<span class="lineNum">     798 </span><span class="lineNoCov">          0 :   for (uint16 i = 0; i &lt; CanIf_ConfigPtr-&gt;InitConfig-&gt;CanIfNumberOfCanRxPduIds; i++)</span>
+<span class="lineNum">     799 </span>            :   {
+<span class="lineNum">     800 </span><span class="lineNoCov">          0 :     if (entry-&gt;CanIfCanRxPduHrhRef-&gt;CanIfHrhIdSymRef == Hrh)</span>
+<span class="lineNum">     801 </span>            :     {
+<span class="lineNum">     802 </span>            :       // Software filtering
+<span class="lineNum">     803 </span><span class="lineNoCov">          0 :       if (entry-&gt;CanIfCanRxPduHrhRef-&gt;CanIfHrhType == CAN_ARC_HANDLE_TYPE_BASIC)</span>
+<span class="lineNum">     804 </span>            :       {
+<span class="lineNum">     805 </span><span class="lineNoCov">          0 :         if (entry-&gt;CanIfCanRxPduHrhRef-&gt;CanIfSoftwareFilterHrh)</span>
+<span class="lineNum">     806 </span>            :         {
+<span class="lineNum">     807 </span><span class="lineNoCov">          0 :           if (entry-&gt;CanIfSoftwareFilterType == CANIF_SOFTFILTER_TYPE_MASK)</span>
+<span class="lineNum">     808 </span>            :           {
+<span class="lineNum">     809 </span><span class="lineNoCov">          0 :             if ((CanId &amp; entry-&gt;CanIfCanRxPduCanIdMask ) ==</span>
+<span class="lineNum">     810 </span><span class="lineNoCov">          0 :                 ( entry-&gt;CanIfCanRxPduCanId &amp; entry-&gt;CanIfCanRxPduCanIdMask))</span>
+<span class="lineNum">     811 </span>            :             {
+<span class="lineNum">     812 </span>            :               // We found a pdu so call higher layers
+<span class="lineNum">     813 </span>            :             }
+<span class="lineNum">     814 </span>            :             else
+<span class="lineNum">     815 </span>            :             {
+<span class="lineNum">     816 </span><span class="lineNoCov">          0 :               entry++;</span>
+<span class="lineNum">     817 </span><span class="lineNoCov">          0 :               continue; // Go to next entry</span>
+<span class="lineNum">     818 </span>            :             }
+<span class="lineNum">     819 </span>            :           }
+<span class="lineNum">     820 </span>            :           else
+<span class="lineNum">     821 </span>            :           {
+<span class="lineNum">     822 </span>            :             DET_REPORTERROR(MODULE_ID_CAN, 0, CANIF_RXINDICATION_ID, CANIF_E_PARAM_HRH);
+<span class="lineNum">     823 </span><span class="lineNoCov">          0 :             continue; // Not a supported filter type, so just drop the frame</span>
+<span class="lineNum">     824 </span>            :           }
+<span class="lineNum">     825 </span>            :         }
+<span class="lineNum">     826 </span>            :       }
+<span class="lineNum">     827 </span>            : 
+<span class="lineNum">     828 </span>            : #if (CANIF_DLC_CHECK == STD_ON)
+<span class="lineNum">     829 </span>            :       if (CanDlc &lt; entry-&gt;CanIfCanRxPduDlc)
+<span class="lineNum">     830 </span>            :       {
+<span class="lineNum">     831 </span>            :         VALIDATE_NO_RV(FALSE, CANIF_RXINDICATION_ID, CANIF_E_PARAM_DLC);
+<span class="lineNum">     832 </span>            :         return;
+<span class="lineNum">     833 </span>            :       }
+<span class="lineNum">     834 </span>            : #endif
+<span class="lineNum">     835 </span>            : 
+<span class="lineNum">     836 </span><span class="lineNoCov">          0 :       switch (entry-&gt;CanIfRxUserType)</span>
+<span class="lineNum">     837 </span>            :       {
+<span class="lineNum">     838 </span>            :         case CANIF_USER_TYPE_CAN_SPECIAL:
+<span class="lineNum">     839 </span>            :         {
+<span class="lineNum">     840 </span><span class="lineNoCov">          0 :           ( (CanIf_FuncTypeCanSpecial)(entry-&gt;CanIfUserRxIndication) )(</span>
+<span class="lineNum">     841 </span><span class="lineNoCov">          0 :             entry-&gt;CanIfCanRxPduHrhRef-&gt;CanIfCanControllerHrhIdRef,</span>
+<span class="lineNum">     842 </span><span class="lineNoCov">          0 :             entry-&gt;CanIfCanRxPduId,</span>
+<span class="lineNum">     843 </span>            :             CanSduPtr,
+<span class="lineNum">     844 </span>            :             CanDlc,
+<span class="lineNum">     845 </span>            :             CanId);
+<span class="lineNum">     846 </span>            : 
+<span class="lineNum">     847 </span><span class="lineNoCov">          0 :             return;</span>
+<span class="lineNum">     848 </span>            :         }
+<span class="lineNum">     849 </span>            : 
+<span class="lineNum">     850 </span>            :         case CANIF_USER_TYPE_CAN_NM:
+<span class="lineNum">     851 </span>            : #if defined(USE_CANNM)
+<span class="lineNum">     852 </span>            :                 CanNm_RxIndication(entry-&gt;CanIfCanRxPduId,CanSduPtr);
+<span class="lineNum">     853 </span>            :                 return;
+<span class="lineNum">     854 </span>            : #endif
+<span class="lineNum">     855 </span><span class="lineNoCov">          0 :                 break;</span>
+<span class="lineNum">     856 </span>            : 
+<span class="lineNum">     857 </span>            :         case CANIF_USER_TYPE_CAN_PDUR:
+<span class="lineNum">     858 </span>            :             // Send Can frame to PDU router
+<span class="lineNum">     859 </span>            : #if defined(USE_PDUR)
+<span class="lineNum">     860 </span>            :                 {
+<span class="lineNum">     861 </span>            :                         PduInfoType pduInfo;
+<span class="lineNum">     862 </span>            :                         pduInfo.SduLength = CanDlc;
+<span class="lineNum">     863 </span>            :                         pduInfo.SduDataPtr = (uint8 *)CanSduPtr;
+<span class="lineNum">     864 </span>            :                 PduR_CanIfRxIndication(entry-&gt;CanIfCanRxPduId,&amp;pduInfo);
+<span class="lineNum">     865 </span>            :                 }
+<span class="lineNum">     866 </span>            :             return;
+<span class="lineNum">     867 </span>            : #endif
+<span class="lineNum">     868 </span><span class="lineNoCov">          0 :             break;</span>
+<span class="lineNum">     869 </span>            : 
+<span class="lineNum">     870 </span>            :         case CANIF_USER_TYPE_CAN_TP:
+<span class="lineNum">     871 </span>            :           // Send Can frame to CAN TP
+<span class="lineNum">     872 </span>            : #if defined(USE_CANTP)
+<span class="lineNum">     873 </span>            :             {
+<span class="lineNum">     874 </span>            :                     PduInfoType CanTpRxPdu;
+<span class="lineNum">     875 </span>            :                     CanTpRxPdu.SduLength = CanDlc;
+<span class="lineNum">     876 </span>            :                     CanTpRxPdu.SduDataPtr = (uint8 *)CanSduPtr;
+<span class="lineNum">     877 </span>            :                 CanTp_RxIndication(entry-&gt;CanIfCanRxPduId, &amp;CanTpRxPdu);
+<span class="lineNum">     878 </span>            :             }
+<span class="lineNum">     879 </span>            :             return;
+<span class="lineNum">     880 </span>            : #endif
+<span class="lineNum">     881 </span><span class="lineNoCov">          0 :             break;</span>
+<span class="lineNum">     882 </span>            :         case CANIF_USER_TYPE_J1939TP:
+<span class="lineNum">     883 </span>            :           // Send Can frame to CAN TP
+<span class="lineNum">     884 </span>            : #if defined(USE_J1939TP)
+<span class="lineNum">     885 </span>            :             {
+<span class="lineNum">     886 </span>            :                     PduInfoType J1939TpRxPdu;
+<span class="lineNum">     887 </span>            :                     J1939TpRxPdu.SduLength = CanDlc;
+<span class="lineNum">     888 </span>            :                     J1939TpRxPdu.SduDataPtr = (uint8 *)CanSduPtr;
+<span class="lineNum">     889 </span>            :                     J1939Tp_RxIndication(entry-&gt;CanIfCanRxPduId, &amp;J1939TpRxPdu);
+<span class="lineNum">     890 </span>            :             }
+<span class="lineNum">     891 </span>            :             return;
+<span class="lineNum">     892 </span>            : #endif
+<span class="lineNum">     893 </span><span class="lineNoCov">          0 :             break;            </span>
+<span class="lineNum">     894 </span>            :       }
+<span class="lineNum">     895 </span>            :     }
+<span class="lineNum">     896 </span>            : 
+<span class="lineNum">     897 </span><span class="lineNoCov">          0 :     entry++;</span>
+<span class="lineNum">     898 </span>            :   }
+<span class="lineNum">     899 </span>            : 
+<span class="lineNum">     900 </span>            :   // Did not find the PDU, something is wrong
+<span class="lineNum">     901 </span>            :   VALIDATE_NO_RV(FALSE, CANIF_RXINDICATION_ID, CANIF_E_PARAM_LPDU);
+<span class="lineNum">     902 </span>            : }
+<span class="lineNum">     903 </span>            : 
+<span class="lineNum">     904 </span>            : #if ( CANIF_TRANSMIT_CANCELLATION == STD_ON )
+<span class="lineNum">     905 </span>            : void CanIf_CancelTxConfirmation(const Can_PduType *PduInfoPtr)
+<span class="lineNum">     906 </span>            : {
+<span class="lineNum">     907 </span>            :   VALIDATE(FALSE, CANIF_CANCELTXCONFIRMATION_ID, CANIF_E_NOK_NOSUPPORT);
+<span class="lineNum">     908 </span>            :   VALIDATE_NO_RV(CanIf_Global.initRun, CANIF_CANCELTXCONFIRMATION_ID, CANIF_E_UNINIT);
+<span class="lineNum">     909 </span>            :   VALIDATE_NO_RV(PduInfoPtr != NULL, CANIF_RXINDICATION_ID, CANIF_E_PARAM_POINTER);
+<span class="lineNum">     910 </span>            : 
+<span class="lineNum">     911 </span>            :   const CanIf_TxPduConfigType *entry =
+<span class="lineNum">     912 </span>            :     CanIf_ConfigPtr-&gt;InitConfig-&gt;CanIfTxPduConfigPtr;
+<span class="lineNum">     913 </span>            : 
+<span class="lineNum">     914 </span>            :   // Not supported
+<span class="lineNum">     915 </span>            : 
+<span class="lineNum">     916 </span>            :   // Did not find the PDU, something is wrong
+<span class="lineNum">     917 </span>            :   VALIDATE_NO_RV(FALSE, CANIF_TXCONFIRMATION_ID, CANIF_E_PARAM_LPDU);
+<span class="lineNum">     918 </span>            : }
+<a name="919"><span class="lineNum">     919 </span>            : #endif</a>
+<span class="lineNum">     920 </span>            : 
+<span class="lineNum">     921 </span><span class="lineCov">          1 : void CanIf_ControllerBusOff(uint8 Controller)</span>
+<span class="lineNum">     922 </span>            : {
+<span class="lineNum">     923 </span><span class="lineCov">          1 :   CanIf_Arc_ChannelIdType channel = CANIF_CHANNEL_CNT;</span>
+<span class="lineNum">     924 </span>            : 
+<span class="lineNum">     925 </span>            :   VALIDATE_NO_RV( CanIf_Global.initRun, CANIF_CONTROLLER_BUSOFF_ID, CANIF_E_UNINIT );
+<span class="lineNum">     926 </span>            : 
+<span class="lineNum">     927 </span><span class="lineCov">          2 :   for(int i = 0; i &lt; CANIF_CHANNEL_CNT; i++)</span>
+<span class="lineNum">     928 </span>            :   {
+<span class="lineNum">     929 </span><span class="lineCov">          1 :           if(CanIf_ConfigPtr-&gt;Arc_ChannelToControllerMap[i] == Controller)</span>
+<span class="lineNum">     930 </span>            :           {
+<span class="lineNum">     931 </span><span class="lineCov">          1 :                   channel = (CanIf_Arc_ChannelIdType)i;</span>
+<span class="lineNum">     932 </span>            :           }
+<span class="lineNum">     933 </span>            :   }
+<span class="lineNum">     934 </span>            : 
+<span class="lineNum">     935 </span>            :   VALIDATE_NO_RV( Controller &lt; CANIF_CHANNEL_CNT, CANIF_CONTROLLER_BUSOFF_ID, CANIF_E_PARAM_CONTROLLER );
+<span class="lineNum">     936 </span>            : 
+<span class="lineNum">     937 </span>            :   // According to figure 35 in canif spec this should be done in
+<span class="lineNum">     938 </span>            :   // Can driver but it is better to do it here
+<span class="lineNum">     939 </span><span class="lineCov">          1 :   CanIf_SetControllerMode(channel, CANIF_CS_STOPPED);</span>
+<span class="lineNum">     940 </span>            : 
+<span class="lineNum">     941 </span><span class="lineCov">          1 :   if (CanIf_ConfigPtr-&gt;DispatchConfig-&gt;CanIfBusOffNotification != NULL)</span>
+<span class="lineNum">     942 </span>            :   {
+<span class="lineNum">     943 </span><span class="lineCov">          1 :     CanIf_ConfigPtr-&gt;DispatchConfig-&gt;CanIfBusOffNotification(channel);</span>
+<span class="lineNum">     944 </span>            :   }
+<a name="945"><span class="lineNum">     945 </span><span class="lineCov">          1 : }</span></a>
+<span class="lineNum">     946 </span>            : 
+<span class="lineNum">     947 </span><span class="lineNoCov">          0 : void CanIf_SetWakeupEvent(uint8 Controller)</span>
+<span class="lineNum">     948 </span>            : {
+<span class="lineNum">     949 </span><span class="lineNoCov">          0 :         CanIf_Arc_ChannelIdType __attribute__((unused)) channel = CANIF_CHANNEL_CNT;</span>
+<span class="lineNum">     950 </span>            : 
+<span class="lineNum">     951 </span>            :         VALIDATE_NO_RV( CanIf_Global.initRun, CANIF_SETWAKEUPEVENT_ID, CANIF_E_UNINIT );
+<span class="lineNum">     952 </span>            : 
+<span class="lineNum">     953 </span><span class="lineNoCov">          0 :         for(int i = 0; i &lt; CANIF_CHANNEL_CNT; i++)</span>
+<span class="lineNum">     954 </span>            :         {
+<span class="lineNum">     955 </span><span class="lineNoCov">          0 :           if(CanIf_ConfigPtr-&gt;Arc_ChannelToControllerMap[i] == Controller)</span>
+<span class="lineNum">     956 </span>            :           {
+<span class="lineNum">     957 </span><span class="lineNoCov">          0 :                   channel = (CanIf_Arc_ChannelIdType)i;</span>
+<span class="lineNum">     958 </span>            :           }
+<span class="lineNum">     959 </span>            :         }
+<span class="lineNum">     960 </span>            : 
+<span class="lineNum">     961 </span>            :         VALIDATE_NO_RV(FALSE, CANIF_SETWAKEUPEVENT_ID, CANIF_E_NOK_NOSUPPORT);
+<span class="lineNum">     962 </span>            :         VALIDATE_NO_RV( channel &lt; CANIF_CHANNEL_CNT, CANIF_SETWAKEUPEVENT_ID, CANIF_E_PARAM_CONTROLLER );
+<span class="lineNum">     963 </span>            : 
+<span class="lineNum">     964 </span>            :         // Not supported
+<a name="965"><span class="lineNum">     965 </span><span class="lineNoCov">          0 : }</span></a>
+<span class="lineNum">     966 </span>            : 
+<span class="lineNum">     967 </span><span class="lineNoCov">          0 : void CanIf_Arc_Error(uint8 Controller, Can_Arc_ErrorType Error)</span>
+<span class="lineNum">     968 </span>            : {
+<span class="lineNum">     969 </span><span class="lineNoCov">          0 :   CanIf_Arc_ChannelIdType channel = CANIF_CHANNEL_CNT;</span>
+<span class="lineNum">     970 </span>            : 
+<span class="lineNum">     971 </span>            :   VALIDATE_NO_RV( CanIf_Global.initRun, CANIF_ARCERROR_ID, CANIF_E_UNINIT );
+<span class="lineNum">     972 </span>            : 
+<span class="lineNum">     973 </span><span class="lineNoCov">          0 :   for(int i = 0; i &lt; CANIF_CHANNEL_CNT; i++)</span>
+<span class="lineNum">     974 </span>            :   {
+<span class="lineNum">     975 </span><span class="lineNoCov">          0 :           if(CanIf_ConfigPtr-&gt;Arc_ChannelToControllerMap[i] == Controller)</span>
+<span class="lineNum">     976 </span>            :           {
+<span class="lineNum">     977 </span><span class="lineNoCov">          0 :                   channel = (CanIf_Arc_ChannelIdType)i;</span>
+<span class="lineNum">     978 </span>            :           }
+<span class="lineNum">     979 </span>            :   }
+<span class="lineNum">     980 </span>            : 
+<span class="lineNum">     981 </span>            :   VALIDATE_NO_RV( channel &lt; CANIF_CHANNEL_CNT, CANIF_ARCERROR_ID, CANIF_E_PARAM_CONTROLLER );
+<span class="lineNum">     982 </span>            : 
+<span class="lineNum">     983 </span><span class="lineNoCov">          0 :   if (CanIf_ConfigPtr-&gt;DispatchConfig-&gt;CanIfErrorNotificaton != NULL)</span>
+<span class="lineNum">     984 </span>            :   {
+<span class="lineNum">     985 </span><span class="lineNoCov">          0 :     CanIf_ConfigPtr-&gt;DispatchConfig-&gt;CanIfErrorNotificaton(Controller, Error);</span>
+<span class="lineNum">     986 </span>            :   }
+<span class="lineNum">     987 </span>            : 
+<span class="lineNum">     988 </span>            :   // Special fix for restart of bus incase of general can error i.e. connection to CanSM
+<span class="lineNum">     989 </span><span class="lineNoCov">          0 :   if (CanIf_ConfigPtr-&gt;DispatchConfig-&gt;CanIfBusOffNotification != NULL)</span>
+<span class="lineNum">     990 </span>            :   {
+<span class="lineNum">     991 </span><span class="lineNoCov">          0 :     CanIf_ConfigPtr-&gt;DispatchConfig-&gt;CanIfBusOffNotification(channel);</span>
+<span class="lineNum">     992 </span>            :   }
+<a name="993"><span class="lineNum">     993 </span><span class="lineNoCov">          0 : }</span></a>
+<span class="lineNum">     994 </span>            : 
+<span class="lineNum">     995 </span><span class="lineNoCov">          0 : uint8 CanIf_Arc_GetChannelDefaultConfIndex(CanIf_Arc_ChannelIdType Channel)</span>
+<span class="lineNum">     996 </span>            : {
+<span class="lineNum">     997 </span><span class="lineNoCov">          0 :         return CanIf_Config.Arc_ChannelDefaultConfIndex[Channel];</span>
+<span class="lineNum">     998 </span>            : }
+<span class="lineNum">     999 </span>            : 
+    </pre>
+          </td>
+        </tr>
+      </table>
+      <br>
+
+      <table width="100%" border=0 cellspacing=0 cellpadding=0>
+        <tr><td class="ruler"><img src="../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.11</a></td></tr>
+      </table>
+      <br>
+
+</body>
+</html>
