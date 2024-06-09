@@ -1,5 +1,5 @@
 TN:
-SF:/d/NTI/Avelabs/testing/CanIf/test05/CanIf.c
+SF:/d/NTI/Avelabs/OpenSAR/communication/CanIf/CanIf.c
 FN:100,CanIf_Arc_FindHrhChannel
 FN:131,CanIf_Init
 FN:156,CanIf_InitController

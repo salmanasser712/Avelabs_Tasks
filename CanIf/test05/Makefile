@@ -17,8 +17,8 @@ build: $(OBJECTS)
 
 coverage: build
 	@./output.exe
-	gcov -c -d . -o $(OBJECTS)
-#	lcov.bat
+	@gcov -c -d . -o $(OBJECTS)
+#	@$(shell lcov.bat)
 #	genhtml index.info -o html --ignore-errors source
 
 clean:
