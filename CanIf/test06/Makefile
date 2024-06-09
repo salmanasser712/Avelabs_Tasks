@@ -17,14 +17,19 @@ OBJECTS := $(OBJECTS:.cpp=.o)
 
 
 build: $(OBJECTS)
-	g++ -std=c++2a -O0 $(CXXFLAGS) $(CPPFLAGS) $^ $(LD_LIBRARIES) -o output
+	g++ -std=c++2a $(CXXFLAGS) $(CPPFLAGS) $^ $(LD_LIBRARIES) -o output
 
 %.o: %.c
-	g++ -std=c++2a -O0 $(CXXFLAGS) $(CPPFLAGS) $^  -c 
+	g++ -std=c++2a $(CXXFLAGS) $(CPPFLAGS) $^ -c 
 
 %.o: %.cpp
-	g++ -std=c++2a -O0 $(CXXFLAGS) $(CPPFLAGS) $^ -c 
+	g++ -std=c++2a $(CXXFLAGS) $(CPPFLAGS) $^ -c 
 
+
+.PHONY: TestReport
+TestReport: build
+	-./output.exe > TestReport.txt
+	make -s clean
 
 clean:
 	rm -f *.o *.exe 
