@@ -9,7 +9,7 @@ CXXFLAGS := -I$(Base_Dir)/include -I$(Base_Dir)/boot/config/ -I$(Base_Dir)/inclu
 
 vpath %.c $(Base_Dir)/communication/CanIf/:$(Base_Dir)/boot/config/
 
-SOURCES = stubs.c CanIf.c CanIf_Cfg.c main.cpp test.cpp
+SOURCES = stubs.c CanIf.c CanIf_Cfg.c Can_PBcfg.c main.cpp test.cpp
 
 OBJECTS = $(SOURCES:.c=.o)
 
@@ -20,7 +20,7 @@ build: $(OBJECTS)
 	g++ -std=c++2a $(CXXFLAGS) $(CPPFLAGS) $^ $(LD_LIBRARIES) -o output
 
 %.o: %.c
-	g++ -std=c++2a $(CXXFLAGS) $(CPPFLAGS) $^ -c 
+	gcc $(CXXFLAGS) $(CPPFLAGS) $^ -c 
 
 %.o: %.cpp
 	g++ -std=c++2a $(CXXFLAGS) $(CPPFLAGS) $^ -c 
